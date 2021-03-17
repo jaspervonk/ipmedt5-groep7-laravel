@@ -1,5 +1,5 @@
 Put an "x" behind your name and push this change:
 Jasper	: x
-Max	:   X
+Max	:   x
 Burak	:
 Hasan	: x
