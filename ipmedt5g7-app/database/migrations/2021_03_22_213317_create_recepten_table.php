@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReceptTable extends Migration
+class CreateReceptenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateReceptTable extends Migration
      */
     public function up()
     {
-        Schema::create('recept', function (Blueprint $table) {
+        Schema::create('recepten', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('naam');
             $table->string('soort');
+            $table->string('ingredienten');
+            $table->string('bereiden');
             $table->foreign('soort')->references('soort')->on('soort_recept');
-            $table->timestamps();
+            
         });
     }
 
@@ -29,8 +31,8 @@ class CreateReceptTable extends Migration
      */
     public function down()
     {
-        Schema::table('recept', function (Blueprint $table) {
-            $table->dropForeign('recept_soort_foreign');
+        Schema::table('recepten', function (Blueprint $table) {
+            $table->dropForeign('recepten_soort_foreign');
         });
 
         Schema::dropIfExists('recept');
