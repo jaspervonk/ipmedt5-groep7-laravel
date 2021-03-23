@@ -56,7 +56,7 @@ port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=1.0)
 mycursor = mydb.cursor()
 while True:   
     rcv = port.readline().strip()
-    print(rcv) 
+    # print(rcv) 
 
     if (rcv == 's'):
         mycursor.execute("UPDATE deskworking SET working_status = 'aan het werken';")
@@ -76,7 +76,7 @@ while True:
         
 
     time.sleep(1)
-    # print("main.py is aan het runnen")
+    print("main.py is aan het runnen")
 
     
 mydb.close()
