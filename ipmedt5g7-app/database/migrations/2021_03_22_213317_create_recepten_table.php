@@ -17,8 +17,9 @@ class CreateReceptenTable extends Migration
             $table->id();
             $table->string('naam');
             $table->string('soort');
-            $table->string('ingredienten');
-            $table->string('bereiden');
+            $table->text('ingredienten');
+            $table->text('bereiden');
+            $table->string('afbeelding')->default('/img/recept_default.jpg');
             $table->foreign('soort')->references('soort')->on('soort_recept');
             
         });
