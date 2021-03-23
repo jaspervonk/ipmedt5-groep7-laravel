@@ -39,5 +39,5 @@ function end_timer(){
 function refreshen() {
     setTimeout(function(){
         window.location.reload(1);
-     }, 5000);
+     }, 3000);
 }
