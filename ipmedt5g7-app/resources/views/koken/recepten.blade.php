@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-    <ul>
+    <ul class='u-grid-12 u-grid-gap-2'>
         @foreach($recepten as $recepten)
-            <li class='receptKaart'>
+            <li class='receptKaart u-list-style-none'>
                 <article>
                     <header class='receptKaart__header'>  
                         <h2 class='receptKaart__heading'> {{$recepten->naam}} </h2>
