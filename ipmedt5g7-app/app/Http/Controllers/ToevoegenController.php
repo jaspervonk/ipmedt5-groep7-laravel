@@ -8,22 +8,12 @@ use \App\Models\Shoppinglist;
 class ToevoegenController extends Controller
 {
     public function store(Request $request){
-        //print_r($request->input());
-        // $Shoppinglist = new Shoppinglist;
-        // $Shoppinglist = $request->product;
-        // $Shoppinglist = $request->aantal;
-        // $Shoppinglist = $request->merk;
-        // $Shoppinglist = $request->volume;
-        // echo $Shoppinglist->save();
-        // return $request->input();
-//--------------------------------------------------------------------------------------
         $Shoppinglist = new Shoppinglist;
-        $Shoppinglist => request('product'),
-        $Shoppinglist => request('aantal'),
-        $Shoppinglist => request('merk'),
-        $Shoppinglist => request('volume'),
-        echo $Shoppinglist->save(),
-        return $request->input();
-
+        $Shoppinglist->product = $request->input('product');
+        $Shoppinglist->merk = $request->input('merk');
+        $Shoppinglist->aantal = $request->input('aantal');
+        $Shoppinglist->volume = $request->input('volume');
+        $Shoppinglist->save();
+        return redirect('/boodschappenlijst');
     }
 }

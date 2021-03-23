@@ -13,15 +13,15 @@ use App\Http\Controller\ToevoegenController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/boodschappenlijst', [App\Http\Controllers\ShoppinglistController::class, 'index']);
-
-// Route::get('/submit', function(){
-//     //return view('welcome');
-//     return controller('ToevoegenController@save');
-// });
-
-Route::post('/submit', [App\Http\Controllers\ToevoegenController::class, 'store']);
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/boodschappenlijst', [App\Http\Controllers\ShoppinglistController::class, 'index']);
+
+Route::post('/submit', [App\Http\Controllers\ToevoegenController::class, 'store']);
+
+Route::post('/remove', [App\Http\Controllers\VerwijderController::class, 'remove']);
+
+
+

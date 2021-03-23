@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Shoppinglist extends Model
 {
-    protected $filltable = "shoppinglist";
+    protected $table = "shoppinglist";
 }

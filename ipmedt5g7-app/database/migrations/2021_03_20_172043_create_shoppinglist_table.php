@@ -14,10 +14,13 @@ class CreateShoppinglistTable extends Migration
     public function up()
     {
         Schema::create('shoppinglist', function (Blueprint $table) {
+            $table->id();
             $table->string("product");
-            $table->string("merk");
+            $table->string("merk")->nullable();
             $table->integer("aantal")->default(1);
-            $table->string("volume");
+            $table->string("volume")->nullable();
+            $table->timestamp("updated_at")->nullable();
+            $table->timestamp("created_at")->nullable();
             $table->boolean("checked")->default(false);
         });
     }
