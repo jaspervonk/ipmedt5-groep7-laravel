@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inerit;
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+/* kleurenpallet: https://colorhunt.co/palette/17117 */
+
+:root {
+    --background: #eaeaea;
+    --red: #ff2e63;
+    --black: #252a34;
+    --blue: #08d9d6;
+  }
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+    grid-template-rows: repeat(8, minmax(0,1fr));
+    gap: 5px;
+}
+
+
+
+
+
+
+/* ============================= clock ============================= */
+.clock{
+    width: 100%;
+    height: 100%;
+    grid-column: 3 / span 8;
+    grid-row: 2 / span 3;
+    font-size: 25rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0,1fr));
+    border: 5px solid var(--black);
+    background: white;
+}
+
+.clock__digits{
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+    grid-column: span 2;
+}
+
+.clock__digits--dots{
+    grid-column: span 1;
+}
+
+@media only screen and (max-width: 1700px) {
+    .clock__digits {
+      font-size: 90%;
+    }
+  }
+
+@media only screen and (max-width: 1400px) {
+    .clock__digits {
+        font-size: 75%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .clock {
+        grid-column: 5 / span 4;
+        grid-row: 2 / span 4;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+    
+    .clock__digits{
+        /* grid-row: span 1; */
+        font-size: 50%;
+    }
+
+    .clock__digits--dots{
+        display: none;
+    }
+}
+
+
+
+
+
+/* ============================= session text ============================= */
+.sessiontext{
+    font-size: 5rem;
+    grid-column: 5 / span 4;
+    grid-row: 5;
+    text-align: center;
+    font-size: 8rem;
+}
+
+
+@media only screen and (max-width: 1320px) {
+    .sessiontext{
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .sessiontext{
+        grid-row: 6;
+    }
+}
+
+
+
+
+
+
+/* ============================= buttons ============================= */
+.buttons{
+    width: 100%;
+    height: 100%;
+    grid-row: 6 / span 1;
+    font-size: 4.5rem;
+    color: white;
+    box-shadow: 1rem 1rem 3rem var(--black);
+    outline: none;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.buttons:active{
+    box-shadow: none;
+    background-color: grey;
+    color: black;
+}
+
+
+
+.buttons--start{
+    grid-column: 3 / span 2;
+    background-color: var(--blue);
+}
+
+.buttons--pause{
+    grid-column: 6 / span 2;
+    background-color: orange;
+}
+
+.buttons--stop{
+    grid-column: 9 / span 2;
+    background-color: var(--red);
+}
+
+
+@media only screen and (max-width: 1320px) {
+    .buttons--pause{
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .buttons {
+        grid-row: 7 / span 1;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .buttons{
+        font-size: 3rem;
+    }
+}
+
+
+@media only screen and (max-width: 560px) {
+    .buttons{
+        font-size: 2rem;
+    }
+}

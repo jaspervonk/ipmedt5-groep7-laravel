@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/desk', [\App\Http\Controllers\deskController::class, 'show']);
+// Route::get('/', [\App\Http\Controllers\deskController::class, 'show']);
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
