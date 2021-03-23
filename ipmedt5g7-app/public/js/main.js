@@ -33,4 +33,11 @@ function end_timer(){
     gestart = false;
     paused = false;
     sessiontext.innerHTML = "gestopt";
+    sessie = 1;
+}
+
+function refreshen() {
+    setTimeout(function(){
+        window.location.reload(1);
+     }, 5000);
 }

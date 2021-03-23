@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDesktimerTable extends Migration
+class CreateDeskworkingTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateDesktimerTable extends Migration
      */
     public function up()
     {
-        Schema::create('desktimer', function (Blueprint $table) {
+        Schema::create('deskworking', function (Blueprint $table) {
             // $table->id();
             // $table->timestamps();
-            $table->integer('total_work_minutes')->default(0);
-            $table->integer('total_pause_minutes')->default(0);
+            $table->string('working_status');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateDesktimerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('desktimer');
+        Schema::dropIfExists('deskworking');
     }
 }
