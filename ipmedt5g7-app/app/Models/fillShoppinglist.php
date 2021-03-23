@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Shoppinglist extends Model
+class fillShoppinglist extends Model
 {
-    protected $filltable = "shoppinglist";
+    use HasFactory;
 }

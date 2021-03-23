@@ -20,5 +20,10 @@ class ShoppinglistTableSeeder extends Seeder
             'aantal' => 2,
             'volume' => "1 liter",
         ]);
+        DB::table('shoppinglist')->insert([
+            'product' => "Naturel Chips",
+            'merk' => "Lays",
+            'volume' => "225 gram",
+        ]);
     }
 }

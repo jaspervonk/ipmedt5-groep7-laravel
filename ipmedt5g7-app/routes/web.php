@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controller\ToevoegenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/boodschappenlijst', [App\Http\Controllers\ShoppinglistController::class, 'index']);
+
+// Route::get('/submit', function(){
+//     //return view('welcome');
+//     return controller('ToevoegenController@save');
+// });
+
+Route::post('/submit', [App\Http\Controllers\ToevoegenController::class, 'store']);
 
 Route::get('/', function () {
     return view('welcome');

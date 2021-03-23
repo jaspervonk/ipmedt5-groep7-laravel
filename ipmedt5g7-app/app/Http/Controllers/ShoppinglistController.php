@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 class ShoppinglistController extends Controller
 {
     public function index(){
-        $product = \App\Models\Shoppinglist::first();
-
-        return view('boodschappenlijst', ['product' => $product->product]);
+        $product = \App\Models\Shoppinglist::all();
+        return view('welcome', ['product' => $product]);
     }
 }
