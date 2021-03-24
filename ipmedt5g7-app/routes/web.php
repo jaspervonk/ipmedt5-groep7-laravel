@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controller\ToevoegenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,9 +13,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/recepten', [\App\Http\Controllers\ReceptController::class, 'index']);
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/recepten', [\App\Http\Controllers\ReceptController::class, 'index']);
+
+Route::get('/boodschappenlijst', [App\Http\Controllers\ShoppinglistController::class, 'index']);
+
+Route::post('/submit', [App\Http\Controllers\ToevoegenController::class, 'store']);
+
+Route::post('/remove', [App\Http\Controllers\VerwijderController::class, 'remove']);
+
+
+
