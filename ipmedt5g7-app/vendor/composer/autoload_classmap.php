@@ -10,6 +10,7 @@ return array(
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\ShoppinglistController' => $baseDir . '/app/Http/Controllers/ShoppinglistController.php',
+    'App\\Http\\Controllers\\deskController' => $baseDir . '/app/Http/Controllers/deskController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
@@ -20,6 +21,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Models\\Shoppinglist' => $baseDir . '/app/Models/Shoppinglist.php',
+    'App\\Models\\Desk' => $baseDir . '/app/Models/Desk.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
@@ -130,9 +132,13 @@ return array(
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
+<<<<<<< HEAD
     'Database\\Seeders\\ReceptSeeder' => $baseDir . '/database/seeders/ReceptSeeder.php',
     'Database\\Seeders\\SoortReceptSeeder' => $baseDir . '/database/seeders/SoortReceptSeeder.php',
     'Database\\Seeders\\ShoppinglistTableSeeder' => $baseDir . '/database/seeders/ShoppinglistTableSeeder.php',
+=======
+    'Database\\Seeders\\DesktimerTableSeeder' => $baseDir . '/database/seeders/DesktimerTableSeeder.php',
+>>>>>>> Hasan
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
     'DeepCopy\\Exception\\PropertyException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',

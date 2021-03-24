@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             SoortReceptSeeder::class,
             ReceptSeeder::class,
             ShoppinglistTableSeeder::class,
+            DeskworkingTableSeeder::class,
+            DesktimerTableSeeder::class,
         ]);
-        // $this->call(ShoppinglistTableSeeder::class);
     }
 }
