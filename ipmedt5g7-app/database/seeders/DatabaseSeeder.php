@@ -13,14 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
         $this->call([
             SoortReceptSeeder::class,
             ReceptSeeder::class,
+            ShoppinglistTableSeeder::class,
         ]);
-=======
-        // \App\Models\User::factory(10)->create();
-        $this->call(ShoppinglistTableSeeder::class);
->>>>>>> Max(groceries)
+        // $this->call(ShoppinglistTableSeeder::class);
     }
 }
