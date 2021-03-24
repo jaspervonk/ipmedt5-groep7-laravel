@@ -27,11 +27,6 @@ body{
     position: relative;
 }
 
-.receptKaart > article{
-    width: 100%;
-    height: 100%;
-}
-
 .receptKaart__header{
     width: 100%;
     height: 20%;
@@ -45,9 +40,10 @@ body{
 .receptKaart__figure{
     width: 100%;
     height: 60%;
+    background: black;
 }
 
-.receptKaart__image{
+.receptKaart__img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -58,7 +54,7 @@ body{
     padding-left: 2rem;
 }
 
-.receptKaart_button{
+.receptKaart__button{
     padding: 1rem 2rem;
     box-sizing: border-box;
     background-color: white;
@@ -70,6 +66,7 @@ body{
     cursor:pointer;
 }
 
+/* utility classes */
 
 .u-list-style-none{
     list-style: none;
@@ -83,4 +80,9 @@ body{
 
 .u-grid-gap-2{
     gap: 2rem;
+}
+
+.u-flex-v-center{
+    display: flex;
+    align-items: center;
 }
