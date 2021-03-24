@@ -9,7 +9,7 @@ class SoortRecept extends Model
 {
     protected $table = 'soort_recept';
 
-    public function allSushi(){
+    public function allRecepten(){
         return $this->hasMany('\App\Models\Recepten', 'soort', 'soort');
     }
 }
