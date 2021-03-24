@@ -8,12 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="./js/main.js"></script>
     <link rel="stylesheet" href="./css/main.css">
-    <title>Mijn lijstje</title>
+    <title>Daily Routine</title>
 </head>
 <body>
-    @include('boodschappenlijst')
-    <br>
-    <h2>Voeg een product toe</h2>
-    @include('form')
+    <h1>Daily Routine </h1>
 </body>
 </html>
