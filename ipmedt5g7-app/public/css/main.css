@@ -10,9 +10,15 @@ html{
 
 body{
     font-family: 'Montserrat', sans-serif;
+    margin: 4rem;
+
 }
 
 li{
     font-size: 1.5rem;
 
+}
+input[type=checkbox]:checked + label.isChecked{
+    text-decoration: line-through;
+    color: green;
 }
