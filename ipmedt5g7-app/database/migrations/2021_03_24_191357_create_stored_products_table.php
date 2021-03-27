@@ -14,12 +14,14 @@ class CreateStoredProductsTable extends Migration
     public function up()
     {
         Schema::create('stored_products', function (Blueprint $table) {
-            $table->id();
-            $table->integer('EAN')->unique();
+            // $table->id();
+            $table->bigInteger('EAN')->unique();
             $table->string('product');
             $table->string('merk');
             $table->string('volume')->nullable();
             $table->float('prijs')->nullable();
+            $table->timestamp("updated_at")->nullable();
+            $table->timestamp("created_at")->nullable();
         });
     }
 

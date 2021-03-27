@@ -25,5 +25,13 @@ Route::post('/submit', [App\Http\Controllers\ToevoegenController::class, 'store'
 
 Route::post('/remove', [App\Http\Controllers\VerwijderController::class, 'remove']);
 
+Route::post('/add', [App\Http\Controllers\CopyFromStoredProductsController::class, 'add']);
+
+Route::get('/api', [App\Http\Controllers\ApiController::class, 'api']);
+
+
+
+
+
 
 

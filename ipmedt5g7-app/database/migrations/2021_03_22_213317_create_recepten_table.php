@@ -32,10 +32,11 @@ class CreateReceptenTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('recepten');
+
         Schema::table('recepten', function (Blueprint $table) {
             $table->dropForeign('recepten_soort_foreign');
         });
 
-        Schema::dropIfExists('recept');
     }
 }
