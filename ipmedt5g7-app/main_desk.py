@@ -73,10 +73,18 @@ while True:
     elif (rcv == 'e'):
         mycursor.execute("UPDATE deskworking SET working_status = 'niet aan het werken';")
         mydb.commit()
+
+    elif (rcv == 'gp'):
+        mycursor.execute("UPDATE deskworking SET working_status = '!TIJD OM TE PAUZEREN!';")
+        mydb.commit()
+
+    elif (rcv == 'gw'):
+        mycursor.execute("UPDATE deskworking SET working_status = '!TIJD OM WEER TE WERKEN!';")
+        mydb.commit()
         
 
     time.sleep(1)
-    print("main.py is aan het runnen")
+    print("main_desk.py is aan het runnen")
 
     
 mydb.close()
