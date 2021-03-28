@@ -516,6 +516,7 @@ class ComposerStaticInit15f0b21cce79b10397cb080b2b59c30d
         'App\\Http\\Controllers\\ReceptController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReceptController.php',
         'App\\Http\\Controllers\\ShoppinglistController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShoppinglistController.php',
         'App\\Http\\Controllers\\ToevoegenController' => __DIR__ . '/../..' . '/app/Http/Controllers/ToevoegenController.php',
+        'App\\Http\\Controllers\\UpcToStoredProductsTableController' => __DIR__ . '/../..' . '/app/Http/Controllers/UpcToStoredProductsTableController.php',
         'App\\Http\\Controllers\\VerwijderController' => __DIR__ . '/../..' . '/app/Http/Controllers/VerwijderController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

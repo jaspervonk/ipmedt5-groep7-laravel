@@ -14,6 +14,7 @@ return array(
     'App\\Http\\Controllers\\ReceptController' => $baseDir . '/app/Http/Controllers/ReceptController.php',
     'App\\Http\\Controllers\\ShoppinglistController' => $baseDir . '/app/Http/Controllers/ShoppinglistController.php',
     'App\\Http\\Controllers\\ToevoegenController' => $baseDir . '/app/Http/Controllers/ToevoegenController.php',
+    'App\\Http\\Controllers\\UpcToStoredProductsTableController' => $baseDir . '/app/Http/Controllers/UpcToStoredProductsTableController.php',
     'App\\Http\\Controllers\\VerwijderController' => $baseDir . '/app/Http/Controllers/VerwijderController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
