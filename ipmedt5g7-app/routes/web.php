@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controller\ToevoegenController;
+use Illuminate\Support\Facades\Http;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +30,6 @@ Route::post('/remove', [App\Http\Controllers\VerwijderController::class, 'remove
 Route::post('/add', [App\Http\Controllers\CopyFromStoredProductsController::class, 'add']);
 
 Route::get('/api', [App\Http\Controllers\ApiController::class, 'api']);
-
-
 
 
 
