@@ -20,10 +20,10 @@
     <button type="submit">Toevoegen</button>
 </form>
 <h2>Scan barcode of voer hieronder in:</h2>
-<form action="/add" method="POST">
+<form action="/api" method="POST">
     @method('POST')
     {{ csrf_field() }}
-    <label for="merk">EAN</label>
+    <label for="merk">Barcode</label>
     <input type="text" name="EAN"><br>
 
     <button type="submit">Toevoegen</button>

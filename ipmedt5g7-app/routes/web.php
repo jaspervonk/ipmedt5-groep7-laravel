@@ -29,7 +29,7 @@ Route::post('/remove', [App\Http\Controllers\VerwijderController::class, 'remove
 
 Route::post('/add', [App\Http\Controllers\CopyFromStoredProductsController::class, 'add']);
 
-Route::get('/api', [App\Http\Controllers\ApiController::class, 'api']);
+Route::post('/api', [App\Http\Controllers\ApiController::class, 'api']);
 
 
 
