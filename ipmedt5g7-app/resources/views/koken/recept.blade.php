@@ -15,6 +15,15 @@
                 <p class='recept__informatie__tekst'> Tijd: {{$recepten->tijd}} minuten </p>
                 <p class='recept__informatie__tekst'> Maximum te behalen punten: {{$recepten->punten}}</p>   
             </section>
+            <section class='recept__informatie__kaart2'>
+                <section class='recept__timer'>
+                    <h2 class='recept__timer__tekst'> 00:00:00</h1>
+                </section>
+                <section class='recept__btnSection u-flex-v-center'>
+                    <button class='recept__button recept__start' > Start recept </button>
+                    <button class='recept__button recept__stop' > Stop recept </button>
+                </section>
+            </section>
         </section>
     </section>
     <section class=recept__section2>

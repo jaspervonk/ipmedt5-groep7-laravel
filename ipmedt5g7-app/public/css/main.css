@@ -148,6 +148,43 @@ li, p{
     padding-top: 2rem;
 }
 
+.recept__btnSection{
+    padding-top: 4rem;
+}
+
+.recept__button{
+    margin: 0 auto;
+    padding: 0.75rem 2.5rem;
+    box-sizing: border-box;
+    background-color: #F8B500;
+    border: none;
+    color: #393E46;
+    box-shadow: 0 0 1.5rem #333;
+    /* border-radius: 0.25rem; */
+}
+
+.recept__stop{
+    display: none;
+}
+
+.receptKaart__button:hover{
+    cursor:pointer;
+}
+
+.recept__timer{
+    padding-top: 4rem;
+}
+
+.recept__timer__tekst{
+    margin: 0 auto;
+    width: 60%;
+    padding: 1rem;
+    text-align: center;
+    background-color: #5C636E;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.5rem #333;
+}
+
 .recept__ingredienten{
     width:40%;
     padding: 2rem;
@@ -208,13 +245,34 @@ li, p{
     }
 
     .recept__informatie{
+        display: flex;
         margin-left: 4rem;
         padding-top: 2rem;
-        width: 60%;
+        width: 80%;
     }
 
     .recept__informatie__kaart{
         margin: 0;
+        width: 50%;
+    }
+
+    .recept__informatie__kaart2{
+        padding-left: 4rem;
+        width: 50%;
+    }
+
+    .recept__timer{
+        padding-top: 2rem;
+    }
+    
+    .recept__timer__tekst{
+        margin: 0 auto;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        background-color: #5C636E;
+        border-radius: 1rem;
+        box-shadow: 0 0 1.5rem #333;
     }
 }
 
