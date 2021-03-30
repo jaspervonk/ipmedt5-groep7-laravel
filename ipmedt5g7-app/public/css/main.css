@@ -75,6 +75,24 @@ li, p{
     cursor:pointer;
 }
 
+@media(max-width: 62.5rem){
+    .receptKaart{
+        grid-column: span 4;
+    }
+}
+
+@media(max-width: 52.5rem){
+    .receptKaart{
+        grid-column: span 6;
+    }
+}
+
+@media(max-width: 32.5rem){
+    .receptKaart{
+        grid-column: span 12;
+    }
+}
+
 /* Recept */
 
 .recept{
@@ -152,6 +170,58 @@ li, p{
 .recept__bereiden__heading, .recept__ingredienten__heading{
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+@media(max-width: 70rem){
+    .recept{
+        width: 70%;
+    }
+}
+
+@media(max-width: 62.5rem){
+    .recept{
+        width: 80%;
+    }
+}
+
+@media(max-width: 52.5rem){
+    .recept{
+        width: 90%;
+    }
+
+    .recept__section1, .recept__section2{
+        display: block;
+    }
+
+    .recept__ingredienten, .recept__bereiden{
+        width: 90%;
+    }
+
+    .recept__ingredienten__kaart{
+        margin: 0 ;
+        padding-left: 2rem;
+    }
+
+    .recept__figure{
+        margin: 0 auto;
+        width: 84%;
+    }
+
+    .recept__informatie{
+        margin-left: 4rem;
+        padding-top: 2rem;
+        width: 60%;
+    }
+
+    .recept__informatie__kaart{
+        margin: 0;
+    }
+}
+
+@media(max-width: 32.5rem){
+    .recept{
+        width: 95%;
+    }
 }
 
 /* Shopping list */
