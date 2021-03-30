@@ -28,3 +28,5 @@
 
     <button type="submit">Toevoegen</button>
 </form>
+@include('boodschappen.addUser')
+<a href="/change">Andere gebruiker kiezen</a>

@@ -29,7 +29,12 @@ Route::post('/remove', [App\Http\Controllers\VerwijderController::class, 'remove
 
 Route::post('/add', [App\Http\Controllers\CopyFromStoredProductsController::class, 'add']);
 
+Route::post('/addUser', [App\Http\Controllers\AddUserController::class, 'create']);
+
 Route::post('/api', [App\Http\Controllers\ApiController::class, 'api']);
+
+Route::get('/change', [App\Http\Controllers\AddUserController::class, 'changeUser']);
+Route::post('/changeUser', [App\Http\Controllers\AddUserController::class, 'ToPersonalPage']);
 
 
 

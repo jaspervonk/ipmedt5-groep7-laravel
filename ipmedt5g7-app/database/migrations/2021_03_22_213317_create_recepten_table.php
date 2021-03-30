@@ -34,9 +34,9 @@ class CreateReceptenTable extends Migration
     {
         Schema::dropIfExists('recepten');
 
-        Schema::table('recepten', function (Blueprint $table) {
-            $table->dropForeign('recepten_soort_foreign');
-        });
+        // Schema::table('recepten', function (Blueprint $table) {
+        //     $table->dropForeign('recepten_soort_foreign');
+        // });
 
     }
 }
