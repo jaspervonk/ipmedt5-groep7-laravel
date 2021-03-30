@@ -11,16 +11,16 @@
         </figure>
         <section class='recept__informatie'>
             <section class='recept__informatie__kaart'>
-                <p class='recept__informatie__tekst'> Bereiden voor: 2 pers. </p>
-                <p class='recept__informatie__tekst'> Duur: 20 minuten </p>
-                <p class='recept__informatie__tekst'> Te behalen punten: 3</p>   
+                <p class='recept__informatie__tekst'> Recept voor: {{$recepten->hoeveelheid}} </p>
+                <p class='recept__informatie__tekst'> Tijd: {{$recepten->tijd}} minuten </p>
+                <p class='recept__informatie__tekst'> Maximum te behalen punten: {{$recepten->punten}}</p>   
             </section>
         </section>
     </section>
     <section class=recept__section2>
         <section class='recept__bereiden'>
             <h2 class='recept__bereiden__heading'> Hoe te bereiden </h2>
-            <p class='recept__bereiden__tekst'> {{$recepten->bereiden}} </p>
+            <p class='recept__bereiden__tekst'> {!! nl2br(e($recepten->bereiden)) !!}</p>
         </section>
         <section class='recept__ingredienten'>
             <section class='recept__ingredienten__kaart'>
