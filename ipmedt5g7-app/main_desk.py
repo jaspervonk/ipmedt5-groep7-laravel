@@ -89,18 +89,42 @@ while True:
             pauze_tijd = getallen[1]
 
 
-            # werk_tijd = int(werk_tijd)
-            # pauze_tijd = int(pauze_tijd)
+            werk_tijd_seconden = int(werk_tijd)
+            pauze_tijd_seconden = int(pauze_tijd)
+            
+            werk_tijd_minuten = werk_tijd_seconden // 60
+            werk_tijd_minuten_aftrek = werk_tijd_minuten * 60
+            werk_tijd_seconden = werk_tijd_seconden - werk_tijd_minuten_aftrek
+            werk_tijd_uren = werk_tijd_minuten // 60
+            werk_tijd_uren_aftrek = werk_tijd_uren * 60
+            werk_tijd_minuten = werk_tijd_minuten - werk_tijd_uren_aftrek
+
+            pauze_tijd_minuten = pauze_tijd_seconden // 60
+            pauze_tijd_minuten_aftrek = pauze_tijd_minuten * 60
+            pauze_tijd_seconden = pauze_tijd_seconden - pauze_tijd_minuten_aftrek
+            pauze_tijd_uren = pauze_tijd_minuten // 60
+            pauze_tijd_uren_aftrek = pauze_tijd_uren * 60
+            pauze_tijd_minuten = pauze_tijd_minuten - pauze_tijd_uren_aftrek
+
+            werk_tijd_uren = str(werk_tijd_uren)
+            werk_tijd_minuten = str(werk_tijd_minuten)
+            werk_tijd_seconden = str(werk_tijd_seconden)
+
+            pauze_tijd_uren = str(pauze_tijd_uren)
+            pauze_tijd_minuten = str(pauze_tijd_minuten)
+            pauze_tijd_seconden = str(pauze_tijd_seconden)
+
 
 
             # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (20, 15);")
-            mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (" + werk_tijd + ", " + pauze_tijd + ");")
+            # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (" + werk_tijd + ", " + pauze_tijd + ");")
+            mycursor.execute("INSERT INTO desktimer VALUES (" + werk_tijd_uren + ", " + werk_tijd_minuten + ", "+ werk_tijd_seconden + ", " + pauze_tijd_uren + ", " + pauze_tijd_minuten + ", " + pauze_tijd_seconden + ");")
             mydb.commit()
             # print("hij komt hier")
         except:
             pass        
     time.sleep(1)
-    print("main_desk.py is aan het runnen")
+    # print("main_desk.py is aan het runnen")
     
 
     
