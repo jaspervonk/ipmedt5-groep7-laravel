@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class deskController extends Controller
 {
-    public function show(){
+    public function index(){
         return view('workspace.deskview', [
             // 'sushi' => \App\Models\Sushi::all(),
             // 'desktimer' => \App\Models\Desk::first()->work_minutes
@@ -24,5 +24,12 @@ class deskController extends Controller
         ]);
 
         // return view('count.show')->with('count', Count::first()->amount);
+    }
+
+    public function show(){
+        return view('workspace.progress', [
+            // 'working_status' => \App\Models\DeskWork::all()->first()->working_status,
+            
+        ]);
     }
 }

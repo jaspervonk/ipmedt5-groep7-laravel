@@ -25,4 +25,5 @@ Route::post('/submit', [App\Http\Controllers\ToevoegenController::class, 'store'
 
 Route::post('/remove', [App\Http\Controllers\VerwijderController::class, 'remove']);
 
-Route::get('/desk', [\App\Http\Controllers\deskController::class, 'show']);
+Route::get('/desk', [\App\Http\Controllers\deskController::class, 'index']);
+Route::get('/desk/progress', [\App\Http\Controllers\deskController::class, 'show']);
