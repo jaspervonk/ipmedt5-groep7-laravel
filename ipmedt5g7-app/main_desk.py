@@ -56,7 +56,7 @@ port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=1.0)
 mycursor = mydb.cursor()
 while True:   
     rcv = port.readline().strip()
-    # print(rcv) 
+    # print(rcv)
 
     if (rcv == 's'):
         mycursor.execute("UPDATE deskworking SET working_status = 'aan het werken';")
@@ -81,10 +81,27 @@ while True:
     elif (rcv == 'gw'):
         mycursor.execute("UPDATE deskworking SET working_status = '!TIJD OM WEER TE WERKEN!';")
         mydb.commit()
-        
 
+    elif(rcv != ""):
+        try:
+            getallen = rcv.split(" ")
+            werk_tijd = getallen[0]
+            pauze_tijd = getallen[1]
+
+
+            # werk_tijd = int(werk_tijd)
+            # pauze_tijd = int(pauze_tijd)
+
+
+            # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (20, 15);")
+            mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (" + werk_tijd + ", " + pauze_tijd + ");")
+            mydb.commit()
+            # print("hij komt hier")
+        except:
+            pass        
     time.sleep(1)
     print("main_desk.py is aan het runnen")
+    
 
     
 mydb.close()

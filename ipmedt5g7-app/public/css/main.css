@@ -102,7 +102,7 @@ input[type=checkbox]:checked + label.isChecked{
 
 
 
-/* kleurenpallet: https://colorhunt.co/palette/17117 */
+/* ---------------------------- desk ---------------------------- */
 
 :root {
     --background: #eaeaea;
@@ -134,6 +134,9 @@ input[type=checkbox]:checked + label.isChecked{
     width: 50%;
     height: 50%;
     margin: auto;
+}
+
+.u-desk-grid-button{
     grid-row: 3;
     grid-column: 2 / span 2;
 }

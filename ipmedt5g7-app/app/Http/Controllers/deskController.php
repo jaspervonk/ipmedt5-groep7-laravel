@@ -28,8 +28,10 @@ class deskController extends Controller
 
     public function show(){
         return view('workspace.progress', [
-            // 'working_status' => \App\Models\DeskWork::all()->first()->working_status,
-            
+            // 'work_minutes' => \App\Models\Desk::all()->first()->total_work_minutes,
+            // 'pause_minutes' => \App\Models\Desk::all()->first()->total_pause_minutes,
+            'alle_tijden' => \App\Models\Desk::all(),
+
         ]);
     }
 }
