@@ -21,7 +21,7 @@ class CreateShoppinglistTable extends Migration
             $table->string("volume")->nullable();
             $table->timestamp("updated_at")->nullable();
             $table->timestamp("created_at")->nullable();
-            $table->boolean("checked")->default(false);
+            $table->string("user")->default("Algemeen")->nullable();
         });
     }
 

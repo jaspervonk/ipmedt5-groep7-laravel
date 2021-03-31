@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controller\ToevoegenController;
 use Illuminate\Support\Facades\Http;
-
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +36,7 @@ Route::post('/api', [App\Http\Controllers\ApiController::class, 'api']);
 Route::get('/change', [App\Http\Controllers\AddUserController::class, 'changeUser']);
 Route::post('/changeUser', [App\Http\Controllers\AddUserController::class, 'ToPersonalPage']);
 
+Route::get('boodschappenlijst/{{id}}', [App\Http\Controllers\ShoppinglistController::class, 'personalList']);
 
 
 

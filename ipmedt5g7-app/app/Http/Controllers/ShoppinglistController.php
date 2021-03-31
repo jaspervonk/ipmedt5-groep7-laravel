@@ -17,8 +17,16 @@ class ShoppinglistController extends Controller
     public function index(){
         return view ('boodschappen.boodschappenlijst', [
             'product' => \App\Models\Shoppinglist::all(),
+            'user' => \App\Models\User::all(),
         ]);
         // $product = \App\Models\Shoppinglist::all();
         // return view('welcome', ['product' => $product]);
+    }
+
+    public function personalList(){
+        return view ('boodschappen.boodschappenlijst', [
+            'product' => \App\Models\Shoppinglist::all(),
+            'user' => \App\Models\User::all(),
+        ]);
     }
 }

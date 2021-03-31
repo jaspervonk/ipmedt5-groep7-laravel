@@ -25,19 +25,4 @@ class AddUserController extends Controller
         //print($activeUserTable);
         return redirect('/boodschappenlijst');
     }
-
-    // public function ToPersonalPage(Request $request){
-    //     $activeUser = activeUserTable::all();
-    //     if(activeUserTable::all()->first() == null){
-    //         $activeUser->name = $request->input('name');
-    //         //print($activeUser->name);
-    //     }
-    //     else{
-    //         $activeUser->name = $request->input('name')->first();
-    //         $led->led_on = 'uit';
-    //         //print($activeUser);
-    //     }
-    //     $activeUser->save();
-    //     return redirect('/');
-    // }
 }
