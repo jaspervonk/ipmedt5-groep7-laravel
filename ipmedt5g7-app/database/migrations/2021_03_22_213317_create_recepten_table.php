@@ -39,6 +39,6 @@ class CreateReceptenTable extends Migration
             $table->dropForeign('recepten_soort_foreign');
         });
 
-        Schema::dropIfExists('recept');
+        Schema::dropIfExists('recepten');
     }
 }
