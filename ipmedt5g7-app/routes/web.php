@@ -38,4 +38,5 @@ Route::post('/changeUser', [App\Http\Controllers\AddUserController::class, 'ToPe
 
 Route::get('boodschappenlijst/{{id}}', [App\Http\Controllers\ShoppinglistController::class, 'personalList']);
 
-Route::get('/desk', [\App\Http\Controllers\deskController::class, 'show']);
+Route::get('/desk', [\App\Http\Controllers\deskController::class, 'index']);
+Route::get('/desk/progress', [\App\Http\Controllers\deskController::class, 'show']);
