@@ -50,7 +50,7 @@ class ReceptSeeder extends Seeder
         ]);
 
         DB::table('recepten')->insert([
-            'naam' => 'Chocolade Pannenkoeken Met Havermout',
+            'naam' => 'Chocolade Pannenkoeken',
             'soort' => 'ontbijt',
             'ingredienten' => '2 bananen (het liefst zo rijp mogelijk)
             200 ml melk

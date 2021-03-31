@@ -7,7 +7,7 @@
 @section('content')
     <ul class='u-grid-12 u-grid-gap-2'>
         @foreach($recepten as $recepten)
-            <li class='receptKaart u-list-style-none'> 
+            <li class='receptKaart u-list-style-none u-box-shadow'> 
                     <header class='receptKaart__header u-flex-v-center'>  
                         <h2 class='receptKaart__heading'> {{$recepten->naam}} </h2>
                     </header>

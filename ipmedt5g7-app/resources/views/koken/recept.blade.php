@@ -1,23 +1,23 @@
 @extends('default')
 
 @section('content')
-<article class='recept'>
+<article class='recept u-box-shadow'>
     <header class='recept__header u-flex-v-center'>
         <h1 class='recept__heading'>{{$recepten->naam}}</h1>
     </header>
     <section class='recept__section1'>
         <figure class='recept__figure'>
-            <img class='recept__img' src="{{$recepten->afbeelding}}" alt="{{$recepten->afbeelding}}">
+            <img class='recept__img u-box-shadow-content' src="{{$recepten->afbeelding}}" alt="{{$recepten->afbeelding}}">
         </figure>
         <section class='recept__informatie'>
-            <section class='recept__informatie__kaart'>
+            <section class='recept__informatie__kaart u-box-shadow-content'>
                 <p class='recept__informatie__tekst'> Recept voor: {{$recepten->hoeveelheid}} </p>
                 <p class='recept__informatie__tekst'> Tijd: {{$recepten->tijd}} minuten </p>
                 <p class='recept__informatie__tekst'> Maximum te behalen punten: {{$recepten->punten}}</p>   
             </section>
             <section class='recept__informatie__kaart2'>
                 <section class='recept__timer'>
-                    <h2 class='recept__timer__tekst'> 00:00:00</h1>
+                    <h2 class='recept__timer__tekst u-box-shadow-content'> 00:00:00</h1>
                 </section>
                 <section class='recept__btnSection u-flex-v-center'>
                     <button class='recept__button recept__start' > Start recept </button>
