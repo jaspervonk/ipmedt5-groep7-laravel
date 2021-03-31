@@ -15,7 +15,7 @@
                         <img class='receptKaart__img' src="{{$recepten->afbeelding}}" alt="{{$recepten->afbeelding}}">
                     </figure>
                     <section class='receptKaart__btnSection u-flex-v-center'>
-                        <button class='receptKaart__button'> Lees meer </button>
+                        <button class='receptKaart__button' onclick="window.location='{{ url('/recepten/' . $recepten->id) }}'"> Lees meer </button>
                     </section>
             </li>
         @endforeach

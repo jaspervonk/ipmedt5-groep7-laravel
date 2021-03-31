@@ -20,13 +20,13 @@ class ShoppinglistTableSeeder extends Seeder
             'merk' => "Campina",
             'aantal' => 2,
             'volume' => "1 liter",
-            'user' => $activeUser->name
+            // 'user' => $activeUser->name
         ]);
         DB::table('shoppinglist')->insert([
             'product' => "Naturel Chips",
             'merk' => "Lays",
             'volume' => "225 gram",
-            'user' => $activeUser->name
+            // 'user' => $activeUser->name
         ]);
     }
 }

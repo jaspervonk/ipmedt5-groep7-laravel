@@ -20,8 +20,10 @@ class CreateReceptenTable extends Migration
             $table->text('ingredienten');
             $table->text('bereiden');
             $table->string('afbeelding')->default('/img/recept_default.jpg');
+            $table->string('hoeveelheid');
+            $table->integer('tijd');
+            $table->integer('punten');
             $table->foreign('soort')->references('soort')->on('soort_recept');
-            
         });
     }
 
@@ -32,11 +34,10 @@ class CreateReceptenTable extends Migration
      */
     public function down()
     {
+        Schema::table('recepten', function (Blueprint $table) {
+            $table->dropForeign('recepten_soort_foreign');
+        });
+
         Schema::dropIfExists('recepten');
-
-        // Schema::table('recepten', function (Blueprint $table) {
-        //     $table->dropForeign('recepten_soort_foreign');
-        // });
-
     }
 }
