@@ -23,6 +23,8 @@ class CreateDesktimerTable extends Migration
             $table->integer('total_pause_hours')->default(0);
             $table->integer('total_pause_minutes')->default(0);
             $table->integer('total_pause_seconds')->default(0);
+
+            $table->string('datum')->default('XX-XX-XXXX');
         });
     }
 
