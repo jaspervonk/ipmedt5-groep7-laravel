@@ -12,9 +12,51 @@ html{
 body{
     font-size: 1.6rem;
     padding: 4rem;
-    background: #5C636E;
+    background: #F7F7F7;
     font-family: 'Montserrat', sans-serif;
-    color:#F7F7F7;
+    color:#FFF;
+}
+
+.button{
+    border: none;
+    color: #fff;
+    font-family: 'Montserrat' ,sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button--card{
+    padding: 2rem 1rem;
+    float: right;
+}
+
+.button--red{
+    background: linear-gradient(180deg, #6CC04A 0%, #FF9D83 0.01%, #FA546C 100%);
+}
+
+.button--small{
+    padding: 1rem 1.5rem;
+}
+
+.pageTitle{
+    color: #212121;
+    font-size: 4.5rem;
+}
+
+.blackFont{
+    color: #212121;
+}
+
+.u-noLiStyle{
+    list-style: none;
+}
+
+.card{
+    background-image: linear-gradient(#C3A5E4, #837BC6);
+    padding: 1rem 5rem 5rem;
+    margin: 5rem;
+    max-width: 60rem;
+    margin: 2rem 0;
 }
 
 li, p{
@@ -311,7 +353,43 @@ input[type=checkbox]:checked + label.isChecked{
 
 }
 
+/*------------------------------ grid -------------------------- */
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+    grid-template-rows: repeat(12, minmax(0,1fr));
+    column-gap: 1.5rem;
 
+}
+
+.grid__header{
+    grid-column: span 6;
+    grid-row: 1;
+}
+
+.grid__booschappenlijstCard{
+    grid-column: 1 / 5;
+    grid-row: 2 / 10;
+}
+
+.grid__toevoegen{
+    grid-column: 5 / 9;
+    grid-row: 4 / 10;
+    gap: 5rem;
+}
+
+.grid__barcodeScannen{
+    grid-column: 5 / 9;
+    grid-row: 2 / 4;
+    gap: 5rem;
+}
+
+.grid__userToevoegen{
+    grid-column: 9 / 13;
+    grid-row: 2 / 4;
+    gap: 5rem;
+}
 
 
 /* ---------------------------- desk ---------------------------- */
