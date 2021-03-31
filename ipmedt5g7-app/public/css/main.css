@@ -101,3 +101,33 @@ input[type=checkbox]:checked + label.isChecked{
 
 
 
+
+/* kleurenpallet: https://colorhunt.co/palette/17117 */
+
+:root {
+    --background: #eaeaea;
+    --red: #ff2e63;
+    --black: #252a34;
+    --blue: #08d9d6;
+  }
+
+.desktimer{
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    grid-template-rows: repeat(3, minmax(0,1fr));
+}
+
+.desktimer__status{
+    font-size: 9rem;
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+

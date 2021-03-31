@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ActiveUserTableSeeder::class,
             ShoppinglistTableSeeder::class,
+            DeskworkingTableSeeder::class,
+            DesktimerTableSeeder::class,
         ]);
-        // $this->call(ShoppinglistTableSeeder::class);
     }
 }
