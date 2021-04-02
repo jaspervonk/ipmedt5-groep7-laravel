@@ -1,3 +1,30 @@
+const swiper = new Swiper('.swiper-container', {
+    observer: true,
+    observeParents: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+
+function receptStart() {
+    document.getElementById("bereiden").style.display = "none";
+    document.getElementById("slider").style.display = "block";
+    document.getElementById("receptStart").style.display = "none";
+    document.getElementById("receptStop").style.display = "block";
+}
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -46,7 +73,6 @@ function sleep(ms) {
 
     function countdown1(hr,mm,ss)
     {
-        document.getElementById("timer").style.display = "none";
         var interval = setInterval(async function(){
 
             ss--;
@@ -77,7 +103,6 @@ function sleep(ms) {
 
     function countdown2(hr,mm,ss)
     {
-        document.getElementById("timer").style.display = "none";
         var interval = setInterval(async function(){
 
             ss--;
@@ -105,3 +130,4 @@ function sleep(ms) {
 
         },1000)
     }
+
