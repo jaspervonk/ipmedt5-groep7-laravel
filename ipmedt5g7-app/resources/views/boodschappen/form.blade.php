@@ -34,6 +34,6 @@
         <button class="button button--red button--card" type="submit">Toevoegen</button>
     </form>
 </section>
-<section class="card grid__userToevoegen">
+<section class="card grid__userToevoegen u-box-shadow">
     @include('boodschappen.addUser')
 </section>

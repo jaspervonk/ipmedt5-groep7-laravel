@@ -7,7 +7,7 @@
             @endforeach
             @include('boodschappen.changeUser')
         </header>
-        <section class="card u-box-shadow grid__booschappenlijstCard">
+        <section class="card u-box-shadow grid__booschappenlijstCard u-box-shadow">
             <h2 class="card__title">{{$ActiveUser->name}}'s boodschappenlijst</h2>
             <hr>
             <form action="/remove" method="POST">

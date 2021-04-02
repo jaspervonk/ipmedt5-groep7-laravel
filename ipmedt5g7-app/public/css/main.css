@@ -431,4 +431,7 @@ input[type=checkbox]:checked + label.isChecked{
     grid-column: 2 / span 2;
 }
 
+.u-box-shadow{
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
+}
 
