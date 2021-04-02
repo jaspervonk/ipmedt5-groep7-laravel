@@ -182,12 +182,13 @@ class ReceptSeeder extends Seeder
             2 tl peterselie
             geraspte kaas
             peper',
-            'bereiden' => 'Verwarm de oven voor op 180 graden. Bak de spekreepjes in ongeveer 5 minuten krokant, in een pan zonder olie. 
-            
-            Snijd ondertussen de knoflook fijn en snipper de rode ui. Haal de spekreepjes vervolgens uit de pan en laat even uitlekken op een keukenpapiertje. Doe vervolgens een piepklein scheutje olie in een pan en fruit de ui en knoflook aan. Voeg na een minuutje de kookroom, ricotta en een snufje peper toe. Roer de spekjes erdoor en het vuur kan uit. Doe een klein beetje saus op de bodem van de ovenschaal. 
-            
-            Daarbovenop doe je een laagje lasagnebladen, dan weer saus, dan weer lasganebladen en zo ga je door. De bovenste laag eindig je met saus en daarover strooi je nog geraspte kaas. Dan kan de lasagne nu de oven in voor ongeveer 30 minuten.',
+            'bereiden_1' => 'Verwarm de oven voor op 180 graden. Bak de spekreepjes in ongeveer 5 minuten krokant, in een pan zonder olie.',
+            'bereiden_2' => 'Snijd ondertussen de knoflook fijn en snipper de rode ui. Haal de spekreepjes vervolgens uit de pan en laat even uitlekken op een keukenpapiertje. Doe vervolgens een piepklein scheutje olie in een pan en fruit de ui en knoflook aan. Voeg na een minuutje de kookroom, ricotta en een snufje peper toe. Roer de spekjes erdoor en het vuur kan uit. Doe een klein beetje saus op de bodem van de ovenschaal.',
+            'bereiden_3' => 'Daarbovenop doe je een laagje lasagnebladen, dan weer saus, dan weer lasganebladen en zo ga je door. De bovenste laag eindig je met saus en daarover strooi je nog geraspte kaas. Dan kan de lasagne nu de oven in voor ongeveer 30 minuten.',
             'afbeelding' => '/img/lasagne.jpg',
+            'timer_1' => 8,
+            'timer_2' => 5,
+            'timer_3' => 10,
             'hoeveelheid' => '2-3 personen',
             'tijd' => 40,
             'punten' => 180,

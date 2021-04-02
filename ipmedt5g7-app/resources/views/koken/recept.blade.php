@@ -29,7 +29,15 @@
     <section class=recept__section2>
         <section class='recept__bereiden'>
             <h2 class='recept__bereiden__heading'> Hoe te bereiden </h2>
-            <p class='recept__bereiden__tekst'> {!! nl2br(e($recepten->bereiden)) !!}</p>
+            <p class='recept__bereiden__tekst'> {{$recepten->bereiden_1}}</p> 
+            <button onclick="countdown(0,0,{{$recepten->timer_1}}), 1"> Start </button>
+            <h3 id="timer"> time</h3> <br>
+            <p class='recept__bereiden__tekst'> {{$recepten->bereiden_2}}</p>
+            <button onclick="countdown1(0,0,{{$recepten->timer_2}}), 2"> Start </button>
+            <h3 id="timer2"> time</h3> <br>
+            <p class='recept__bereiden__tekst'> {{$recepten->bereiden_3}}</p>
+            <button onclick="countdown2(0,0,{{$recepten->timer_3}}), 3"> Start </button>
+            <h3 id="timer3"> time</h3> <br>
         </section>
         <section class='recept__ingredienten'>
             <section class='recept__ingredienten__kaart'>
@@ -39,5 +47,7 @@
         </section>
     </section>
 </article>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
+<script src='/js/timer.js'></script>
 @endsection

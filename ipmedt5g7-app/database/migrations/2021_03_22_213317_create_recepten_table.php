@@ -18,7 +18,13 @@ class CreateReceptenTable extends Migration
             $table->string('naam');
             $table->string('soort');
             $table->text('ingredienten');
-            $table->text('bereiden');
+            $table->text('bereiden')->nullable();
+            $table->text('bereiden_1')->nullable();
+            $table->text('bereiden_2')->nullable();
+            $table->text('bereiden_3')->nullable();
+            $table->integer('timer_1')->nullable();
+            $table->integer('timer_2')->nullable();
+            $table->integer('timer_3')->nullable();
             $table->string('afbeelding')->default('/img/recept_default.jpg');
             $table->string('hoeveelheid');
             $table->integer('tijd');
