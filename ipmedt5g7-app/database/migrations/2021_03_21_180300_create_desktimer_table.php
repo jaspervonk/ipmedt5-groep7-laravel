@@ -25,8 +25,9 @@ class CreateDesktimerTable extends Migration
             $table->integer('total_pause_seconds')->default(0);
 
             $table->string('datum')->default('XX-XX-XXXX');
-
             $table->integer('aantal_pauzes')->default(0);
+            $table->string('feedback')->default('niet berekend');
+
         });
     }
 

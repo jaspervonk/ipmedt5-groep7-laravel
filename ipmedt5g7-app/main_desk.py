@@ -52,7 +52,7 @@ mydb = mysql.connector.connect(
     )
 
 port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=1.0)
-
+print("maindesk.py is aan het runnen")
 mycursor = mydb.cursor()
 while True:   
     rcv = port.readline().strip()
@@ -89,7 +89,6 @@ while True:
             pauze_tijd = getallen[1]
             aantal_pauzes = getallen[2]
 
-
             werk_tijd_seconden = int(werk_tijd)
             pauze_tijd_seconden = int(pauze_tijd)
             
@@ -117,15 +116,35 @@ while True:
 
             today = date.today()
             datum = today.strftime("%d-%m-%Y")
-            datum_db = str(datum)           
+            datum_db = str(datum)
+
+            
+            feedback_werk_tijd = int(werk_tijd)
+            feedback_pauze_tijd = int(pauze_tijd)
+            feedback=""
+
+            if (int(aantal_pauzes) == 0):
+                if (feedback_werk_tijd < 8100):
+                    feedback = "Je hebt niet gepauzeerd, maar wel GOED gewerkt."
+                elif(feedback_werk_tijd >= 8100):
+                    feedback = "Je hebt NIET goed gewerkt, je had moeten pauzeren tussendoor."
+
+            elif(int(aantal_pauzes) > 0):
+                if ((feedback_pauze_tijd/feedback_werk_tijd) < 0.0625):
+                    feedback = "Je hebt NIET goed gewerkt, je hebt te WEINIG gepauzeerd."
+                elif ((feedback_pauze_tijd/feedback_werk_tijd) > 0.25):
+                    feedback = "Je hebt NIET goed gewerkt, je hebt te VEEL gepauzeerd."
+                else:
+                    feedback = "Je hebt GOED gewerkt, de verhouding van tijden is GOED."
+
 
             # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (20, 15);")
             # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (" + werk_tijd + ", " + pauze_tijd + ");")
-            mycursor.execute("INSERT INTO desktimer VALUES (" + werk_tijd_uren + ", " + werk_tijd_minuten + ", "+ werk_tijd_seconden + ", " + pauze_tijd_uren + ", " + pauze_tijd_minuten + ", " + pauze_tijd_seconden + ", '" + datum_db + "', " + aantal_pauzes + ");")
+            mycursor.execute("INSERT INTO desktimer VALUES (" + werk_tijd_uren + ", " + werk_tijd_minuten + ", "+ werk_tijd_seconden + ", " + pauze_tijd_uren + ", " + pauze_tijd_minuten + ", " + pauze_tijd_seconden + ", '" + datum_db + "', " + aantal_pauzes + ", '" + feedback + "');")
             mydb.commit()
             # print("hij komt hier")
         except:
-            pass        
+            print("er is ergens en error")       
     time.sleep(1)
     # print("main_desk.py is aan het runnen")
     

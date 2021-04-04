@@ -316,9 +316,9 @@ input[type=checkbox]:checked + label.isChecked{
 
 /* ---------------------------- desk ---------------------------- */
 
-:root {
+/* :root {
 
-  }
+  } */
 
 .desktimer{
     width: 100%;
@@ -373,7 +373,7 @@ input[type=checkbox]:checked + label.isChecked{
     background: linear-gradient(180deg, #6CC04A 0%, #FF9D83 0.01%, #FA546C 100%);
     display: grid;
     grid-template-columns: repeat(2, minmax(0,1fr));
-    grid-template-rows: repeat(3, minmax(0,1fr));
+    grid-template-rows: repeat(4, minmax(0,1fr));
 }
 
 .deskprogress__listitem__header{
@@ -386,4 +386,8 @@ input[type=checkbox]:checked + label.isChecked{
     grid-column: 2 / span 2;
 }
 
-
+.u-progress-text-grid{
+    border-top: 3px solid #1F1842;
+    grid-row: 4;
+    grid-column: span 2;
+}
