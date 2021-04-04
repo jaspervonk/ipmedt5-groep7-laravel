@@ -87,6 +87,7 @@ while True:
             getallen = rcv.split(" ")
             werk_tijd = getallen[0]
             pauze_tijd = getallen[1]
+            aantal_pauzes = getallen[2]
 
 
             werk_tijd_seconden = int(werk_tijd)
@@ -121,7 +122,7 @@ while True:
 
             # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (20, 15);")
             # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (" + werk_tijd + ", " + pauze_tijd + ");")
-            mycursor.execute("INSERT INTO desktimer VALUES (" + werk_tijd_uren + ", " + werk_tijd_minuten + ", "+ werk_tijd_seconden + ", " + pauze_tijd_uren + ", " + pauze_tijd_minuten + ", " + pauze_tijd_seconden + ", '" + datum_db + "');")
+            mycursor.execute("INSERT INTO desktimer VALUES (" + werk_tijd_uren + ", " + werk_tijd_minuten + ", "+ werk_tijd_seconden + ", " + pauze_tijd_uren + ", " + pauze_tijd_minuten + ", " + pauze_tijd_seconden + ", '" + datum_db + ", " + aantal_pauzes + "');")
             mydb.commit()
             # print("hij komt hier")
         except:
