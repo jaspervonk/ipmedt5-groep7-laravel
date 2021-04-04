@@ -8,11 +8,13 @@
     <section class="deskprogress">
         <ul class="deskprogress__list">
         @foreach($alle_tijden as $alle_tijden)
-            <li class="deskprogress__list__item"> {{$alle_tijden->datum}} </li>
-            <li class="deskprogress__list__item">gewerkte tijd: {{$alle_tijden->total_work_hours}} : {{$alle_tijden->total_work_minutes}} : {{$alle_tijden->total_work_seconds}} / gepauzeerde tijd: {{$alle_tijden->total_pause_hours}} : {{$alle_tijden->total_pause_minutes}} : {{$alle_tijden->total_pause_seconds}} </li>
-            <br />
+            <li class="deskprogress__listitem">
+            <h1 class="deskprogress__listitem__header">{{$alle_tijden->datum}}</h1>
+            <p class="deskprogress__listitem__text"> gewerkte tijd: {{$alle_tijden->total_work_hours}} : {{$alle_tijden->total_work_minutes}} : {{$alle_tijden->total_work_seconds}} </p>
+            <p> gepauzeerde tijd: {{$alle_tijden->total_pause_hours}} : {{$alle_tijden->total_pause_minutes}} : {{$alle_tijden->total_pause_seconds}} </p>
+            </li>
         @endforeach
         </ul>
-    </section>
     <button class="desktimer__button" type="button" onclick="window.location.assign('/desk')">ga terug</button>
+    </section>
 @endsection
