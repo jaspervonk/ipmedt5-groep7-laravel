@@ -117,12 +117,11 @@ while True:
 
             today = date.today()
             datum = today.strftime("%d-%m-%Y")
-            datum_db = str(datum)
-            
+            datum_db = str(datum)           
 
             # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (20, 15);")
             # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (" + werk_tijd + ", " + pauze_tijd + ");")
-            mycursor.execute("INSERT INTO desktimer VALUES (" + werk_tijd_uren + ", " + werk_tijd_minuten + ", "+ werk_tijd_seconden + ", " + pauze_tijd_uren + ", " + pauze_tijd_minuten + ", " + pauze_tijd_seconden + ", '" + datum_db + ", " + aantal_pauzes + "');")
+            mycursor.execute("INSERT INTO desktimer VALUES (" + werk_tijd_uren + ", " + werk_tijd_minuten + ", "+ werk_tijd_seconden + ", " + pauze_tijd_uren + ", " + pauze_tijd_minuten + ", " + pauze_tijd_seconden + ", '" + datum_db + "', " + aantal_pauzes + ");")
             mydb.commit()
             # print("hij komt hier")
         except:

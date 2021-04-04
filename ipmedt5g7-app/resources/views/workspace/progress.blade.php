@@ -12,7 +12,8 @@
             <h1 class="deskprogress__listitem__header">{{$alle_tijden->datum}}</h1>
             <p class="deskprogress__listitem__text"> gewerkte tijd: {{$alle_tijden->total_work_hours}} : {{$alle_tijden->total_work_minutes}} : {{$alle_tijden->total_work_seconds}} </p>
             <p class="deskprogress__listitem__text"> gepauzeerde tijd: {{$alle_tijden->total_pause_hours}} : {{$alle_tijden->total_pause_minutes}} : {{$alle_tijden->total_pause_seconds}} </p>
-            <p class="deskprogress__listitem__text"> {{$alle_tijden->aantal_pauzes}} </p>
+            <p class="deskprogress__listitem__text"> totaal aantal pauzes: {{$alle_tijden->aantal_pauzes}} </p>
+            <p class="deskprogress__listitem__text"> goed gewerkt / slecht gewerkt </p>
             </li>
         @endforeach
         </ul>
