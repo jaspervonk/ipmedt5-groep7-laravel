@@ -6,7 +6,9 @@
 
 @section('content')
 
-<form action="/selectDeskjob" method="GET">
+<form action="/selectDeskjob" method="POST">
+    @method('POST')
+    {{ csrf_field() }}
     <label class="u-text-color-black" for="deskjobs">Choose your browser from the list:</label>
     <input list="deskjobs" name="deskjob" id="deskjob">
 
@@ -15,18 +17,22 @@
             <option value="{{$alle_deskjobs->deskjob}}">
         @endforeach
     </datalist>
-</form>
 
+    <button type="submit">selecteer</button>
+</form>
 
 
 <form action="/addDeskjob" method="POST">
     @method('POST')
     {{ csrf_field() }}
     <label class="u-text-color-black" for="deskjob_name">Deskjob</label>
-    <input type="text" name="deskjob_name"><br />
-
+    <input type="text" name="deskjob_name">
     <button type="submit">Aanmaken</button>
 </form>
+
+<p class="u-text-color-black"> actieve deskjob: {{$actieve_deskjob}}</p>
+<p class="u-text-color-black">{{$test}}</p>
+
 
     <section class="deskprogress">
         <ul class="deskprogress__list">
