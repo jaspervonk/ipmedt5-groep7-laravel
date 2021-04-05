@@ -15,7 +15,8 @@ class CreateActiveDeskjobTable extends Migration
     {
         Schema::create('active_deskjob', function (Blueprint $table) {
             $table->id();
-            // $table->string('deskjob')->references('deskjob')->on('desktimer');
+            $table->string('deskjob');
+            // ->references('deskjob')->on('desktimer');
         });
     }
 
