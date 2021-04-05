@@ -50,11 +50,11 @@ mydb = mysql.connector.connect(
     passwd="laravel",
     database="deskWork"
     )
-
+x=0
 port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=1.0)
 print("maindesk.py is aan het runnen")
 mycursor = mydb.cursor()
-while True:   
+while True:
     rcv = port.readline().strip()
     # print(rcv)
 
@@ -123,6 +123,10 @@ while True:
             feedback_pauze_tijd = int(pauze_tijd)
             feedback=""
 
+            mycursor.execute("select deskjob from active_deskjob;")
+            for x in mycursor:
+                deskjob = x[0]
+
             if (int(aantal_pauzes) == 0):
                 if (feedback_werk_tijd < 8100):
                     feedback = "Je hebt niet gepauzeerd, maar wel GOED gewerkt."
@@ -140,7 +144,7 @@ while True:
 
             # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (20, 15);")
             # mycursor.execute("INSERT INTO desktimer (total_work_seconds, total_pause_seconds) VALUES (" + werk_tijd + ", " + pauze_tijd + ");")
-            mycursor.execute("INSERT INTO desktimer VALUES (" + werk_tijd_uren + ", " + werk_tijd_minuten + ", "+ werk_tijd_seconden + ", " + pauze_tijd_uren + ", " + pauze_tijd_minuten + ", " + pauze_tijd_seconden + ", '" + datum_db + "', " + aantal_pauzes + ", '" + feedback + "');")
+            mycursor.execute("INSERT INTO desktimer VALUES ('" + deskjob + "', " +  werk_tijd_uren + ", " + werk_tijd_minuten + ", "+ werk_tijd_seconden + ", " + pauze_tijd_uren + ", " + pauze_tijd_minuten + ", " + pauze_tijd_seconden + ", '" + datum_db + "', " + aantal_pauzes + ", '" + feedback + "');")
             mydb.commit()
             # print("hij komt hier")
         except:
