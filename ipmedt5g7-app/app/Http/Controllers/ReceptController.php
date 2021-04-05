@@ -22,6 +22,7 @@ class ReceptController extends Controller
         return view ('koken.receptKlaar', [
             'recepten' => \App\Models\Recepten::find($id),
             'activeUser' => \App\Models\activeUserTable::all(),
+            'cijfer' => \App\Models\Cijfer::first()->waarde,
         ]);
     }
 }

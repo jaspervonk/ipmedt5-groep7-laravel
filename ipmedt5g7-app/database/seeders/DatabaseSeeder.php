@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             ShoppinglistTableSeeder::class,
             DeskworkingTableSeeder::class,
             DesktimerTableSeeder::class,
+            cijferTableSeeder::class,
         ]);
     }
 }

@@ -363,6 +363,12 @@ li, p{
     }
 }
 
+/* receptKlaar */
+
+#beoordeling{
+    display: none;
+}
+
 /* Shopping list */
 
 input[type=checkbox]:checked + label.isChecked{

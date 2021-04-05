@@ -8,6 +8,11 @@
 
     <a href="/change">Andere gebruiker kiezen</a>
 
-    <p>{{$activeUser[0]->name}} </p>
+    <p>{{$activeUser[0]->name}} </p> <br>
+    <h3> Heb je een beoordeling gekregen? Klik dan op de knop hieronder</h3>
+    <button onclick='verwerk()'> Verwerken</button>
+    <p id='beoordeling'> Behaalde beoordeling: {{$cijfer}}</p>
+    <p> ({{$cijfer}} + {{$recepten->punten}}) </p>
 </article>
+<script src='/js/koken_verwerk.js'></script>
 @endsection

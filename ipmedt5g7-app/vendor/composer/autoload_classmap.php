@@ -155,6 +155,7 @@ return array(
     'Database\\Seeders\\ShoppinglistTableSeeder' => $baseDir . '/database/seeders/ShoppinglistTableSeeder.php',
     'Database\\Seeders\\SoortReceptSeeder' => $baseDir . '/database/seeders/SoortReceptSeeder.php',
     'Database\\Seeders\\StoredProductsTableSeeder' => $baseDir . '/database/seeders/StoredProductsTableSeeder.php',
+    'Database\\Seeders\\cijferTableSeeder' => $baseDir . '/database/seeders/cijferTableSeeder.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
     'DeepCopy\\Exception\\PropertyException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
