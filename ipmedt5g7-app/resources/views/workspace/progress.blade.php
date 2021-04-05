@@ -31,7 +31,6 @@
 </form>
 
 <p class="u-text-color-black"> actieve deskjob: {{$actieve_deskjob}}</p>
-<p class="u-text-color-black">{{$test}}</p>
 
 
     <section class="deskprogress">

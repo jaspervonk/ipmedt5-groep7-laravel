@@ -25,10 +25,11 @@ class deskController extends Controller
         return view('workspace.progress', [
             // 'work_minutes' => \App\Models\Desk::all()->first()->total_work_minutes,
             // 'pause_minutes' => \App\Models\Desk::all()->first()->total_pause_minutes,
-            'alle_tijden' => \App\Models\Desk::all(),
+            // 'alle_tijden' => \App\Models\Desk::all(),
+
+            'alle_tijden' => \App\Models\Desk::all()->where('deskjob', \App\Models\Deskjob::first()->deskjob),
             'alle_deskjobs' => \App\Models\AllDeskJobs::all(),
             'actieve_deskjob' => \App\Models\Deskjob::first()->deskjob,
-            'test'=> \App\Models\Deskjob::all(),
         ]);
     }
 
