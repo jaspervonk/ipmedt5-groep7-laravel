@@ -89,6 +89,7 @@ li, p{
 @media(max-width: 32.5rem){
     .receptKaart{
         grid-column: span 12;
+        width: 90%;
     }
 }
 
@@ -345,7 +346,20 @@ li, p{
 
 @media(max-width: 32.5rem){
     .recept{
-        width: 95%;
+        width: 100%;
+    }
+
+    .swiper-container{
+        height: 75rem;
+    }
+
+    .swiper-slide__time{
+        display: block;
+    }
+
+    .swiper-slide__button{
+        margin-bottom: 2rem;
+        align-items: center;
     }
 }
 

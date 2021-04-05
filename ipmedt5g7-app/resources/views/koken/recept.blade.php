@@ -41,21 +41,21 @@
                 <!-- Slides -->
                 <div class="swiper-slide">
                     <section class='swiper-slide__time'>
-                        <button class='swiper-slide__button' onclick="countdown(0,{{$recepten->timer_1}},1), 1"> Start </button>
+                        <button class='swiper-slide__button' onclick="countdown(0,{{$recepten->timer_1}},1), 1"> Start tijd </button>
                         <h3 id="timer" class='swiper-slide__timer u-box-shadow-content'> {{$recepten->timer_1}} minuten </h3> <br> 
                     </section>
                     <p class='recept__bereiden__tekst'> {{$recepten->bereiden_1}}</p>    
                 </div>
                 <div class="swiper-slide">
                     <section class='swiper-slide__time'>
-                        <button class='swiper-slide__button' onclick="countdown1(0,{{$recepten->timer_2}},1), 2"> Start </button>
+                        <button class='swiper-slide__button' onclick="countdown1(0,{{$recepten->timer_2}},1), 2"> Start tijd</button>
                         <h3 id="timer2" class='swiper-slide__timer u-box-shadow-content'> {{$recepten->timer_2}} minuten </h3> <br>
                     </section>
                     <p class='recept__bereiden__tekst'> {{$recepten->bereiden_2}}</p>  
                 </div>
                 <div class="swiper-slide">
                     <section class='swiper-slide__time'>
-                        <button class='swiper-slide__button' onclick="countdown2(0,{{$recepten->timer_3}},1), 3"> Start </button>
+                        <button class='swiper-slide__button' onclick="countdown2(0,{{$recepten->timer_3}},1), 3"> Start tijd </button>
                         <h3 id="timer3" class='swiper-slide__timer u-box-shadow-content'> {{$recepten->timer_3}} minuten </h3> <br>
                     </section>
                     <p class='recept__bereiden__tekst'> {{$recepten->bereiden_3}}</p>     
