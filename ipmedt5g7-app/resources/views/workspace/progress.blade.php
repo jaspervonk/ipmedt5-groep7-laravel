@@ -1,10 +1,33 @@
 @extends('default')
 
 @section('title')
- {{'Recepten'}}
+ {{'Progress'}}
 @endsection
 
 @section('content')
+
+<form action="/selectDeskjob" method="GET">
+    <label class="u-text-color-black" for="deskjobs">Choose your browser from the list:</label>
+    <input list="deskjobs" name="deskjob" id="deskjob">
+
+    <datalist id="deskjobs">
+        @foreach($alle_deskjobs as $alle_deskjobs)
+            <option value="{{$alle_deskjobs->deskjob}}">
+        @endforeach
+    </datalist>
+</form>
+
+
+
+<form action="/addDeskjob" method="POST">
+    @method('POST')
+    {{ csrf_field() }}
+    <label class="u-text-color-black" for="deskjob_name">Deskjob</label>
+    <input type="text" name="deskjob_name"><br />
+
+    <button type="submit">Aanmaken</button>
+</form>
+
     <section class="deskprogress">
         <ul class="deskprogress__list">
         @foreach($alle_tijden as $alle_tijden)

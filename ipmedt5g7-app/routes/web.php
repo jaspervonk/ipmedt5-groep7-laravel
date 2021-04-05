@@ -42,3 +42,4 @@ Route::get('boodschappenlijst/{{id}}', [App\Http\Controllers\ShoppinglistControl
 
 Route::get('/desk', [\App\Http\Controllers\deskController::class, 'index']);
 Route::get('/desk/progress', [\App\Http\Controllers\deskController::class, 'show']);
+Route::post('/addDeskjob', [App\Http\Controllers\deskController::class, 'create']);

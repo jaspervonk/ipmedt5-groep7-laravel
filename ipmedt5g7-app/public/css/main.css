@@ -391,3 +391,7 @@ input[type=checkbox]:checked + label.isChecked{
     grid-row: 4;
     grid-column: span 2;
 }
+
+.u-text-color-black{
+    color: #393E46;
+}
