@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 Route::get('/recepten/{id}', [\App\Http\Controllers\ReceptController::class, 'show']);
 
+Route::get('/recepten/{id}/klaar', [\App\Http\Controllers\ReceptController::class, 'klaar']);
+
 Route::get('/recepten', [\App\Http\Controllers\ReceptController::class, 'index']);
 
 Route::get('/boodschappenlijst', [App\Http\Controllers\ShoppinglistController::class, 'index']);

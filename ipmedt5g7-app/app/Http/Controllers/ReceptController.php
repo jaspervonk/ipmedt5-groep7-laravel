@@ -17,4 +17,10 @@ class ReceptController extends Controller
             'recepten' => \App\Models\Recepten::find($id),
         ]);
     }
+
+    public function klaar($id){
+        return view ('koken.receptKlaar', [
+            'recepten' => \App\Models\Recepten::find($id),
+        ]);
+    }
 }

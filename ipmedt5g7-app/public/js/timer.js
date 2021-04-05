@@ -29,7 +29,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
- function countdown(hr,mm,ss,timer)
+ function countdown(hr,mm,ss)
     {
         const interval = setInterval( async function(){
             
