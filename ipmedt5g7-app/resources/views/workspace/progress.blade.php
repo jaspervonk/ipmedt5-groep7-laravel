@@ -6,31 +6,34 @@
 
 @section('content')
 
-<form action="/selectDeskjob" method="POST">
-    @method('POST')
-    {{ csrf_field() }}
-    <label class="u-text-color-black" for="deskjobs">Choose your browser from the list:</label>
-    <input list="deskjobs" name="deskjob" id="deskjob">
+<section class="desklabels">
+    <h1 class="desklabels__actief u-text-color-black u-grid-center"> actieve deskjob: {{$actieve_deskjob}}</h1>
 
-    <datalist id="deskjobs">
-        @foreach($alle_deskjobs as $alle_deskjobs)
-            <option value="{{$alle_deskjobs->deskjob}}">
-        @endforeach
-    </datalist>
+    <form class="u-grid-center" action="/selectDeskjob" method="POST">
+        @method('POST')
+        {{ csrf_field() }}
+        <label class="u-text-color-black" for="deskjobs">Kies een bestaande deskjob:</label>
+        <input list="deskjobs" name="deskjob" id="deskjob">
 
-    <button type="submit">selecteer</button>
-</form>
+        <datalist id="deskjobs">
+            @foreach($alle_deskjobs as $alle_deskjobs)
+                <option value="{{$alle_deskjobs->deskjob}}">
+            @endforeach
+        </datalist>
+
+        <button class="u-desk-button" type="submit">selecteer</button>
+    </form>
 
 
-<form action="/addDeskjob" method="POST">
-    @method('POST')
-    {{ csrf_field() }}
-    <label class="u-text-color-black" for="deskjob_name">Deskjob</label>
-    <input type="text" name="deskjob_name">
-    <button type="submit">Aanmaken</button>
-</form>
+    <form class="u-grid-center" action="/addDeskjob" method="POST">
+        @method('POST')
+        {{ csrf_field() }}
+        <label class="u-text-color-black" for="deskjob_name">Maak een nieuwe Deskjob aan:</label>
+        <input type="text" name="deskjob_name">
+        <button class="u-desk-button" type="submit">Aanmaken</button>
+    </form>
 
-<p class="u-text-color-black"> actieve deskjob: {{$actieve_deskjob}}</p>
+</section>
 
 
     <section class="deskprogress">
@@ -45,6 +48,6 @@
             </li>
         @endforeach
         </ul>
-    <button class="desktimer__button" type="button" onclick="window.location.assign('/desk')">ga terug</button>
+    <button class="deskprogress__button u-desk-button" type="button" onclick="window.location.assign('/desk')">ga terug</button>
     </section>
 @endsection
