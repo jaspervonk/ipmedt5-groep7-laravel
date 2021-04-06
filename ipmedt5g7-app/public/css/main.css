@@ -21,6 +21,10 @@ li, p{
     font-size: 1.5rem;
 }
 
+button:hover{
+    cursor:pointer;
+}
+
 /* receptenpagina */
 
 .receptKaart{
@@ -163,10 +167,6 @@ li, p{
 
 .recept__stop{
     display: none;
-}
-
-.receptKaart__button:hover{
-    cursor:pointer;
 }
 
 .recept__timer{
@@ -364,9 +364,47 @@ li, p{
 }
 
 /* receptKlaar */
+.recept__beoordeling{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.recept__image{
+    margin-bottom: 8rem;
+}
+
+.recept__beoordeling__titel{
+    padding-bottom: 2rem;
+}
+
+.recept__beoordeling__flex{
+    display: flex;
+    padding-bottom: 4rem;
+}
+
+.recept__beoordeling__tekst{
+    padding-top: 2rem;
+    margin: 0 auto;
+    width: 60%;
+    padding: 1rem;
+    text-align: center;
+    background-color: #F7F7F7;
+    color: #5068A5;
+    border-radius: 1rem;
+}
+
+.recept__beoordeling__button{
+    font-family: 'Montserrat';
+    margin: 0 auto;
+    padding: 0.75rem 2.5rem;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%), #5068A5;
+    border: none;
+    color: #F7F7F7;
+}
 
 #beoordeling{
-    display: none;
+    /* display: none; */
 }
 
 /* Shopping list */

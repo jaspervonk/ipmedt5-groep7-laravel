@@ -16,9 +16,6 @@
                 <p class='recept__informatie__tekst'> Maximum te behalen punten: {{$recepten->punten}}</p>   
             </section>
             <section class='recept__informatie__kaart2'>
-                <!-- <section class='recept__timer'>
-                    <h2 class='recept__timer__tekst u-box-shadow-content'> 00:00:00 </h1>
-                </section> -->
                 <section class='recept__btnSection u-flex-v-center'>
                     <button class='recept__button recept__start' onclick='receptStart()' id='receptStart'> Start recept </button>
                     <button class='recept__button recept__stop' onclick="window.location='{{ url('/recepten/' . $recepten->id . '/klaar/') }}'" id='receptStop' > Stop recept </button>

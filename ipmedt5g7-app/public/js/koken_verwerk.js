@@ -3,7 +3,7 @@ function sleep(ms) {
   }
 
 async function verwerk(){
-    // location.reload();
+    location.reload();
     // await sleep(2000);
-    document.getElementById("beoordeling").style.display = "block";
+    //document.getElementById("beoordeling").style.display = "block";
 }
