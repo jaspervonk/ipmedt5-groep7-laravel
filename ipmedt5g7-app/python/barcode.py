@@ -17,10 +17,11 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=3.0)
+scanner = serial.Serial("/dev/ttyUSB4", baudrate=115200, timeout=0.5)
 
 while True:
     print('Scan barcode: ')
-    barcode = input()
+    barcode = scanner.readline()
     print("barcode =", barcode)
     print("------------------------------------")
 
