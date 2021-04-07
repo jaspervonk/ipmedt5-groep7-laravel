@@ -13,7 +13,7 @@
             <img src="/img/logo.png"></img>
             <ul>
                 <li><a href="/gebruiker">Account</a></li>
-                <li><a href="/wakingupresults">Opstaan</a></li>
+                <li><a href="/opstaan">Opstaan</a></li>
                 <li><a href="/desk">Bureau</a></li>
                 <li><a href="/boodschappenlijst">Boodschappen</a></li>
                 <li><a href="/recepten">Koken</a></li>

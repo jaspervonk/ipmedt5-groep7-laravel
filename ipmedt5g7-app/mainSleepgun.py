@@ -56,8 +56,8 @@ while True:
         print("Alarm Minutes:\t" + str(alarmMinutes))
 
         # Kijk of de tijdens gelijk zijn aan de tijd van nu
-        # if (alarmHours == currentTime.hour) and (alarmMinutes == currentTime.minute):
-        if(15 == currentTime.hour) and (59 == currentTime.minute):
+        if (alarmHours == currentTime.hour) and (alarmMinutes == currentTime.minute):
+        #if(15 == currentTime.hour) and (59 == currentTime.minute):
             pygame.mixer.music.play()
             port.write("1")
             print("Raspberry Pi Sends a '1' to the arduino nano")
@@ -66,7 +66,16 @@ while True:
                 sleepgunScore = port.readline().strip()
                 if(sleepgunScore != ""):
                     print("Score added to sleepgunscores!")
-                    currentDate = str(currentTime.day) + "/" + str(currentTime.month) + "/" +  str(currentTime.year) + " " + str(currentTime.hour) + ":" + str(currentTime.minute)
+                    # Kijk of het aantal uren/minuten onder 10 zit; Anders moet er een 0 bij
+                    if(currentTime.hour < 10):
+                        currentHour = "0" + str(currentTime.hour)
+                    else:
+                        currentHour = currentTime.hour
+                    if(currentTime.minute < 10):
+                        currentMinute = "0" + str(currentTime.minute)
+                    else:
+                        currentMinute = currentTime.minute
+                    currentDate = str(currentTime.day) + "/" + str(currentTime.month) + "/" +  str(currentTime.year) + " " + str(currentHour) + ":" + str(currentMinute)
                     sleepgunScoreArray = sleepgunScore.split(":")
                     mycursor.execute("INSERT INTO sleepgunscores VALUES ('" + str(currentDate) + "'," + str(sleepgunScoreArray[4]) + "," + str(sleepgunScoreArray[0]) + "," + str(sleepgunScoreArray[1]) + "," + str(sleepgunScoreArray[2]) + "," + str(sleepgunScoreArray[3]) + "," + str(sleepgunScoreArray[5]) + ");")
                     pygame.mixer.music.stop()

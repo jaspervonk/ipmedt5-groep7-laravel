@@ -717,7 +717,12 @@ input[type=checkbox]:checked + label.isChecked{
     width: 90%;
     margin: 3vh auto;
     background: white;
+    transition-duration: 1s;
     border-radius: 30px 0px;
+}
+
+.scoresList__scoreCard:hover{
+    transform: scale(1.06);
 }
 
 
@@ -740,13 +745,73 @@ input[type=checkbox]:checked + label.isChecked{
     height: 66%;
     width: 96%;
     margin: 0 auto;
-    font-size: 3rem;
+    font-size: 2.2rem;
 }
 
 .scoresList__scoreCard__paragraph--half{
     width: 50%;
     height: 90%;
     margin-top: 1rem;
+}
+
+.wekker__form {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    width: 90%;
+}
+
+.wekker__form *{
+    display: inline;
+}
+
+.wekker__form__labelSection{
+    margin: 2rem;
+}
+
+.wekker__form__labelSection > label {
+    font-size: 2.2rem;
+}
+
+.wekker__form__button{
+    color: white;
+    font-size: 2.2rem;
+    padding: 2rem;
+    border: none;
+    transition-duration: 1s;
+    background: linear-gradient(180deg, #B1A6FF 0%, #6959DB 100%);
+}
+
+.wekker__form__button:hover{
+    transform: translateX(-4px) translateY(-4px);
+    color: black;
+    background: linear-gradient(180deg, #D1CBFF 0%, #A69CEE 100%);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.6);
+}
+
+.wekkers{
+    width: 90%;
+    margin: 2rem auto;
+
+    color: black;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.wekkerList{
+    display: flex;
+    padding: 4px;
+}
+
+.wekkerList__item--h1{
+    width: 40%;
+    font-size: 3rem;
+}
+
+.wekkerList__item--p{
+    width: 60%;
+    font-size: 3rem;
 }
 
 /* ========== Gebruiker ========== */
@@ -864,6 +929,15 @@ input[type=checkbox]:checked + label.isChecked{
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
 }
 
+.u-flexbox{
+    display: flex;
+}
+
+.u-flexbox-column{
+    flex: 50%;
+    margin: 4rem;
+}
+
 .u-flex-v-center{
     display: flex;
     align-items: center;
@@ -921,7 +995,7 @@ input[type=checkbox]:checked + label.isChecked{
 
 .u-vertical-scroll::-webkit-scrollbar-thumb {
     border-radius: 0 3rem 3rem 0;
-    background: linear-gradient(180deg, #96A5CB 0%, #BBCBF4 50%, #92A2CC 100%);
+    background: linear-gradient(180deg, #B1A6FF 0%, #6959DB 100%);
 }
 
 .u-grid-center{
@@ -934,6 +1008,10 @@ input[type=checkbox]:checked + label.isChecked{
 
 .u-opstaan-gradient{
     background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
+}
+
+.u-opstaan-gradient-secondary{
+    background: linear-gradient(180deg, #B1A6FF 0%, #6959DB 100%);
 }
 
 .u-boodschappen-gradient{
