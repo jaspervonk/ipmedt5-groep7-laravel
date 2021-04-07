@@ -1,6 +1,6 @@
 <form action="/changeUser" method="POST">
     @csrf
-    <label class="blackFont" for="naam">Selecteer gebruiker: </label>
+    <label class="blackFont" for="naam">Selecteer lijstje: </label>
     <select name="naam">
         @foreach($user as $user)
             <option value="{{$user->name}}">{{$user->name}}</option>
