@@ -72,17 +72,20 @@ while True:
         port.write(str(merk))
         failed = False
     except:
-        print("Barcode onbekend")
+        print("Barcode onbekend in API")
         port.write(str("Barcode onbekend"))
         failed = True
 
-    if(failed == True):
-        try:
-            print("Zoeken in stored products")
-            Storedproductnaam = mycursor.execute("SELECT product FROM stored_products WHERE EAN = " , ss)
-            Storedmerk = mycursor.execute("SELECT merk FROM stored_products WHERE EAN = " , ss)
-            mycursor.execute("INSERT INTO `shoppinglist` (product,merk) VALUES (%s, %s)", (Storedproductnaam, Storedmerk))
-            mydb.commit()
-        except:
-            print("Barcode onbekend")
-            port.write(str("Barcode onbekend"))
+    # if(failed == True):
+    #     #try:
+    #     print("Zoeken in stored products")
+    #     print(ss)
+    #     query = """SELECT product FROM stored_products WHERE EAN = %s"""
+    #     #8719179340221
+    #     mycursor.execute(query, (ss))
+    #     Storedmerk = mycursor.execute("SELECT merk FROM stored_products WHERE EAN = Kruidvat")
+    #     #mycursor.execute("INSERT INTO `shoppinglist` (product,merk) VALUES (%s, %s)", (Storedproductnaam, Storedmerk))
+    #     mydb.commit()
+    #     # except:
+    #     #     print("Barcode onbekend")
+    #     #     port.write(str("Barcode onbekend"))
