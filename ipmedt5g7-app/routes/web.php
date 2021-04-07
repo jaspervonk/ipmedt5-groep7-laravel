@@ -48,3 +48,6 @@ Route::get('/desk', [\App\Http\Controllers\deskController::class, 'index']);
 Route::get('/desk/progress', [\App\Http\Controllers\deskController::class, 'show']);
 Route::post('/addDeskjob', [App\Http\Controllers\deskController::class, 'create']);
 Route::post('/selectDeskjob', [App\Http\Controllers\deskController::class, 'update']);
+
+Route::get('/gebruiker', [App\Http\Controllers\GebruikerController::class, 'gebruiker']);
+Route::post('/gebruikerChange', [App\Http\Controllers\AddUserController::class, 'ToPersonalPage']);
