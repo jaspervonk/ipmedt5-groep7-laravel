@@ -11,10 +11,16 @@ html{
 
 body{
     font-size: 1.6rem;
-    padding: 4rem;
     background: #F7F7F7;
     font-family: 'Montserrat', sans-serif;
     color:#FFF;
+}
+
+select{
+    font-family: 'Montserrat' ,sans-serif;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .button{
@@ -67,6 +73,38 @@ li, p{
 
 button:hover{
     cursor:pointer;
+}
+
+
+/* ========= Main Header ========== */
+.mainHeader {
+    height: 10vh;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.mainHeader * {
+    display: inline;
+}
+
+.mainHeader__nav {
+    height: 100%;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.mainHeader__nav > img {
+    height: 85%;
+}
+
+.mainHeader__nav > ul > li {
+    margin: 20px;
+}
+
+.mainHeader__nav > ul > li > a {
+    color: white;
+    text-decoration: none;
 }
 
 /* ========== receptenpagina ========== */
@@ -145,6 +183,8 @@ button:hover{
 
 .recept{
     margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     width: 70%;
     background: linear-gradient(143.7deg, #90C8F5 0%, #8494EC 100%);
 }
@@ -580,13 +620,16 @@ input[type=checkbox]:checked + label.isChecked{
 .desklabels__actief{
     grid-column: 1 / span 2;
     font-size: 5rem;
+    text-align: center;
 }
 
 .deskprogress{
-    width: 100%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
     display: block;
+    background: linear-gradient(180deg, #6CC04A 0%, #FF9D83 0.01%, #FA546C 100%);
+    padding: 2rem 0;
 }
 
 .deskprogress__list{
@@ -594,26 +637,26 @@ input[type=checkbox]:checked + label.isChecked{
     height: 100%;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0,1fr));
-    grid-template-rows: repeat(3, minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    /* grid-template-rows: repeat(3, minmax(0,1fr)); */
     gap: 2rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 
 .deskprogress__listitem{
-    width: 65%;
-    height: 100%;
-    color: #ffffff;
-    background: linear-gradient(180deg, #6CC04A 0%, #FF9D83 0.01%, #FA546C 100%);
+    width: 24rem;
+    height: 26rem;
+    color: var(--black);
+    background: white;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0,1fr));
-    grid-template-rows: repeat(4, minmax(0,1fr));
+    padding: 1rem;
+    border-radius: 3rem 0 3rem 0;
+    /* margin: 2rem 3rem; */
+    /* float: left; */
 }
 
 .deskprogress__listitem__header{
     text-align: center;
-    grid-column: span 2;
 }
 
 .deskprogress__button{
@@ -622,10 +665,38 @@ input[type=checkbox]:checked + label.isChecked{
     font-size: 3rem;
     display: block;
     margin: auto;
+    grid-column: 1 / span 2;
+}
+
+@media(max-width: 1100px){
+    .desklabels__form{
+        grid-column: span 2;
+    }
+    .deskprogress__list{
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+}
+
+@media(max-width: 750px){
+    .deskprogress__list{
+        grid-template-columns: 1fr;
+    }
+    .deskprogress{
+        width: 90%;
+    }
 }
 
 
 /* ========== Waking Up ========== */
+.wakingup--left {
+    width: 45%;
+    margin-left: 2%;
+}
+
+.wakingup--right {
+    width: 45%;
+    margin-left: 52%;
+}
 
 .wakingup--header{
     padding-left: 1rem;
@@ -637,18 +708,14 @@ input[type=checkbox]:checked + label.isChecked{
 .scoresList{
     width: 100%;
     height: 80vh;
-
     padding-top: 1px;
-    
     color: black;
-    background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
 }
 
 .scoresList__scoreCard{
     height: 20rem;
-    width: 80%;
+    width: 90%;
     margin: 3vh auto;
-
     background: white;
     border-radius: 30px 0px;
 }
@@ -659,7 +726,6 @@ input[type=checkbox]:checked + label.isChecked{
     width: 96%;
     margin: 0 auto;
     padding-top: .8rem;
-
     font-size: 2.4rem;
     font-weight: 200;
     font-style: italic;
@@ -674,18 +740,100 @@ input[type=checkbox]:checked + label.isChecked{
     height: 66%;
     width: 96%;
     margin: 0 auto;
-
     font-size: 3rem;
 }
 
 .scoresList__scoreCard__paragraph--half{
     width: 50%;
     height: 90%;
-
     margin-top: 1rem;
 }
 
+/* ========== Gebruiker ========== */
+.gebruiker{
+    margin: 0 auto;
+    margin-top: 6rem;
+    width: 40%;
+    background: linear-gradient(180deg, #6AEAB2 0%, #20B798 100%);
+    padding: 4rem;
+}
 
+.gebruiker__section1, .gebruiker__section2{
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.gebruiker__title{
+    padding-bottom: 1rem;
+}
+
+.gebruiker__header__text{
+    margin: 0 auto;
+    width: 15rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #F7F7F7;
+    color: #20B798;
+    border-radius: 1rem;
+}
+
+.gebruiker__flex{
+    display: flex;
+    padding-top: 1rem;
+}
+
+.gebruiker__input{
+    /* margin-top: 1rem;
+    margin-bottom: 1rem; */
+    padding: 0.75rem 2.5rem;
+}
+
+.gebruiker__button{
+    font-family: 'Montserrat';
+    margin: 0 auto;
+    padding: 0.75rem 2.5rem;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%), #5068A5;
+    border: none;
+    color: #F7F7F7;
+    margin-left: 2rem;
+}
+
+.gebruiker__header__title{
+    padding-bottom: 1rem;
+}
+
+@media(max-width: 70rem){
+    .gebruiker{
+        width: 55%;
+    }
+}
+
+@media(max-width: 62.5rem){
+    .gebruiker{
+        width: 50%;
+    }
+    .gebruiker__flex{
+        display: block;
+    }
+
+    .gebruiker__button{
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 52.5rem){
+    .gebruiker{
+        width: 60%;
+    }
+}
+
+@media(max-width: 32.5rem){
+    .gebruiker{
+        width: 80%;
+    }
+}
 /* ========== Utility Classes ========== */
 
 .u-list-style-none{
@@ -755,7 +903,7 @@ input[type=checkbox]:checked + label.isChecked{
 }
 
 .u-box-shadow{
-    box-shadow: 4px 10px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 10px 8px rgba(0, 0, 0, 0.25);
 }
 
 .u-vertical-scroll{
@@ -778,4 +926,62 @@ input[type=checkbox]:checked + label.isChecked{
 
 .u-grid-center{
     margin:auto;
+}
+
+.u-main-gradient{
+    background: linear-gradient(180deg, #6AEAB2 0%, #20B798 100%);
+}
+
+.u-opstaan-gradient{
+    background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
+}
+
+.u-boodschappen-gradient{
+    background: linear-gradient(180deg, #B294D4 0%, #837BC6 100%);
+}
+
+.u-koken-gradient{
+    background: linear-gradient(180deg, #90C8F5 0%, #8494EC 100%);
+}
+
+.u-bureau-gradient{
+    background: linear-gradient(180deg, #FF9D83 0%, #FA546C 100%);
+}
+
+.u-body-padding{
+    padding: 4rem;
+}
+
+/* ========== animation classes ========== */
+
+.a-popup{
+    animation-name: popup;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+}
+
+.a-popup:nth-of-type(12n-11){animation-delay: 0.1s;}
+.a-popup:nth-of-type(12n-10){animation-delay: 0.2s;}
+.a-popup:nth-of-type(12n-9){animation-delay: 0.3s;}
+.a-popup:nth-of-type(12n-8){animation-delay: 0.4s;}
+.a-popup:nth-of-type(12n-7){animation-delay: 0.5s;}
+.a-popup:nth-of-type(12n-6){animation-delay: 0.6s;}
+.a-popup:nth-of-type(12n-5){animation-delay: 0.7s;}
+.a-popup:nth-of-type(12n-4){animation-delay: 0.8s;}
+.a-popup:nth-of-type(12n-3){animation-delay: 0.9s;}
+.a-popup:nth-of-type(12n-2){animation-delay: 1s;}
+.a-popup:nth-of-type(12n-1){animation-delay: 1.1s;}
+.a-popup:nth-of-type(12n){animation-delay: 1.2s;}
+
+
+
+@keyframes popup{
+    0%{
+        transform: scale(1.1) translateY(-2rem);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }

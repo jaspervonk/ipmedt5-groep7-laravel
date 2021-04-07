@@ -8,6 +8,18 @@
     <title>Desktimer</title>
 </head>
 <body onload="refreshen()">
+    <header class="mainHeader u-bureau-gradient u-box-shadow">
+        <nav class="mainHeader__nav">
+            <img src="/img/logo.png"></img>
+            <ul>
+                <li><a href="/gebruiker">Account</a></li>
+                <li><a href="/wakingupresults">Opstaan</a></li>
+                <li><a href="/desk">Bureau</a></li>
+                <li><a href="/boodschappenlijst">Boodschappen</a></li>
+                <li><a href="/recepten">Koken</a></li>
+            </ul> 
+        </nav>
+    </header>
     <main class="desktimer" >
 
         <h1 class="desktimer__actief u-text-color-black"> actieve deskjob: {{$actieve_deskjob}}</h1>

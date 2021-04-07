@@ -5,11 +5,22 @@
 @endsection
 
 @section('content')
-
+<header class="mainHeader u-bureau-gradient u-box-shadow">
+    <nav class="mainHeader__nav">
+        <img src="/img/logo.png"></img>
+        <ul>
+            <li><a href="/gebruiker">Account</a></li>
+            <li><a href="/wakingupresults">Opstaan</a></li>
+            <li><a href="/desk">Bureau</a></li>
+            <li><a href="/boodschappenlijst">Boodschappen</a></li>
+            <li><a href="/recepten">Koken</a></li>
+        </ul> 
+    </nav>
+</header>
 <section class="desklabels">
     <h1 class="desklabels__actief u-text-color-black u-grid-center"> actieve deskjob: {{$actieve_deskjob}}</h1>
 
-    <form class="u-grid-center" action="/selectDeskjob" method="POST">
+    <form class="desklabels__form u-grid-center" action="/selectDeskjob" method="POST">
         @method('POST')
         {{ csrf_field() }}
         <label class="u-text-color-black" for="deskjobs">Kies een bestaande deskjob:</label>
@@ -25,7 +36,7 @@
     </form>
 
 
-    <form class="u-grid-center" action="/addDeskjob" method="POST">
+    <form class="desklabels__form u-grid-center" action="/addDeskjob" method="POST">
         @method('POST')
         {{ csrf_field() }}
         <label class="u-text-color-black" for="deskjob_name">Maak een nieuwe Deskjob aan:</label>
@@ -33,21 +44,23 @@
         <button class="u-desk-button" type="submit">Aanmaken</button>
     </form>
 
+    <button class="deskprogress__button u-desk-button" type="button" onclick="window.location.assign('/desk')">ga terug</button>
+
+
 </section>
 
 
     <section class="deskprogress">
         <ul class="deskprogress__list">
         @foreach($alle_tijden as $alle_tijden)
-            <li class="deskprogress__listitem">
-            <h1 class="deskprogress__listitem__header">{{$alle_tijden->datum}}</h1>
-            <p class="deskprogress__listitem__text"> gewerkte tijd: {{$alle_tijden->total_work_hours}} : {{$alle_tijden->total_work_minutes}} : {{$alle_tijden->total_work_seconds}} </p>
-            <p class="deskprogress__listitem__text"> gepauzeerde tijd: {{$alle_tijden->total_pause_hours}} : {{$alle_tijden->total_pause_minutes}} : {{$alle_tijden->total_pause_seconds}} </p>
-            <p class="deskprogress__listitem__text"> totaal aantal pauzes: {{$alle_tijden->aantal_pauzes}} </p>
+            <li class="deskprogress__listitem u-box-shadow"><br />
+            <h1 class="deskprogress__listitem__header">{{$alle_tijden->datum}}</h1><br />
+            <p class="deskprogress__listitem__text"> gewerkte tijd: {{$alle_tijden->total_work_hours}} : {{$alle_tijden->total_work_minutes}} : {{$alle_tijden->total_work_seconds}} </p><br />
+            <p class="deskprogress__listitem__text"> gepauzeerde tijd: {{$alle_tijden->total_pause_hours}} : {{$alle_tijden->total_pause_minutes}} : {{$alle_tijden->total_pause_seconds}} </p><br />
+            <p class="deskprogress__listitem__text"> totaal aantal pauzes: {{$alle_tijden->aantal_pauzes}} </p><br />
             <p class="deskprogress__listitem__text u-progress-text-grid"> {{$alle_tijden->feedback}} </p>
             </li>
         @endforeach
         </ul>
-    <button class="deskprogress__button u-desk-button" type="button" onclick="window.location.assign('/desk')">ga terug</button>
     </section>
 @endsection

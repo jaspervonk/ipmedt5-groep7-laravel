@@ -1,7 +1,19 @@
 @extends('default')
 
 @section('content')
-<article class='recept u-box-shadow'>
+<header class="mainHeader u-koken-gradient u-box-shadow">
+    <nav class="mainHeader__nav">
+        <img src="/img/logo.png"></img>
+        <ul>
+            <li><a href="/gebruiker">Account</a></li>
+            <li><a href="/wakingupresults">Opstaan</a></li>
+            <li><a href="/desk">Bureau</a></li>
+            <li><a href="/boodschappenlijst">Boodschappen</a></li>
+            <li><a href="/recepten">Koken</a></li>
+        </ul> 
+    </nav>
+</header>
+<article class='recept u-box-shadow u-body-padding'>
     <header class='recept__header u-flex-v-center'>
         <h1 class='recept__heading'>{{$recepten->naam}}</h1>
     </header>

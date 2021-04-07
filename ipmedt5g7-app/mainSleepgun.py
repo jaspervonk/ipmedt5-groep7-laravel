@@ -57,7 +57,7 @@ while True:
 
         # Kijk of de tijdens gelijk zijn aan de tijd van nu
         # if (alarmHours == currentTime.hour) and (alarmMinutes == currentTime.minute):
-        if(10 == currentTime.hour) and (18 == currentTime.minute):
+        if(15 == currentTime.hour) and (59 == currentTime.minute):
             pygame.mixer.music.play()
             port.write("1")
             print("Raspberry Pi Sends a '1' to the arduino nano")
@@ -74,9 +74,7 @@ while True:
                 else:
                     print("Awaiting score...")
                     time.sleep(10)
-            
-            time.sleep(60)
-                    
+                                
         else:
             port.write("0")
             print("Raspberry Pi Sends a '0' to the arduino nano")

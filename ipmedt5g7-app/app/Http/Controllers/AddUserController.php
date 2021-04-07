@@ -11,11 +11,15 @@ class AddUserController extends Controller
         $user->name = $request->input('name');
         $user->save();
         //return $activeUser;
-        return redirect('/boodschappenlijst');
+        return redirect('/gebruiker');
     }
 
     public function changeUser(){
         return view('boodschappen.changeUser', ['user' => \App\Models\User::all()]);
+    }
+
+    public function gebruikerChange(){
+        return view('gebruiker.gebruikerUser', ['user' => \App\Models\User::all()]);
     }
 
     public function ToPersonalPage(Request $request, \App\Models\activeUserTable $activeUserTable){
@@ -23,6 +27,6 @@ class AddUserController extends Controller
         $activeUserTable->name = $request->input('naam');
         $activeUserTable->save();
         //print($activeUserTable);
-        return redirect('/boodschappenlijst');
+        return redirect('/gebruiker');
     }
 }
