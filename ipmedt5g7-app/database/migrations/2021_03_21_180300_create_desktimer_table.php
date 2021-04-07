@@ -16,6 +16,7 @@ class CreateDesktimerTable extends Migration
         Schema::create('desktimer', function (Blueprint $table) {
             // $table->id();
             // $table->timestamps();
+            $table->string('deskjob')->default('Algemeen');
             $table->integer('total_work_hours')->default(0);
             $table->integer('total_work_minutes')->default(0);
             $table->integer('total_work_seconds')->default(0);
@@ -23,6 +24,11 @@ class CreateDesktimerTable extends Migration
             $table->integer('total_pause_hours')->default(0);
             $table->integer('total_pause_minutes')->default(0);
             $table->integer('total_pause_seconds')->default(0);
+
+            $table->string('datum')->default('XX-XX-XXXX');
+            $table->integer('aantal_pauzes')->default(0);
+            $table->string('feedback')->default('niet berekend');
+
         });
     }
 

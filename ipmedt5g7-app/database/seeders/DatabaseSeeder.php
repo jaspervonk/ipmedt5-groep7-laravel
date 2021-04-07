@@ -20,7 +20,12 @@ class DatabaseSeeder extends Seeder
             ShoppinglistTableSeeder::class,
             DeskworkingTableSeeder::class,
             DesktimerTableSeeder::class,
+<<<<<<< HEAD
             cijferTableSeeder::class,
+=======
+            AllDeskjobsTableSeeder::class,
+            ActiveDeskjobTableSeeder::class,
+>>>>>>> 90ea1e9e49c3117bc5533ee39e8ecd1801e3b682
         ]);
     }
 }

@@ -18,6 +18,7 @@ class ShoppinglistController extends Controller
         return view ('boodschappen.boodschappenlijst', [
             'product' => \App\Models\Shoppinglist::all(),
             'user' => \App\Models\User::all(),
+            'ActiveUser' => \App\Models\activeUserTable::all(),
         ]);
         // $product = \App\Models\Shoppinglist::all();
         // return view('welcome', ['product' => $product]);
