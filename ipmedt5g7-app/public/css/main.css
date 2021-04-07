@@ -329,6 +329,15 @@ input[type=checkbox]:checked + label.isChecked{
     grid-template-rows: repeat(3, minmax(0,1fr));
 }
 
+.desktimer__actief{
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 5rem;
+}
+
 .desktimer__status{
     font-size: 9rem;
     grid-column: 2 / span 2;
@@ -359,6 +368,9 @@ input[type=checkbox]:checked + label.isChecked{
     }
     .desktimer__button{
         width: 100%;
+    }
+    .desktimer__actief{
+        font-size: 4rem;
     }
 }
 

@@ -131,13 +131,13 @@ while True:
                 if (feedback_werk_tijd < 8100):
                     feedback = "Je hebt niet gepauzeerd, maar wel GOED gewerkt."
                 elif(feedback_werk_tijd >= 8100):
-                    feedback = "Je hebt NIET goed gewerkt, je had moeten pauzeren tussendoor."
+                    feedback = "Je hebt ONVOLDOENDE gewerkt, je had moeten pauzeren tussendoor."
 
             elif(int(aantal_pauzes) > 0):
                 if ((feedback_pauze_tijd/feedback_werk_tijd) < 0.0625):
-                    feedback = "Je hebt NIET goed gewerkt, je hebt te WEINIG gepauzeerd."
+                    feedback = "Je hebt ONVOLDOENDE gewerkt, je hebt te WEINIG gepauzeerd."
                 elif ((feedback_pauze_tijd/feedback_werk_tijd) > 0.25):
-                    feedback = "Je hebt NIET goed gewerkt, je hebt te VEEL gepauzeerd."
+                    feedback = "Je hebt ONVOLDOENDE gewerkt, je hebt te VEEL gepauzeerd."
                 else:
                     feedback = "Je hebt GOED gewerkt, de verhouding van tijden is GOED."
 

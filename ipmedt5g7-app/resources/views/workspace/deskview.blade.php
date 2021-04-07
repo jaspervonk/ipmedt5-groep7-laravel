@@ -9,6 +9,8 @@
 </head>
 <body onload="refreshen()">
     <main class="desktimer" >
+
+        <h1 class="desktimer__actief u-text-color-black"> actieve deskjob: {{$actieve_deskjob}}</h1>
                 
         <h1 class="desktimer__status"> {{$working_status}} </h1>
 
