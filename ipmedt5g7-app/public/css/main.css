@@ -538,7 +538,6 @@ input[type=checkbox]:checked + label.isChecked{
     grid-column: 2 / span 2;
 }
 
-<<<<<<< HEAD
 .u-progress-text-grid{
     border-top: 3px solid #1F1842;
     grid-row: 4;
@@ -553,13 +552,11 @@ input[type=checkbox]:checked + label.isChecked{
     background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
     color: #F7F7F7;
 }
-=======
 .u-box-shadow{
     box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
 }
 
 
->>>>>>> 208d35e76c6968831bc67944d9f5b6d8836ba51c
 
 .u-grid-center{
     margin:auto;
