@@ -14,7 +14,49 @@ body{
     padding: 4rem;
     background: #F7F7F7;
     font-family: 'Montserrat', sans-serif;
-    color:#F7F7F7;
+    color:#FFF;
+}
+
+.button{
+    border: none;
+    color: #fff;
+    font-family: 'Montserrat' ,sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button--card{
+    padding: 2rem 1rem;
+    float: right;
+}
+
+.button--red{
+    background: linear-gradient(180deg, #6CC04A 0%, #FF9D83 0.01%, #FA546C 100%);
+}
+
+.button--small{
+    padding: 1rem 1.5rem;
+}
+
+.pageTitle{
+    color: #212121;
+    font-size: 4.5rem;
+}
+
+.blackFont{
+    color: #212121;
+}
+
+.u-noLiStyle{
+    list-style: none;
+}
+
+.card{
+    background-image: linear-gradient(#C3A5E4, #837BC6);
+    padding: 1rem 5rem 5rem;
+    margin: 5rem;
+    max-width: 60rem;
+    margin: 2rem 0;
 }
 
 li, p{
@@ -27,9 +69,8 @@ li, p{
     grid-column: span 3;
     width: 100%;
     height: 35rem;
-    box-shadow: 0 0 2rem #333;
     position: relative;
-    background-color: #393E46;
+    background: linear-gradient(143.7deg, #90C8F5 0%, #8494EC 100%);
     /* border: #F8B500 solid 1px; */
 }
 
@@ -61,13 +102,13 @@ li, p{
 }
 
 .receptKaart__button{
+    font-family: 'Montserrat';
     margin: 0 auto;
     padding: 0.75rem 2.5rem;
     box-sizing: border-box;
-    background-color: #F8B500;
+    background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%), #5068A5;
     border: none;
-    color: #393E46;
-    box-shadow: 0 0 1.5rem #333;
+    color: #F7F7F7;
     /* border-radius: 0.25rem; */
 }
 
@@ -98,9 +139,7 @@ li, p{
 .recept{
     margin: 0 auto;
     width: 60%;
-    box-shadow: 0 0 2rem #333;
-    background-color: #393E46;
-    /* border: #F8B500 solid 1px; */
+    background: linear-gradient(143.7deg, #90C8F5 0%, #8494EC 100%);
 }
 
 .recept__header{
@@ -122,7 +161,7 @@ li, p{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: 0 0 1.5rem #333;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
 }
 
 .recept__section1, .recept__section2{
@@ -139,9 +178,9 @@ li, p{
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 2rem;
-    background-color: #5C636E;
+    background-color: #F7F7F7;
+    color: #5068A5;
     border-radius: 1rem;
-    box-shadow: 0 0 1.5rem #333;
 }
 
 .recept__informatie__tekst{
@@ -153,13 +192,13 @@ li, p{
 }
 
 .recept__button{
+    font-family: 'Montserrat';
     margin: 0 auto;
     padding: 0.75rem 2.5rem;
     box-sizing: border-box;
-    background-color: #F8B500;
+    background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%), #5068A5;
     border: none;
-    color: #393E46;
-    box-shadow: 0 0 1.5rem #333;
+    color: #F7F7F7;
     /* border-radius: 0.25rem; */
 }
 
@@ -180,9 +219,9 @@ li, p{
     width: 60%;
     padding: 1rem;
     text-align: center;
-    background-color: #5C636E;
+    background-color: #F7F7F7;
+    color: #5068A5;
     border-radius: 1rem;
-    box-shadow: 0 0 1.5rem #333;
 }
 
 .recept__ingredienten{
@@ -272,7 +311,6 @@ li, p{
         text-align: center;
         background-color: #5C636E;
         border-radius: 1rem;
-        box-shadow: 0 0 1.5rem #333;
     }
 }
 
@@ -302,7 +340,7 @@ input[type=checkbox]:checked + label.isChecked{
 }
 
 .u-grid-gap-2{
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .u-flex-v-center{
@@ -311,7 +349,51 @@ input[type=checkbox]:checked + label.isChecked{
 
 }
 
+.u-box-shadow{
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
+}
 
+.u-box-shadow-content{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+}
+
+/*------------------------------ grid -------------------------- */
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+    grid-template-rows: repeat(12, minmax(0,1fr));
+    column-gap: 1.5rem;
+
+}
+
+.grid__header{
+    grid-column: span 6;
+    grid-row: 1;
+}
+
+.grid__booschappenlijstCard{
+    grid-column: 1 / 5;
+    grid-row: 2 / 10;
+}
+
+.grid__toevoegen{
+    grid-column: 5 / 9;
+    grid-row: 4 / 10;
+    gap: 5rem;
+}
+
+.grid__barcodeScannen{
+    grid-column: 5 / 9;
+    grid-row: 2 / 4;
+    gap: 5rem;
+}
+
+.grid__userToevoegen{
+    grid-column: 9 / 13;
+    grid-row: 2 / 4;
+    gap: 5rem;
+}
 
 
 /* ---------------------------- desk ---------------------------- */
@@ -456,6 +538,7 @@ input[type=checkbox]:checked + label.isChecked{
     grid-column: 2 / span 2;
 }
 
+<<<<<<< HEAD
 .u-progress-text-grid{
     border-top: 3px solid #1F1842;
     grid-row: 4;
@@ -470,6 +553,13 @@ input[type=checkbox]:checked + label.isChecked{
     background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
     color: #F7F7F7;
 }
+=======
+.u-box-shadow{
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+>>>>>>> 208d35e76c6968831bc67944d9f5b6d8836ba51c
 
 .u-grid-center{
     margin:auto;

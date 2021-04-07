@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 // use \GuzzleHttp\Client;
-use Illuminate\Http\Client\Response;
-use \App\Models\StoredProducts;
-use ArrayAccess;
-use DOMDocument;
-use \App\Goutte\Client;
+// use Illuminate\Http\Client\Response;
+use \App\Models\Shoppinglist;
+// use ArrayAccess;
+// use DOMDocument;
+// use \App\Goutte\Client;
 
 
 class ApiController extends Controller
@@ -28,11 +28,11 @@ class ApiController extends Controller
         //return view('boodschappen.api', ['titleData'=>$title, 'brandData'=>$brand, 'upcData'=>$upc]);
 
         //------------------------------------------------
-        $stored_products = new StoredProducts;
-        $stored_products->EAN = $upc;
-        $stored_products->product = $title;
-        $stored_products->merk = $brand;
-        $stored_products->save();
+        $Shoppinglist = new Shoppinglist;
+        //$stored_products->EAN = $upc;
+        $Shoppinglist->product = $title;
+        $Shoppinglist->merk = $brand;
+        $Shoppinglist->save();
         return redirect('/boodschappenlijst');
     }
 
