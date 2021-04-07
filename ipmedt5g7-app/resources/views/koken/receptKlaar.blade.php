@@ -17,9 +17,9 @@
             </section>
         </section>
     </section>
-    <!-- <p> ({{$cijfer}} + {{$recepten->punten}}) </p> -->
+    <!-- <p> ({{$cijfer}} + {{$recepten->punten}}) </p>
 
-    <!-- <a href="/change">Andere gebruiker kiezen</a>
+     <a href="/change">Andere gebruiker kiezen</a>
     <p>{{$activeUser[0]->name}} </p> <br> -->
 </article>
 <script src='/js/koken_verwerk.js'></script>
