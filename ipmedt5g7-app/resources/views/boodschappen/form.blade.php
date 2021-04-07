@@ -4,19 +4,19 @@
     <form action="/submit" method="POST">
         @method('POST')
         {{ csrf_field() }}
-        <label for="product">Productnaam</label>
+        <label for="product">Productnaam:</label><br>
         <input type="text" name="product" required><br>
 
         <!-- <label for="aantal">Aantal</label>
         <input type="number" name="aantal" value="1"><br> -->
 
-        <label for="merk">EAN</label>
+        <label for="merk">EAN:</label><br>
         <input type="text" name="EAN"><br>
 
-        <label for="merk">Merk</label>
+        <label for="merk">Merk:</label><br>
         <input type="text" name="merk"><br>
 
-        <label for="Volume">Volume</label>
+        <label for="Volume">Volume:</label><br>
         <input type="text" name="volume"><br><br>
 
         <button class="button button--red button--card" type="submit">Toevoegen</button>
@@ -28,8 +28,8 @@
     <form action="/api" method="POST">
         @method('POST')
         {{ csrf_field() }}
-        <label for="merk">Barcode</label>
-        <input type="text" name="EAN"><br>
+        <label for="merk">Barcode:</label><br>
+        <input type="text" name="EAN">
 
         <button class="button button--red button--card" type="submit">Toevoegen</button>
     </form>
