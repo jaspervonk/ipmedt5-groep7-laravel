@@ -59,15 +59,17 @@ body{
     margin: 2rem 0;
 }
 
+/* Dit moet een BEM classen worden
 li, p{
     font-size: 1.5rem;
 }
+*/
 
 button:hover{
     cursor:pointer;
 }
 
-/* receptenpagina */
+/* ========== receptenpagina ========== */
 
 .receptKaart{
     grid-column: span 3;
@@ -139,7 +141,7 @@ button:hover{
     }
 }
 
-/* Recept */
+/* ========== Recept ========== */
 
 .recept{
     margin: 0 auto;
@@ -449,41 +451,11 @@ button:hover{
     /* display: none; */
 }
 
-/* Shopping list */
+/* ========== Shopping list ========== */
 
 input[type=checkbox]:checked + label.isChecked{
     text-decoration: line-through;
     color: green;
-}
-
-/* utility classes */
-
-.u-list-style-none{
-    list-style: none;
-}
-
-.u-grid-12{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12,minmax(0,1fr));
-}
-
-.u-grid-gap-2{
-    gap: 4rem;
-}
-
-.u-flex-v-center{
-    display: flex;
-    align-items: center;
-
-}
-
-.u-box-shadow{
-    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
-}
-
-.u-box-shadow-content{
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
 }
 
 /*------------------------------ grid -------------------------- */
@@ -524,8 +496,8 @@ input[type=checkbox]:checked + label.isChecked{
     gap: 5rem;
 }
 
+/* ========== desk ========== */
 
-/* ---------------------------- desk ---------------------------- */
 :root{
     --black: #393E46;
     --background: #eaeaea;
@@ -593,11 +565,6 @@ input[type=checkbox]:checked + label.isChecked{
     }
 }
 
-
-
-/* --------------------------------- */
-
-
 .desklabels{
     width: 100%;
     height: 100%;
@@ -614,10 +581,6 @@ input[type=checkbox]:checked + label.isChecked{
     grid-column: 1 / span 2;
     font-size: 5rem;
 }
-
-
-/* --------------------------------- */
-
 
 .deskprogress{
     width: 100%;
@@ -661,8 +624,115 @@ input[type=checkbox]:checked + label.isChecked{
     margin: auto;
 }
 
-/* --------------------------------- */
 
+/* ========== Waking Up ========== */
+
+.wakingup--header{
+    padding-left: 1rem;
+    color: black;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.scoresList{
+    width: 100%;
+    height: 80vh;
+
+    padding-top: 1px;
+    
+    color: black;
+    background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
+}
+
+.scoresList__scoreCard{
+    height: 20rem;
+    width: 80%;
+    margin: 3vh auto;
+
+    background: white;
+    border-radius: 30px 0px;
+}
+
+
+.scoresList__scoreCard__header{
+    height: 30%;
+    width: 96%;
+    margin: 0 auto;
+    padding-top: .8rem;
+
+    font-size: 2.4rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.scoresList__scoreCard__paragraph--horizontalLine{
+    border: 2px solid #888888;
+    border-radius: 1rem;
+}
+
+.scoresList__scoreCard__paragraph{
+    height: 66%;
+    width: 96%;
+    margin: 0 auto;
+
+    font-size: 3rem;
+}
+
+.scoresList__scoreCard__paragraph--half{
+    width: 50%;
+    height: 90%;
+
+    margin-top: 1rem;
+}
+
+
+/* ========== Utility Classes ========== */
+
+.u-list-style-none{
+    list-style: none;
+}
+
+.u-grid-12{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+}
+
+.u-grid-gap-2{
+    gap: 4rem;
+}
+
+.u-flex-v-center{
+    display: flex;
+    align-items: center;
+
+}
+
+.u-box-shadow{
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+.u-box-shadow-content{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+}
+
+.u-flex-v-center{
+    display: flex;
+    align-items: center;
+}
+
+.u-float-left{
+    float: left;
+}
+
+.u-float-center{
+    float: right;
+    padding-right: 40%;
+}
+
+.u-float-right{
+    float: right;
+}
 
 .u-desk-grid-button{
     grid-row: 3;
@@ -683,11 +753,28 @@ input[type=checkbox]:checked + label.isChecked{
     background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
     color: #F7F7F7;
 }
+
 .u-box-shadow{
-    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 10px 8px rgba(0, 0, 0, 0.3);
 }
 
+.u-vertical-scroll{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
+.u-vertical-scroll::-webkit-scrollbar {
+    width: 2rem;
+}
+
+.u-vertical-scroll::-webkit-scrollbar-track {
+    background: white;
+}
+
+.u-vertical-scroll::-webkit-scrollbar-thumb {
+    border-radius: 0 3rem 3rem 0;
+    background: linear-gradient(180deg, #96A5CB 0%, #BBCBF4 50%, #92A2CC 100%);
+}
 
 .u-grid-center{
     margin:auto;
