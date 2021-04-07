@@ -19,7 +19,7 @@
     </header>
     <ul class='u-grid-12 u-grid-gap-2 u-body-padding'>
         @foreach($recepten as $recepten)
-            <li class='receptKaart u-list-style-none u-box-shadow'> 
+            <li class='receptKaart u-list-style-none u-box-shadow a-popup'> 
                     <header class='receptKaart__header u-flex-v-center'>  
                         <h2 class='receptKaart__heading'> {{$recepten->naam}} </h2>
                     </header>
