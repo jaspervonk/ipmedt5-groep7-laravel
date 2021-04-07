@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-// use \GuzzleHttp\Client;
+use \GuzzleHttp\Client;
 use Illuminate\Http\Client\Response;
 use \App\Models\StoredProducts;
-use ArrayAccess;
-use DOMDocument;
-use \App\Goutte\Client;
+// use \App\Goutte\Client;
 
 
 class ApiController extends Controller

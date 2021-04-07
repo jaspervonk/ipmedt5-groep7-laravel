@@ -12,16 +12,17 @@ html{
 body{
     font-size: 1.6rem;
     padding: 4rem;
-    background: #5C636E;
+    background: #F7F7F7;
     font-family: 'Montserrat', sans-serif;
-    color:#F7F7F7;
 }
 
+/* Dit moet een BEM classen worden
 li, p{
     font-size: 1.5rem;
 }
+*/
 
-/* receptenpagina */
+/* ========== receptenpagina ========== */
 
 .receptKaart{
     grid-column: span 3;
@@ -93,7 +94,7 @@ li, p{
     }
 }
 
-/* Recept */
+/* ========== Recept ========== */
 
 .recept{
     margin: 0 auto;
@@ -282,39 +283,14 @@ li, p{
     }
 }
 
-/* Shopping list */
+/* ========== Shopping list ========== */
 
 input[type=checkbox]:checked + label.isChecked{
     text-decoration: line-through;
     color: green;
 }
 
-/* utility classes */
-
-.u-list-style-none{
-    list-style: none;
-}
-
-.u-grid-12{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12,minmax(0,1fr));
-}
-
-.u-grid-gap-2{
-    gap: 2rem;
-}
-
-.u-flex-v-center{
-    display: flex;
-    align-items: center;
-
-}
-
-
-
-
-/* ---------------------------- desk ---------------------------- */
+/* ========== desk ========== */
 
 :root {
     --background: #eaeaea;
@@ -348,9 +324,128 @@ input[type=checkbox]:checked + label.isChecked{
     margin: auto;
 }
 
+
+/* ========== Waking Up ========== */
+
+.wakingup--header{
+    padding-left: 1rem;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.scoresList{
+    width: 100%;
+    height: 80vh;
+
+    padding-top: 1px;
+    
+    color: black;
+    background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
+}
+
+.scoresList__scoreCard{
+    height: 20rem;
+    width: 80%;
+    margin: 3vh auto;
+
+    background: white;
+    border-radius: 30px 0px;
+}
+
+
+.scoresList__scoreCard__header{
+    height: 30%;
+    width: 96%;
+    margin: 0 auto;
+    padding-top: .8rem;
+
+    font-size: 2.4rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.scoresList__scoreCard__paragraph--horizontalLine{
+    border: 2px solid #888888;
+    border-radius: 1rem;
+}
+
+.scoresList__scoreCard__paragraph{
+    height: 66%;
+    width: 96%;
+    margin: 0 auto;
+
+    font-size: 3rem;
+}
+
+.scoresList__scoreCard__paragraph--half{
+    width: 50%;
+    height: 90%;
+
+    margin-top: 1rem;
+}
+
+
+/* utility classes */
+
+.u-list-style-none{
+    list-style: none;
+}
+
+.u-grid-12{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+}
+
+.u-grid-gap-2{
+    gap: 2rem;
+}
+
+.u-flex-v-center{
+    display: flex;
+    align-items: center;
+}
+
+.u-float-left{
+    float: left;
+}
+
+.u-float-center{
+    float: right;
+    padding-right: 40%;
+}
+
+.u-float-right{
+    float: right;
+}
+
 .u-desk-grid-button{
     grid-row: 3;
     grid-column: 2 / span 2;
 }
+
+.u-box-shadow{
+    box-shadow: 4px 10px 8px rgba(0, 0, 0, 0.25);
+}
+
+.u-vertical-scroll{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.u-vertical-scroll::-webkit-scrollbar {
+    width: 2rem;
+}
+
+.u-vertical-scroll::-webkit-scrollbar-track {
+    background: white;
+}
+
+.u-vertical-scroll::-webkit-scrollbar-thumb {
+    border-radius: 0 3rem 3rem 0;
+    background: linear-gradient(180deg, #96A5CB 0%, #BBCBF4 50%, #92A2CC 100%);
+}
+
+
 
 

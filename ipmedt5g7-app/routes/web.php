@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/wakingup', [\App\Http\Controllers\WakingupController::class, 'index']);
+
 Route::get('/recepten/{id}', [\App\Http\Controllers\ReceptController::class, 'show']);
 
 Route::get('/recepten', [\App\Http\Controllers\ReceptController::class, 'index']);
