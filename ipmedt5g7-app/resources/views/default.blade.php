@@ -16,8 +16,6 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <main class="grid">
-        @yield('content')
-    </main>
+    @yield('content')
 </body>
 </html>
