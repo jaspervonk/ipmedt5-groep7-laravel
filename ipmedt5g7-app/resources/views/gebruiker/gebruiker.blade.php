@@ -1,6 +1,18 @@
 @extends('default')
     
     @section('content')
+    <header class="mainHeader u-main-gradient u-box-shadow">
+        <nav class="mainHeader__nav">
+            <img src="/img/logo.png"></img>
+            <ul>
+                <li><a href="/gebruiker">Account</a></li>
+                <li><a href="/wakingupresults">Opstaan</a></li>
+                <li><a href="/desk">Bureau</a></li>
+                <li><a href="/boodschappenlijst">Boodschappen</a></li>
+                <li><a href="/recepten">Koken</a></li>
+            </ul> 
+        </nav>
+    </header>
     <article class='gebruiker u-box-shadow-content'>
         @foreach($ActiveUser as $ActiveUser)
             <h3 class="gebruiker__header__text u-box-shadow-content"> {{$ActiveUser->name}}</h3>

@@ -80,7 +80,6 @@ button:hover{
 .mainHeader {
     height: 10vh;
     margin-bottom: 2rem;
-
     font-size: 3rem;
 }
 
@@ -96,7 +95,7 @@ button:hover{
 }
 
 .mainHeader__nav > img {
-    height: 80px;
+    height: 85%;
 }
 
 .mainHeader__nav > ul > li {
@@ -184,6 +183,8 @@ button:hover{
 
 .recept{
     margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     width: 70%;
     background: linear-gradient(143.7deg, #90C8F5 0%, #8494EC 100%);
 }
@@ -649,6 +650,7 @@ input[type=checkbox]:checked + label.isChecked{
     background: white;
     margin: auto;
     padding: 1rem;
+    border-radius: 3rem 0 3rem 0;
     /* margin: 2rem 3rem; */
     /* float: left; */
 }
@@ -750,6 +752,7 @@ input[type=checkbox]:checked + label.isChecked{
 /* Gebruiker */
 .gebruiker{
     margin: 0 auto;
+    margin-top: 6rem;
     width: 40%;
     background: linear-gradient(180deg, #6AEAB2 0%, #20B798 100%);
     padding: 4rem;
@@ -900,7 +903,7 @@ input[type=checkbox]:checked + label.isChecked{
 }
 
 .u-box-shadow{
-    box-shadow: 4px 10px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 10px 8px rgba(0, 0, 0, 0.25);
 }
 
 .u-vertical-scroll{
@@ -925,6 +928,26 @@ input[type=checkbox]:checked + label.isChecked{
     margin:auto;
 }
 
-.u-wakingup-gradient{
+.u-main-gradient{
+    background: linear-gradient(180deg, #6AEAB2 0%, #20B798 100%);
+}
+
+.u-opstaan-gradient{
     background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
+}
+
+.u-boodschappen-gradient{
+    background: linear-gradient(180deg, #B294D4 0%, #837BC6 100%);
+}
+
+.u-koken-gradient{
+    background: linear-gradient(180deg, #90C8F5 0%, #8494EC 100%);
+}
+
+.u-bureau-gradient{
+    background: linear-gradient(180deg, #FF9D83 0%, #FA546C 100%);
+}
+
+.u-body-padding{
+    padding: 4rem;
 }

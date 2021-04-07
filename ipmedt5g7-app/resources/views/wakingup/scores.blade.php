@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <header class="mainHeader u-wakingup-gradient u-box-shadow">
+    <header class="mainHeader u-opstaan-gradient u-box-shadow">
         <nav class="mainHeader__nav">
             <img src="/img/logo.png"></img>
             <ul>
@@ -20,7 +20,7 @@
 
     <section class="wakingup--left u-float-left">
         <h1 class='wakingup--header'>Wekkers</h1>
-        <ul class='scoresList u-wakingup-gradient u-list-style-none u-box-shadow u-vertical-scroll'>
+        <ul class='scoresList u-opstaan-gradient u-list-style-none u-box-shadow u-vertical-scroll'>
             @foreach($sleepgunScores as $score)
                 <li class='scoresList__scoreCard u-box-shadow'>
                     <section class='scoresList__scoreCard__header'>
@@ -39,7 +39,7 @@
 
     <section class="wakingup--right">
         <h1 class='wakingup--header'>Sleepgun Resultaten</h1>
-        <ul class='scoresList u-wakingup-gradient u-list-style-none u-box-shadow u-vertical-scroll'>
+        <ul class='scoresList u-opstaan-gradient u-list-style-none u-box-shadow u-vertical-scroll'>
             @foreach($sleepgunScores as $score)
                 <li class='scoresList__scoreCard u-box-shadow'>
                     <section class='scoresList__scoreCard__header'>

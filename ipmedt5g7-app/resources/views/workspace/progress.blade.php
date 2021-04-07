@@ -5,7 +5,18 @@
 @endsection
 
 @section('content')
-
+<header class="mainHeader u-bureau-gradient u-box-shadow">
+    <nav class="mainHeader__nav">
+        <img src="/img/logo.png"></img>
+        <ul>
+            <li><a href="/gebruiker">Account</a></li>
+            <li><a href="/wakingupresults">Opstaan</a></li>
+            <li><a href="/desk">Bureau</a></li>
+            <li><a href="/boodschappenlijst">Boodschappen</a></li>
+            <li><a href="/recepten">Koken</a></li>
+        </ul> 
+    </nav>
+</header>
 <section class="desklabels">
     <h1 class="desklabels__actief u-text-color-black u-grid-center"> actieve deskjob: {{$actieve_deskjob}}</h1>
 
