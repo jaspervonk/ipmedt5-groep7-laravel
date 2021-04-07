@@ -11,7 +11,6 @@ html{
 
 body{
     font-size: 1.6rem;
-    padding: 4rem;
     background: #F7F7F7;
     font-family: 'Montserrat', sans-serif;
     color:#FFF;
@@ -67,6 +66,39 @@ li, p{
 
 button:hover{
     cursor:pointer;
+}
+
+
+/* ========= Main Header ========== */
+.mainHeader {
+    height: 10vh;
+    margin-bottom: 2rem;
+
+    font-size: 3rem;
+}
+
+.mainHeader * {
+    display: inline;
+}
+
+.mainHeader__nav {
+    height: 100%;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.mainHeader__nav > img {
+    height: 80px;
+}
+
+.mainHeader__nav > ul > li {
+    margin: 20px;
+}
+
+.mainHeader__nav > ul > li > a {
+    color: white;
+    text-decoration: none;
 }
 
 /* ========== receptenpagina ========== */
@@ -626,6 +658,15 @@ input[type=checkbox]:checked + label.isChecked{
 
 
 /* ========== Waking Up ========== */
+.wakingup--left {
+    width: 45%;
+    margin-left: 2%;
+}
+
+.wakingup--right {
+    width: 45%;
+    margin-left: 52%;
+}
 
 .wakingup--header{
     padding-left: 1rem;
@@ -641,12 +682,11 @@ input[type=checkbox]:checked + label.isChecked{
     padding-top: 1px;
     
     color: black;
-    background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
 }
 
 .scoresList__scoreCard{
     height: 20rem;
-    width: 80%;
+    width: 90%;
     margin: 3vh auto;
 
     background: white;
@@ -778,4 +818,8 @@ input[type=checkbox]:checked + label.isChecked{
 
 .u-grid-center{
     margin:auto;
+}
+
+.u-wakingup-gradient{
+    background: linear-gradient(180deg, #5D6595 0%, #1F1842 100%);
 }
