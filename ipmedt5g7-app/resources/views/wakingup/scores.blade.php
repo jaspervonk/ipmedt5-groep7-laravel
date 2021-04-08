@@ -23,7 +23,7 @@
         <section class="u-flexbox-column">
             <h1 class='wakingup--header'>Sleepgun Resultaten</h1>
             <ul class='scoresList u-opstaan-gradient u-list-style-none u-box-shadow u-vertical-scroll'>
-                @foreach($sleepgunScores as $score)
+                @foreach($sleepgunScores->reverse() as $score)
                     <li class='scoresList__scoreCard u-box-shadow a-popup'>
                         <section class='scoresList__scoreCard__header'>
                             <h2 class='u-float-left'>{{$score->date}}</h2>
@@ -31,8 +31,8 @@
                         </section>
                         <section class='scoresList__scoreCard__paragraph'>
                             <hr class='scoresList__scoreCard__paragraph--horizontalLine'>
-                            <p class='scoresList__scoreCard__paragraph--half u-float-left'>Totale target: {{$score->targetTotal}}<br>Targets Hit: {{$score->targetHits}}<br>Targets Missed: {{$score->targetMisses}}</p>
-                            <p class='scoresList__scoreCard__paragraph--half u-float-left'>Target Accuracy: {{$score->targetAccuracy}}%<br>Reaction Time: {{$score->targetReactionTime}}ms</p>
+                            <p class='scoresList__scoreCard__paragraph--half u-float-left'>Doelwitten: {{$score->targetTotal}}<br>Geraakt: {{$score->targetHits}}<br>Gemist: {{$score->targetMisses}}</p>
+                            <p class='scoresList__scoreCard__paragraph--half u-float-left'>Accuracy: {{$score->targetAccuracy}}%<br>Reactie Tijd: {{$score->targetReactionTime}}ms</p>
                         </section>
                     </li>
                 @endforeach
@@ -41,14 +41,14 @@
 
 
         <section class="u-flexbox-column">
-            <h1 class='wakingup--header'>Wekkers</h1>
+            <h1 class='wakingup--header'>Wekker Instellingen</h1>
             <section class='u-opstaan-gradient u-list-style-none u-box-shadow u-vertical-scroll'>
                 <form class="wekker__form" action="/changeWekker" method="POST">
                 @csrf    
                     <section class="wekker__form__labelSection">
-                        <label for="dag">Selecteer een Dag: </label>
+                        <label for="dag">Dag: </label>
                         <select name="dag" required>
-                            <option value="" disabled selected hidden>Kies een dag...</option>
+                            <option value="" disabled selected hidden>Dag...</option>
                             <option value="maandag">Maandag</option>
                             <option value="dinsdag">Dinsdag</option>
                             <option value="woensdag">Woensdag</option>
@@ -61,7 +61,7 @@
                     <section class="wekker__form__labelSection">
                         <label for="uren">Uren: </label>
                         <select name="uren" required>
-                            <option value="" disabled selected hidden>Aantal uren...</option>
+                            <option value="" disabled selected hidden>Uren...</option>
                             <?php for ($num=0; $num<=23; $num++){
                                 echo '<option value="' .$num. '">' .$num. '</option>';
                             } 
@@ -71,17 +71,17 @@
                     <section class="wekker__form__labelSection">
                         <label for="minuten">Minuten: </label>
                         <select name="minuten" required>
-                            <option value="" disabled selected hidden>Aantal minuten...</option>
+                            <option value="" disabled selected hidden>Minuten...</option>
                             <?php for ($num=0; $num<=59; $num++){
                                 echo '<option value="' .$num. '">' .$num. '</option>';
                             } 
                             ?>
                         </select>
                     </section>
-                    <button class="wekker__form__button u-box-shadow" type="submit">Submit</button>
+                    <button class="wekker__form__button u-box-shadow" type="submit">Aanpassen</button>
                 </form>
                 
-                <ul class="wekkers u-body-padding">
+                <ul class="wekkers">
                 @foreach($wekkers as $wekker)
                     <li class="wekkerList">
                         <h1 class="wekkerList__item--h1">

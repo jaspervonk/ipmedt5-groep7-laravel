@@ -21,10 +21,6 @@ mycursor = mydb.cursor()
 # Array List om te kijken welke dag het is
 weekdayArray = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"]
 
-# pygame mixer om geluiden af te spelen
-pygame.mixer.init()
-pygame.mixer.music.load("marcrebillet_wakeup.mp3")
-
 # Functie die de dag van vandaag returned
 def getWeekday():
     currentWeekdayInteger = datetime.datetime.today().weekday()
@@ -55,38 +51,42 @@ while True:
         print("Alarm Hours:\t" + str(alarmHours))
         print("Alarm Minutes:\t" + str(alarmMinutes))
 
-        # Kijk of de tijdens gelijk zijn aan de tijd van nu
+        # Kijk of de tijdens gelijk zijn aan de tijd van nu --> Zet Sleepgun aan
         if (alarmHours == currentTime.hour) and (alarmMinutes == currentTime.minute):
-        #if(15 == currentTime.hour) and (59 == currentTime.minute):
-            pygame.mixer.music.play()
             port.write("1")
             print("Raspberry Pi Sends a '1' to the arduino nano")
-            while(True):
-                # Kijk of er een score is gegeven vanaf de Arduino nano
-                sleepgunScore = port.readline().strip()
-                if(sleepgunScore != ""):
-                    print("Score added to sleepgunscores!")
-                    # Kijk of het aantal uren/minuten onder 10 zit; Anders moet er een 0 bij
-                    if(currentTime.hour < 10):
-                        currentHour = "0" + str(currentTime.hour)
-                    else:
-                        currentHour = currentTime.hour
-                    if(currentTime.minute < 10):
-                        currentMinute = "0" + str(currentTime.minute)
-                    else:
-                        currentMinute = currentTime.minute
-                    currentDate = str(currentTime.day) + "/" + str(currentTime.month) + "/" +  str(currentTime.year) + " " + str(currentHour) + ":" + str(currentMinute)
-                    sleepgunScoreArray = sleepgunScore.split(":")
-                    mycursor.execute("INSERT INTO sleepgunscores VALUES ('" + str(currentDate) + "'," + str(sleepgunScoreArray[4]) + "," + str(sleepgunScoreArray[0]) + "," + str(sleepgunScoreArray[1]) + "," + str(sleepgunScoreArray[2]) + "," + str(sleepgunScoreArray[3]) + "," + str(sleepgunScoreArray[5]) + ");")
-                    pygame.mixer.music.stop()
-                    break
-                else:
-                    print("Awaiting score...")
-                    time.sleep(10)
-                                
         else:
             port.write("0")
             print("Raspberry Pi Sends a '0' to the arduino nano")
+    
+    # Check of de Arduino aan is gegaan --> Wacht op een score
+    time.sleep(3)
+    arduinoSignal = port.readline().strip()
+    if(arduinoSignal == '49'):
+        os.system('sudo aplay marcrebillet_wakeup.wav &')
+        while(True):
+            # Kijk of er een score is gegeven vanaf de Arduino nano
+            arduinoSignal = port.readline().strip()
+            if(arduinoSignal != ""):
+                print("Score added to sleepgunscores!")
+                # Kijk of het aantal uren/minuten onder 10 zit; Anders moet er een 0 bij
+                if(currentTime.hour < 10):
+                    currentHour = "0" + str(currentTime.hour)
+                else:
+                    currentHour = currentTime.hour
+                if(currentTime.minute < 10):
+                    currentMinute = "0" + str(currentTime.minute)
+                else:
+                    currentMinute = currentTime.minute
+                currentDate = str(currentTime.day) + "/" + str(currentTime.month) + "/" +  str(currentTime.year) + " " + str(currentHour) + ":" + str(currentMinute)
+                sleepgunScoreArray = arduinoSignal.split(":")
+                mycursor.execute("INSERT INTO sleepgunscores VALUES ('" + str(currentDate) + "'," + str(sleepgunScoreArray[4]) + "," + str(sleepgunScoreArray[0]) + "," + str(sleepgunScoreArray[1]) + "," + str(sleepgunScoreArray[2]) + "," + str(sleepgunScoreArray[3]) + "," + str(sleepgunScoreArray[5]) + ");")
+                os.system('sudo killall aplay')
+                break
+            else:
+                print("Awaiting score...")
+                time.sleep(5)
+        
 
     # Verplicht
     mydb.commit()

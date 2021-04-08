@@ -688,16 +688,6 @@ input[type=checkbox]:checked + label.isChecked{
 
 
 /* ========== Waking Up ========== */
-.wakingup--left {
-    width: 45%;
-    margin-left: 2%;
-}
-
-.wakingup--right {
-    width: 45%;
-    margin-left: 52%;
-}
-
 .wakingup--header{
     padding-left: 1rem;
     color: black;
@@ -707,9 +697,10 @@ input[type=checkbox]:checked + label.isChecked{
 
 .scoresList{
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     padding-top: 1px;
     color: black;
+    border-radius: 0 2rem 2rem 0;
 }
 
 .scoresList__scoreCard{
@@ -757,17 +748,14 @@ input[type=checkbox]:checked + label.isChecked{
 .wekker__form {
     display: flex;
     align-items: center;
-    margin: 0 auto;
-
     width: 90%;
+    margin: 0 auto;
 }
 
-.wekker__form *{
-    display: inline;
-}
-
-.wekker__form__labelSection{
-    margin: 2rem;
+.wekker__form__labelSection{'
+    width: 20%;
+    margin: 1.4rem;
+    margin-top: 0;
 }
 
 .wekker__form__labelSection > label {
@@ -793,7 +781,7 @@ input[type=checkbox]:checked + label.isChecked{
 .wekkers{
     width: 90%;
     margin: 2rem auto;
-
+    padding: 4rem;
     color: black;
     background-color: white;
     border-radius: 2rem;
@@ -805,13 +793,95 @@ input[type=checkbox]:checked + label.isChecked{
 }
 
 .wekkerList__item--h1{
-    width: 40%;
+    width: 20rem;
     font-size: 3rem;
 }
 
 .wekkerList__item--p{
-    width: 60%;
     font-size: 3rem;
+}
+
+@media(max-width: 1350px){
+    .u-flexbox{
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .scoresList{
+        height: 50vh;
+    }
+
+    .scoresList__scoreCard{
+        height: 18rem;
+    }
+
+    .wekker__form__labelSection{
+        margin: .4rem;
+    }
+}
+
+@media(max-width: 675px){
+    .u-flexbox{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .wakingup--header{
+        font-size: 3rem;
+    }
+
+    .scoresList__scoreCard{
+        height: 15rem;
+    }
+
+    .scoresList__scoreCard__header{
+        font-size: 1.8rem;
+    }
+
+    .scoresList__scoreCard__paragraph{
+        font-size: 1.8rem;
+    }
+
+    .wekkers{
+        padding: 2rem;
+    }
+
+    .wekker__form {
+        flex-wrap: wrap;
+    }
+    
+    .wekker__form__labelSection{
+        width: 90%;
+        margin: 1rem;
+    }
+
+    .wekker__form__labelSection > select{
+        display: inline-block;
+        width: 40%;
+    }
+    
+    .wekker__form__labelSection > label {
+        display: inline-block;
+        width: 12rem;
+        font-size: 2.2rem;
+        text-align: right;
+    }
+
+    .wekker__form__button{
+        display: inline-block;
+        margin: 0 auto;
+        width: 18rem;
+    }
+
+    .wekkerList__item--h1{
+        width: 14rem;
+        font-size: 2rem;
+    }
+    
+    .wekkerList__item--p{
+        font-size: 2.4rem;
+    }
+    
 }
 
 /* ========== Gebruiker ========== */
@@ -931,11 +1001,13 @@ input[type=checkbox]:checked + label.isChecked{
 
 .u-flexbox{
     display: flex;
+    gap: 2rem;
+    margin: 0 auto;
 }
 
 .u-flexbox-column{
     flex: 50%;
-    margin: 4rem;
+    margin: 2rem;
 }
 
 .u-flex-v-center{
@@ -991,6 +1063,7 @@ input[type=checkbox]:checked + label.isChecked{
 
 .u-vertical-scroll::-webkit-scrollbar-track {
     background: white;
+    border-radius: 0 3rem 3rem 0;
 }
 
 .u-vertical-scroll::-webkit-scrollbar-thumb {

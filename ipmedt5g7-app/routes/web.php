@@ -15,9 +15,7 @@ use App\Models\User;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\GebruikerController::class, 'gebruiker']);
 
 Route::get('/opstaan', [\App\Http\Controllers\WakingupController::class, 'index']);
 
