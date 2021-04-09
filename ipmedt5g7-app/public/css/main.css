@@ -450,12 +450,9 @@ button:hover{
     width: 100%;
 }
 
-.recept__figure{
-    width: 100%;
-}
-
 .recept__image{
     margin-bottom: 8rem;
+    width: 100%;
 }
 
 .recept__beoordeling__titel{
