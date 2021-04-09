@@ -4,6 +4,9 @@ function sleep(ms) {
 
 async function verwerk(){
     location.reload();
-    // await sleep(2000);
-    //document.getElementById("beoordeling").style.display = "block";
+}
+
+function receptScore(){
+    document.getElementById("beoordelingSection").style.display = "none";
+    document.getElementById("scoreSection").style.display = "block";
 }

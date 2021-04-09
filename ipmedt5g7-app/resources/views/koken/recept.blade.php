@@ -25,7 +25,7 @@
             <section class='recept__informatie__kaart u-box-shadow-content'>
                 <p class='recept__informatie__tekst'> Recept voor: {{$recepten->hoeveelheid}} </p>
                 <p class='recept__informatie__tekst'> Tijd: {{$recepten->tijd}} minuten </p>
-                <p class='recept__informatie__tekst'> Maximum te behalen punten: {{$recepten->punten}}</p>   
+                <p class='recept__informatie__tekst'> Maximum te behalen punten: {{$recepten->punten - 10}}</p>   
             </section>
             <section class='recept__informatie__kaart2'>
                 <section class='recept__btnSection u-flex-v-center'>
