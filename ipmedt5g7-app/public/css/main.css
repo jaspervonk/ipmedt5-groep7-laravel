@@ -337,10 +337,6 @@ button:hover{
     margin-bottom: 2rem;
 }
 
-/* .recept__bereiden{
-    display:none;
-} */
-
 .swiper-container{
     display:none;
 }
@@ -487,8 +483,35 @@ button:hover{
     color: #F7F7F7;
 }
 
-#beoordeling{
-    /* display: none; */
+/* ========== recept informatie ========== */
+
+.recept__informatie{
+    color: #1F1842;
+}
+
+.recept__informatie:hover{
+    color: #5068A5;
+}
+
+.informatie{
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 70%;
+    padding: 4rem;
+    background: linear-gradient(143.7deg, #90C8F5 0%, #8494EC 100%);
+}
+
+.informatie__timer{
+    margin-bottom: 2rem;
+}
+
+.informatie__timer__header{
+    margin-top: 1rem;
+}
+
+.informatie__timer__header, .informatie__timer__tekst{
+    margin-bottom: 1.5rem;
 }
 
 /* ========== Shopping list ========== */

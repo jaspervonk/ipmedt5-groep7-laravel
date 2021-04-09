@@ -27,6 +27,8 @@ Route::get('/recepten/{id}/klaar', [\App\Http\Controllers\ReceptController::clas
 
 Route::get('/recepten', [\App\Http\Controllers\ReceptController::class, 'index']);
 
+Route::get('/receptInfo', function () {return view('koken.receptInfo');});
+
 Route::get('/boodschappenlijst', [App\Http\Controllers\ShoppinglistController::class, 'index']);
 
 Route::post('/submit', [App\Http\Controllers\ToevoegenController::class, 'store']);

@@ -27,6 +27,7 @@
                 <button class='recept__beoordeling__button' onclick='verwerk()'> Verwerken</button>
                 <p class='recept__beoordeling__tekst' id='beoordeling'> Behaalde beoordeling: {{$cijfer}}</p>
             </section>
+            <a class='recept__informatie' href="{{ url('/receptInfo') }}"> Hoe moet ik beoordelen? </a>
         </section>
     </section>
     <!-- <p> ({{$cijfer}} + {{$recepten->punten}}) </p>
