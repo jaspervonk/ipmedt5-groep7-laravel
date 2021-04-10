@@ -31,8 +31,13 @@ select{
     text-align: center;
 }
 
+.button:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    transition: all .3s;
+}
+
 .button--card{
-    padding: 2rem 1rem;
+    padding: .8rem 1.5rem;
     float: right;
 }
 
@@ -57,13 +62,6 @@ select{
     list-style: none;
 }
 
-.card{
-    background-image: linear-gradient(#C3A5E4, #837BC6);
-    padding: 1rem 5rem 5rem;
-    margin: 5rem;
-    max-width: 60rem;
-    margin: 2rem 0;
-}
 
 /* Dit moet een BEM classen worden
 li, p{
@@ -105,6 +103,61 @@ button:hover{
 .mainHeader__nav > ul > li > a {
     color: white;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px){
+    .mainHeader {
+        height: 10vh;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+    
+    .mainHeader * {
+        display: inline;
+    }
+    
+    .mainHeader__nav {
+        height: 100%;
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .mainHeader__nav > img {
+        height: 40%;
+    }
+    
+    .mainHeader__nav > ul > li {
+        margin: 5px;
+        font-size: 40%;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px){
+    .mainHeader {
+        height: 10vh;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+    
+    .mainHeader * {
+        display: inline;
+    }
+    
+    .mainHeader__nav {
+        height: 100%;
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .mainHeader__nav > img {
+        height: 60%;
+    }
+    
+    .mainHeader__nav > ul > li {
+        margin: 5px;
+        font-size: 60%;
+    }
 }
 
 /* ========== receptenpagina ========== */
@@ -487,8 +540,15 @@ button:hover{
     color: #F7F7F7;
 }
 
-#beoordeling{
-    /* display: none; */
+.card__list__item{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.lijstFlex{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 /* ========== Shopping list ========== */
@@ -496,6 +556,16 @@ button:hover{
 input[type=checkbox]:checked + label.isChecked{
     text-decoration: line-through;
     color: green;
+}
+
+.card{
+    background-image: linear-gradient(#C3A5E4, #837BC6);
+    padding: 3rem;
+    max-width: 60rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 /*------------------------------ grid -------------------------- */
@@ -521,19 +591,70 @@ input[type=checkbox]:checked + label.isChecked{
 .grid__toevoegen{
     grid-column: 5 / 9;
     grid-row: 4 / 10;
-    gap: 5rem;
 }
 
 .grid__barcodeScannen{
     grid-column: 5 / 9;
     grid-row: 2 / 4;
-    gap: 5rem;
 }
 
 .grid__userToevoegen{
     grid-column: 9 / 13;
     grid-row: 2 / 4;
-    gap: 5rem;
+}
+
+@media(max-width: 900px){
+    .grid__header{
+        grid-column: 2 / 10;
+        grid-row: 1;
+    }
+    
+    .grid__booschappenlijstCard{
+        grid-column: 2 / 11;
+        grid-row: 2 / 5;
+    }
+    
+    .grid__toevoegen{
+        grid-column: 2 / 11;
+        grid-row: 5 / 8;
+    }
+    
+    .grid__barcodeScannen{
+        grid-column: 2 / 11;
+        grid-row: 8 / 10;
+    }
+    
+    .grid__userToevoegen{
+        grid-column: 2 / 11;
+        grid-row: 10 / 12;
+    }
+}
+
+@media(max-width: 600px){
+    .grid__header{
+        grid-column: span 6;
+        grid-row: 1;
+    }
+    
+    .grid__booschappenlijstCard{
+        grid-column: span 12;
+        grid-row: 2 / 5;
+    }
+    
+    .grid__toevoegen{
+        grid-column: span 12;
+        grid-row: 5 / 8;
+    }
+    
+    .grid__barcodeScannen{
+        grid-column: span 12;
+        grid-row: 8 / 10;
+    }
+    
+    .grid__userToevoegen{
+        grid-column: span 12;
+        grid-row: 10 / 12;
+    }
 }
 
 /* ========== desk ========== */
@@ -950,6 +1071,23 @@ input[type=checkbox]:checked + label.isChecked{
 
 .u-body-padding{
     padding: 4rem;
+}
+
+.u-input{
+    width: 100%;
+    height: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin: .8rem 0 2rem 0;
+    border: none
+}
+
+.u-label{
+    margin-bottom: 1rem;
+}
+
+hr{
+    border: .1rem solid #eee;
 }
 
 /* ========== animation classes ========== */
