@@ -21,5 +21,12 @@ class StoredProductsTableSeeder extends Seeder
             'volume' => "200 gram",
             'prijs' => 1.99,
         ]);
+        DB::table('stored_products')->insert([
+            'EAN' => 8719179340221,
+            'product' => "MULTI A-Z compleet",
+            'merk' => "Kruidvat",
+            'volume' => "80 gram",
+            'prijs' => 2.99,
+        ]);
     }
 }

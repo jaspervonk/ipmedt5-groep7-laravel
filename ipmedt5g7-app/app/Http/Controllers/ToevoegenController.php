@@ -3,19 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Models\Shoppinglist;
-
+use \App\Models\StoredProducts;
 class ToevoegenController extends Controller
 {
-    
     public function store(Request $request){
-        $Shoppinglist = new Shoppinglist;
-        $Shoppinglist->EAN = $request->input('EAN');
-        $Shoppinglist->product = $request->input('product');
-        $Shoppinglist->merk = $request->input('merk');
-        //$Shoppinglist->aantal = $request->input('aantal');
-        $Shoppinglist->volume = $request->input('volume');
-        $Shoppinglist->save();
+        $StoredProducts = new StoredProducts;
+        $StoredProducts->EAN = $request->input('EAN');
+        $StoredProducts->product = $request->input('product');
+        $StoredProducts->merk = $request->input('merk');
+        $StoredProducts->volume = $request->input('volume');
+        $StoredProducts->save();
         return redirect('/boodschappenlijst');
     }
 }

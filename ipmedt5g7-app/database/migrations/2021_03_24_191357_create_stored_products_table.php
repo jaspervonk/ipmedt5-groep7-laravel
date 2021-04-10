@@ -17,7 +17,7 @@ class CreateStoredProductsTable extends Migration
             // $table->id();
             $table->bigInteger('EAN')->unique();
             $table->string('product');
-            $table->string('merk');
+            $table->string('merk')->nullable();
             $table->string('volume')->nullable();
             $table->float('prijs')->nullable();
             $table->timestamp("updated_at")->nullable();
