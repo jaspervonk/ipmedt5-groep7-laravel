@@ -85,7 +85,6 @@ while True:
             #----------------------------------------------------------------------
             #queryProduct = """SELECT product FROM stored_products WHERE EAN = """ 
             queryProduct = """SELECT product FROM stored_products WHERE EAN = %s""" % ss
-            print(queryProduct)
             #queryBrand = """SELECT %s FROM stored_products WHERE EAN = %s """
 
             Storedproductnaam = (ss)
@@ -101,17 +100,31 @@ while True:
             productStr = productStr.replace(")", "")
             productStr = productStr[1:]
 
+            #--------------------------------------------------------------------
+            queryMerk = """SELECT merk FROM stored_products WHERE EAN = %s""" % ss
+            merk = mycursor.execute(queryMerk)
+            merk = mycursor.fetchall()
+            merkStr = ' '.join(map(str, merk))
+            merkStr = merkStr.replace("(", "")
+            merkStr = merkStr.replace("'", "")
+            merkStr = merkStr.replace(",", "")
+            merkStr = merkStr.replace(")", "")
+            merkStr = merkStr[1:]
 
         #----------------------------------------------------------------------
             if(productStr != ''):
-                queryInsert = """INSERT INTO shoppinglist (product) VALUES ('%s', '%s');""" % productStr
+                queryInsert = """INSERT INTO shoppinglist (product, merk) VALUES ('%s', '%s');""" % (productStr, merkStr)
                 print(queryInsert)
                 mycursor.execute(queryInsert)
                 mydb.commit()
+                port.write(str(productStr))
+
             else:
                 print("Barcode onbekend!")
+                port.write(str("Barcode onbekend    Probeer het opnieuw"))
+
         except:
             print("Barcode onbekend")
-            port.write(str("Barcode onbekend    Probeer het opnieuw"))
+            port.write(str("Er is een fout opgetreden"))
 
            
