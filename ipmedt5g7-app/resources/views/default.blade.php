@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    
-    <link rel="icon" type="image/png" href="./img/logo.png">
     <!-- einde swiperJS -->
-    <title>@yield('title')</title>
+    <link rel="icon" type="image/png" href="./img/logo.png">
+    <title>Daily Routine</title>
 </head>
 <body>
     @yield('content')
