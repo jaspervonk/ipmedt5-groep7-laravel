@@ -15,6 +15,7 @@ class SleepgunscoresTableSeeder extends Seeder
     public function run()
     {
         DB::table('sleepgunscores')->insert([
+            'user' => "Algemeen",
             'date' => "11/6/2020 12:00",
             'totalTime' => 3.500,
             'targetTotal' => 10,
@@ -25,6 +26,7 @@ class SleepgunscoresTableSeeder extends Seeder
         ]);
 
         DB::table('sleepgunscores')->insert([
+            'user' => "Algemeen",
             'date' => "12/5/2020 11:40",
             'totalTime' => 3.000,
             'targetTotal' => 10,
@@ -35,6 +37,7 @@ class SleepgunscoresTableSeeder extends Seeder
         ]);
 
         DB::table('sleepgunscores')->insert([
+            'user' => "Algemeen",
             'date' => "4/6/2021 10:30",
             'totalTime' => 4.000,
             'targetTotal' => 10,

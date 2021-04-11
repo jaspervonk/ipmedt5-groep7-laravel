@@ -24,17 +24,19 @@
             <h1 class='wakingup--header'>Sleepgun Resultaten</h1>
             <ul class='scoresList u-opstaan-gradient u-list-style-none u-box-shadow u-vertical-scroll'>
                 @foreach($sleepgunScores->reverse() as $score)
-                    <li class='scoresList__scoreCard u-box-shadow a-popup'>
-                        <section class='scoresList__scoreCard__header'>
-                            <h2 class='u-float-left'>{{$score->date}}</h2>
-                            <h2 class='u-float-right'> {{$score->totalTime}}s</h2>
-                        </section>
-                        <section class='scoresList__scoreCard__paragraph'>
-                            <hr class='scoresList__scoreCard__paragraph--horizontalLine'>
-                            <p class='scoresList__scoreCard__paragraph--half u-float-left'>Doelwitten: {{$score->targetTotal}}<br>Geraakt: {{$score->targetHits}}<br>Gemist: {{$score->targetMisses}}</p>
-                            <p class='scoresList__scoreCard__paragraph--half u-float-left'>Accuracy: {{$score->targetAccuracy}}%<br>Reactie Tijd: {{$score->targetReactionTime}}ms</p>
-                        </section>
-                    </li>
+                    @if($score->user == $activeUser->name)
+                        <li class='scoresList__scoreCard u-box-shadow a-popup'>
+                            <section class='scoresList__scoreCard__header'>
+                                <h2 class='u-float-left'>{{$score->date}}</h2>
+                                <h2 class='u-float-right'> {{$score->totalTime}}s</h2>
+                            </section>
+                            <section class='scoresList__scoreCard__paragraph'>
+                                <hr class='scoresList__scoreCard__paragraph--horizontalLine'>
+                                <p class='scoresList__scoreCard__paragraph--half u-float-left'>Doelwitten: {{$score->targetTotal}}<br>Geraakt: {{$score->targetHits}}<br>Gemist: {{$score->targetMisses}}</p>
+                                <p class='scoresList__scoreCard__paragraph--half u-float-left'>Accuracy: {{$score->targetAccuracy}}%<br>Reactie Tijd: {{$score->targetReactionTime}}ms</p>
+                            </section>
+                        </li>
+                    @endif
                 @endforeach
             </ul>
         </section>

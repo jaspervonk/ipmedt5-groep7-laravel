@@ -8,6 +8,7 @@ class WakingupController extends Controller
 {
     public function index(){
         return view ('wakingup.scores', [
+            'activeUser' => \App\Models\activeUserTable::all()->first(),
             'sleepgunScores' => \App\Models\WakingupScores::all(),
             'wekkers' => \App\Models\Wekkers::all(),
         ]);

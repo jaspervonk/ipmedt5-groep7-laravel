@@ -60,7 +60,7 @@ while True:
             print("Raspberry Pi Sends a '0' to the arduino nano")
     
     # Check of de Arduino aan is gegaan --> Wacht op een score
-    time.sleep(3)
+    time.sleep(1)
     arduinoSignal = port.readline().strip()
     if(arduinoSignal == '49'):
         os.system('sudo aplay marcrebillet_wakeup.wav &')
@@ -79,13 +79,16 @@ while True:
                 else:
                     currentMinute = currentTime.minute
                 currentDate = str(currentTime.day) + "/" + str(currentTime.month) + "/" +  str(currentTime.year) + " " + str(currentHour) + ":" + str(currentMinute)
+                mycursor.execute("SELECT * FROM activeUser WHERE id = 1;")
+                for x in mycursor:
+                    activeUser = x[1]
                 sleepgunScoreArray = arduinoSignal.split(":")
-                mycursor.execute("INSERT INTO sleepgunscores VALUES ('" + str(currentDate) + "'," + str(sleepgunScoreArray[4]) + "," + str(sleepgunScoreArray[0]) + "," + str(sleepgunScoreArray[1]) + "," + str(sleepgunScoreArray[2]) + "," + str(sleepgunScoreArray[3]) + "," + str(sleepgunScoreArray[5]) + ");")
+                mycursor.execute("INSERT INTO sleepgunscores VALUES ('" + str(activeUser) + "','" + str(currentDate) + "'," + str(sleepgunScoreArray[4]) + "," + str(sleepgunScoreArray[0]) + "," + str(sleepgunScoreArray[1]) + "," + str(sleepgunScoreArray[2]) + "," + str(sleepgunScoreArray[3]) + "," + str(sleepgunScoreArray[5]) + ");")
                 os.system('sudo killall aplay')
                 break
             else:
                 print("Awaiting score...")
-                time.sleep(3)
+                time.sleep(1)
         
 
     # Verplicht

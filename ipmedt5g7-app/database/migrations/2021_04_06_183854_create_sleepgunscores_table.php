@@ -14,6 +14,7 @@ class CreateSleepgunscoresTable extends Migration
     public function up()
     {
         Schema::create('sleepgunscores', function (Blueprint $table) {
+            $table->string('user');
             $table->string('date');
             $table->float('totalTime');
             $table->integer('targetTotal');
