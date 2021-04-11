@@ -35,5 +35,5 @@
     </form>
 </section>
 <section class="card grid__userToevoegen u-box-shadow">
-    @include('boodschappen.addUser')
+    @include('boodschappen.addShoppinglist')
 </section>

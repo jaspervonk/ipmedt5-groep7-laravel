@@ -19,10 +19,10 @@
             @foreach($ActiveUser as $ActiveUser)
                 <p class="blackFont">Huidige lijstje: {{$ActiveUser->name}}</p>
             @endforeach
-            @include('boodschappen.changeUser')
+            @include('boodschappen.changeShoppinglist')
         </header>
         <section class="card u-box-shadow grid__booschappenlijstCard u-box-shadow lijstFlex">
-            <h2 class="card__title">Boodschappenlijst {{$ActiveUser->name}}</h2>
+            <h2 class="card__title">{{$activeShoppinglist->activeshoppinglist}}</h2>
             <hr>
             <form action="/remove" method="POST">
                 @method('POST')

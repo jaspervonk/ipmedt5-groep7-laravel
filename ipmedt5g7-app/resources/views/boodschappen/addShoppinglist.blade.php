@@ -1,6 +1,6 @@
 <h2 class="card__title">Lijstje aanmaken</h2>
 <hr>
-<form action="/addUser" method="POST">
+<form action="/addshoppinglist" method="POST">
     @method('POST')
     {{ csrf_field() }}
     <label class="u-label" for="name">Naam:</label><br>

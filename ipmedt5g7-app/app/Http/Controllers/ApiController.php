@@ -14,26 +14,34 @@ use \App\Models\Shoppinglist;
 
 class ApiController extends Controller
 {
-    public function api(Request $request)
+    public function api(Request $request, \App\Models\StoredProducts $storedProducts)
     {
-        $barcode = $request->input('EAN');
-        //723175258273;         
+        // Gebruik de meegegeven barcode om in de API te kijken
+        $barcode = $request->input('EAN');       
         $response = Http::get('https://api.barcodespider.com/v1/lookup?token=78ecdb5a897a3707a85b&upc=' . $barcode);
-        //dd($response->json());
+        
+        // Kijk of er een product is gevonden
+        $item_response = $response->json()['item_response'];
+        if($item_response['code'] == 200){
+            // Voeg gevonden product toe aan de database
+            $item_attributes = $response->json()['item_attributes'];
 
-        $item_attributes = $response->json()['item_attributes'];
-        $title = $item_attributes['title'];
-        $brand = $item_attributes['brand'];
-        $upc = $item_attributes['upc'];
-        //return view('boodschappen.api', ['titleData'=>$title, 'brandData'=>$brand, 'upcData'=>$upc]);
-
-        //------------------------------------------------
-        $Shoppinglist = new Shoppinglist;
-        //$stored_products->EAN = $upc;
-        $Shoppinglist->product = $title;
-        $Shoppinglist->merk = $brand;
-        $Shoppinglist->save();
-        return redirect('/boodschappenlijst');
+            $Shoppinglist = new Shoppinglist;
+            $Shoppinglist->product = $item_attributes['title'];
+            $Shoppinglist->merk = $item_attributes['brand'];
+            $Shoppinglist->save();
+            return redirect('/boodschappenlijst');
+        }
+        else{
+            $product = $storedProducts::where('EAN', '=', $barcode)->first();
+            if($product != NULL){
+                $Shoppinglist = new Shoppinglist;
+                $Shoppinglist->product = $product->product;
+                $Shoppinglist->merk = $product->merk;
+                $Shoppinglist->save();
+                return redirect('/boodschappenlijst');
+            }
+        };       
     }
 
     // public function api(Request $request)
