@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             ActiveUserTableSeeder::class,
             SoortReceptSeeder::class,
             ReceptSeeder::class,
+            UsershoppinglistTableSeeder::class,
             ShoppinglistTableSeeder::class,
             DeskworkingTableSeeder::class,
             DesktimerTableSeeder::class,

@@ -15,10 +15,18 @@ class ShoppinglistController extends Controller
 
     // }
     public function index(){
+        if(\App\Models\ActiveShoppinglist::all()->first() != NULL){
+            $selected = true;
+        }   
+        else{
+            $selected = false;
+        }
+
         return view ('boodschappen.boodschappenlijst', [
-            'product' => \App\Models\Shoppinglist::all(),
+            'shoppinglistProducts' => \App\Models\Shoppinglist::all(),
             'user' => \App\Models\User::all(),
             'ActiveUser' => \App\Models\activeUserTable::all(),
+            'selected' => $selected,
             'activeShoppinglist' => \App\Models\ActiveShoppinglist::all()->first(),
             'userShoppinglists' => \App\Models\UserShoppinglist::all(),
         ]);

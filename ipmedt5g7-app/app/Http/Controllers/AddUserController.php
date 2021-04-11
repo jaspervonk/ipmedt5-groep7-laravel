@@ -22,11 +22,11 @@ class AddUserController extends Controller
         return view('gebruiker.gebruikerUser', ['user' => \App\Models\User::all()]);
     }
 
-    public function ToPersonalPage(Request $request, \App\Models\activeUserTable $activeUserTable){
+    public function ToPersonalPage(Request $request, \App\Models\activeUserTable $activeUserTable, \App\Models\ActiveShoppinglist $activeShoppinglistTable){
         $activeUserTable = activeUserTable::all()->first();
         $activeUserTable->name = $request->input('naam');
         $activeUserTable->save();
-        //print($activeUserTable);
+        $activeShoppinglistTable::truncate();
         return redirect('/gebruiker');
     }
 }
