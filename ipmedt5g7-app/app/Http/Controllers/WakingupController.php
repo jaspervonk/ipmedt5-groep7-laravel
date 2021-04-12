@@ -11,6 +11,7 @@ class WakingupController extends Controller
             'activeUser' => \App\Models\activeUserTable::all()->first(),
             'sleepgunScores' => \App\Models\WakingupScores::all(),
             'wekkers' => \App\Models\Wekkers::all(),
+            'ActiveUser' => \App\Models\activeUserTable::all()->first(),
         ]);
     }
 

@@ -71,7 +71,6 @@ while True:
         print(productnaam)
         print(merk)
         #---------------------------------------------------------------
-        #activeListQuery = """select activeshoppinglist from activeshoppinglist;"""
         activeList = mycursor.execute("select activeshoppinglist from activeshoppinglist;")
         activeList = mycursor.fetchall()
         activeList = ' '.join(map(str, activeList))
