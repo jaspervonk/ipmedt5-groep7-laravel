@@ -14,9 +14,13 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    
     <!-- einde swiperJS -->
     <link rel="icon" type="image/png" href="./img/logo.png">
+    <script src="/js/main.js"></script>
     <title>Daily Routine</title>
 </head>
 <body>
     @yield('content')
+    <section id="js--feedbackPopup" class="feedbackPopup">
+        <h1 id="js--feedbackPopupText" class="feedbackPopup__text"> Placeholder </h1>
+    </section>
 </body>
 </html>

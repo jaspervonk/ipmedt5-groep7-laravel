@@ -45,7 +45,7 @@
         <section class="u-flexbox-column">
             <h1 class='wakingup--header'>Wekker Instellingen</h1>
             <section class='u-opstaan-gradient u-list-style-none u-box-shadow u-vertical-scroll'>
-                <form class="wekker__form" action="/changeWekker" method="POST">
+                <form class="wekker__form" onsubmit='return setPopup("Wekker succesvol aangepast!", "linear-gradient(180deg, #86DA69 0%, #2B8D29 100%)");' action="/changeWekker" method="POST">
                 @csrf    
                     <section class="wekker__form__labelSection">
                         <label for="dag">Dag: </label>
@@ -107,9 +107,6 @@
                 </ul>
             </section>
         </section>
-
-
-
     </section>
 
 @endsection

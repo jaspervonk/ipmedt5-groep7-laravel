@@ -160,6 +160,29 @@ button:hover{
     }
 }
 
+/* ========== Feedback Popup ========== */
+.feedbackPopup{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    height: 0rem;
+    width: 100%;
+    margin-top: 10vh;
+
+    overflow: hidden;
+    transition: 1.5s;
+    border-radius: 0 0 3rem 3rem;
+    background-color: lightcoral;
+}
+
+.feedbackPopup__text{
+    padding-top: 1rem;
+    font-style: italic;
+    text-align: center;
+}
+
 /* ========== receptenpagina ========== */
 
 .receptKaart{
