@@ -11,13 +11,13 @@
         <input type="number" name="aantal" value="1"><br> -->
 
         <label class="u-label" for="merk">EAN:</label><br>
-        <input class="u-input" type="text" name="EAN"><br>
+        <input class="u-input" type="text" name="EAN" required><br>
 
         <label class="u-label" for="merk">Merk:</label><br>
-        <input class="u-input" type="text" name="merk"><br>
+        <input class="u-input" type="text" name="merk" required><br>
 
         <label class="u-label" for="Volume">Volume:</label><br>
-        <input class="u-input" type="text" name="volume"><br><br>
+        <input class="u-input" type="text" name="volume" required><br><br>
 
         <button class="button button--red button--card" type="submit">Toevoegen</button>
     </form>
@@ -29,7 +29,7 @@
         @method('POST')
         {{ csrf_field() }}
         <label class="u-label" for="merk">Barcode:</label><br>
-        <input class="u-input" type="text" name="EAN">
+        <input class="u-input" type="text" name="EAN" required>
 
         <button class="button button--red button--card" type="submit">Toevoegen</button>
     </form>

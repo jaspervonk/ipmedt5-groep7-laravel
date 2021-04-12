@@ -26,7 +26,7 @@
             <h2 class="card__title">Selecteer een boodschappenlijst</h2>
             @endif
             <hr>
-            <form action="/remove" method="POST">
+            <form action="/remove" method="POST" onsubmit='return setPopup("Geselecteerde producten verwijderd", "linear-gradient(180deg, #5ACD34 0%, #2B8D29 100%)");'>
                 @method('POST')
                 {{ csrf_field() }}
                 <ul>
@@ -40,7 +40,7 @@
                             @endif
                         @endforeach
                     @endif
-                    <button class="button button--red button--card" type="submit">Verwijder</button>
+                    <button class="button button--red button--card">Verwijder</button>
                 </ul>
             </form>
         </section>
