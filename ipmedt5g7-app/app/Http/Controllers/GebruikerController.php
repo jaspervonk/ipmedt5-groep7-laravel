@@ -12,6 +12,7 @@ class GebruikerController extends Controller
             'product' => \App\Models\Shoppinglist::all(),
             'user' => \App\Models\User::all(),
             'ActiveUser' => \App\Models\activeUserTable::all(),
+            'activeShoppinglist' => \App\Models\ActiveShoppinglist::all()->first(),
         ]);
     }
 }

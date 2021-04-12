@@ -25,7 +25,7 @@ class ShoppinglistController extends Controller
         return view ('boodschappen.boodschappenlijst', [
             'shoppinglistProducts' => \App\Models\Shoppinglist::all(),
             'user' => \App\Models\User::all(),
-            'ActiveUser' => \App\Models\activeUserTable::all(),
+            'ActiveUser' => \App\Models\activeUserTable::all()->first(),
             'selected' => $selected,
             'activeShoppinglist' => \App\Models\ActiveShoppinglist::all()->first(),
             'userShoppinglists' => \App\Models\UserShoppinglist::all(),

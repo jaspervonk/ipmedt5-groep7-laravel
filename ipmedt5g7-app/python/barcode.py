@@ -70,14 +70,24 @@ while True:
         merk = item['item_attributes']['brand']
         print(productnaam)
         print(merk)
-        mycursor.execute("INSERT INTO `shoppinglist` (product,merk) VALUES (%s, %s)", (productnaam, merk))
+        #---------------------------------------------------------------
+        #activeListQuery = """select activeshoppinglist from activeshoppinglist;"""
+        activeList = mycursor.execute("select activeshoppinglist from activeshoppinglist;")
+        activeList = mycursor.fetchall()
+        activeList = ' '.join(map(str, activeList))
+        activeList = activeList.replace("(", "")
+        activeList = activeList.replace("'", "")
+        activeList = activeList.replace(",", "")
+        activeList = activeList.replace(")", "")
+        activeList = activeList[1:]
+        mycursor.execute("INSERT INTO `shoppinglist` (product, merk, shoppinglist) VALUES (%s, %s, %s)", (productnaam, merk, activeList))
         mydb.commit()
         port.write(str(productnaam))
         failed = False
-    except:
-        print("Barcode onbekend in API")
-        #port.write(str("Barcode onbekend    Probeer het opnieuw"))
+    except Exception as e:
+        print(e)
         failed = True
+        
     if(failed == True):
         try:
             print("Zoeken in stored products")
@@ -110,10 +120,18 @@ while True:
             merkStr = merkStr.replace(",", "")
             merkStr = merkStr.replace(")", "")
             merkStr = merkStr[1:]
-
+            #-----------------------------------------------------------------
+            activeList = mycursor.execute("select activeshoppinglist from activeshoppinglist;")
+            activeList = mycursor.fetchall()
+            activeList = ' '.join(map(str, activeList))
+            activeList = activeList.replace("(", "")
+            activeList = activeList.replace("'", "")
+            activeList = activeList.replace(",", "")
+            activeList = activeList.replace(")", "")
+            activeList = activeList[1:]
         #----------------------------------------------------------------------
             if(productStr != ''):
-                queryInsert = """INSERT INTO shoppinglist (product, merk) VALUES ('%s', '%s');""" % (productStr, merkStr)
+                queryInsert = """INSERT INTO shoppinglist (product, merk, shoppinglist) VALUES ('%s', '%s', '%s');""" % (productStr, merkStr, activeList)
                 print(queryInsert)
                 mycursor.execute(queryInsert)
                 mydb.commit()
@@ -123,8 +141,8 @@ while True:
                 print("Barcode onbekend!")
                 port.write(str("Barcode onbekend    Probeer het opnieuw"))
 
-        except:
-            print("Barcode onbekend")
+        except Exception as e:
+            print(e)
             port.write(str("Er is een fout opgetreden"))
 
            
