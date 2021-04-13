@@ -130,7 +130,6 @@ button:hover{
     transition: all 1s;
     display: flex;
     flex-direction: row;
-    padding-bottom: 16rem;
     align-self: flex-end;
     align-items: flex-end;
     justify-content: flex-end;
