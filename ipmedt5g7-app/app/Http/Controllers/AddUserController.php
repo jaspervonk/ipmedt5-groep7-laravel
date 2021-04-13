@@ -41,7 +41,6 @@ class AddUserController extends Controller
         $activeUserTable = activeUserTable::all()->first();
         $activeUserTable->name = $request->input('naam');
         $activeUserTable->save();
-        $activeShoppinglistTable::truncate();
         return redirect('/gebruiker');
     }
 }

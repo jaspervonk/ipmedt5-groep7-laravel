@@ -8,7 +8,6 @@ class deskController extends Controller
 {
     public function index(){
         return view('workspace.deskview', [
-            // 'sushi' => \App\Models\Sushi::all(),
             // 'desktimer' => \App\Models\Desk::first()->work_minutes
             // 'pause_minutes' => \App\Models\Desk::skip(0)->first()->pause_minutes
             // 'work_minutes' => \App\Models\Desk::all()->take(2)->total_work_minutes,
