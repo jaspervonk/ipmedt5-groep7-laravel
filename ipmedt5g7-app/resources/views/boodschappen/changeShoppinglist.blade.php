@@ -1,4 +1,4 @@
-<form action="/changeshoppinglist" method="POST">
+<form action="/boodschappenlijst/change" method="POST">
     @csrf
     <label class="blackFont" for="naam">Selecteer lijstje: </label>
     <select name="naam" onchange="this.form.submit()">

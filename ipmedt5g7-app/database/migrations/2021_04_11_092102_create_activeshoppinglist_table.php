@@ -15,7 +15,7 @@ class CreateActiveshoppinglistTable extends Migration
     {
         Schema::create('activeshoppinglist', function (Blueprint $table) {
             $table->id();
-            $table->string('activeshoppinglist');
+            $table->string('activeshoppinglist')->default("Default");
         });
     }
 

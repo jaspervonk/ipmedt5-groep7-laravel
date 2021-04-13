@@ -5,15 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Models\StoredProducts;
 use \App\Models\Shoppinglist;
+use \App\Models\UserShoppinglist;
+use DB;
 
 
 class ShoppinglistController extends Controller
 {
-    // public function copyFromStoredProducts(Request $request){
-    //     $shoppinglist = new Shoppinglist;
-    //     $shoppinglist->product = $request['EAN'];
-
-    // }
     public function index(){
         if(\App\Models\ActiveShoppinglist::all()->first() != NULL){
             $selected = true;
@@ -60,5 +57,30 @@ class ShoppinglistController extends Controller
             $activeShoppinglist->save();
             return redirect('/boodschappenlijst');
         }
+    }
+
+    public function clearShoppinglist(\App\Models\UserShoppinglist $userShoppinglist, \App\Models\activeUserTable $activeUserTable, \App\Models\ActiveShoppinglist $activeshoppinglist){
+        DB::table('shoppinglist')->where('shoppinglist->user', '=', $activeshoppinglist->activeshoppinglist)->delete();
+        return redirect('/boodschappenlijst');
+    }
+
+    public function removeShoppinglist(\App\Models\UserShoppinglist $userShoppinglist, \App\Models\activeUserTable $activeUserTable, \App\Models\ActiveShoppinglist $activeshoppinglist){
+        $lijst = DB::table('usershoppinglist');
+        $activeshoppinglist = DB::table('activeshoppinglist')->first();
+        foreach ($lijst as $lijst) {
+            $lijst->where('shoppinglist', '=', $activeshoppinglist)->delete();
+        };
+        //DB::table('shoppinglist')->where('shoppinglist->user', $activeshoppinglist->shoppinglist->first())->delete();
+        // $query = $activeshoppinglist::all()->first();
+        //DB::table('usershoppinglist')->where($userShoppinglist->shoppinglist->first(), '=', $query)->get();
+        // $userShoppinglist->save();
+        // $activeshoppinglist = $activeshoppinglist::all()->first();
+        $activeshoppinglist->activeshoppinglist = 'Default';
+        $activeshoppinglist->save();
+        return redirect('/boodschappenlijst');
+    }
+
+    function plusOneShoppinglist(){
+        
     }
 }

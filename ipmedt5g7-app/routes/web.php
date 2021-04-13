@@ -28,8 +28,11 @@ Route::get('/recepten/{id}/klaar', [\App\Http\Controllers\ReceptController::clas
 Route::get('/recepten', [\App\Http\Controllers\ReceptController::class, 'index']);
 
 Route::get('/boodschappenlijst', [App\Http\Controllers\ShoppinglistController::class, 'index']);
-Route::post('/addshoppinglist', [App\Http\Controllers\ShoppinglistController::class, 'addShoppinglist']);
-Route::post('/changeshoppinglist', [App\Http\Controllers\ShoppinglistController::class, 'changeShoppinglist']);
+Route::post('/boodschappenlijst/create', [App\Http\Controllers\ShoppinglistController::class, 'addShoppinglist']);
+Route::post('/boodschappenlijst/change', [App\Http\Controllers\ShoppinglistController::class, 'changeShoppinglist']);
+Route::post('/boodschappenlijst/clear', [App\Http\Controllers\ShoppinglistController::class, 'clearShoppinglist']);
+Route::post('/boodschappenlijst/plus', [App\Http\Controllers\ShoppinglistController::class, 'plusOneShoppinglist']);
+
 
 Route::post('/submit', [App\Http\Controllers\ToevoegenController::class, 'store']);
 

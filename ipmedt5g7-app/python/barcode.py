@@ -135,6 +135,8 @@ while True:
                 mycursor.execute(queryInsert)
                 mydb.commit()
                 port.write(str(productStr))
+                #port.write(str("Is toegevoegd"))
+
 
             else:
                 print("Barcode onbekend!")

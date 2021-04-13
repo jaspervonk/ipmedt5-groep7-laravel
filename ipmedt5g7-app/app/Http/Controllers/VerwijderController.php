@@ -16,11 +16,16 @@ class VerwijderController extends Controller
             return redirect('/boodschappenlijst');
         }
         else{
-            echo 'Selecteer ten minste één vakje.';
+            print 'Selecteer ten minste één vakje.';
             return redirect('/boodschappenlijst');
         }
-        
-        
-        
+    }
+
+    public function removeAll(Request $request){
+        foreach ($checked as $checked) {
+            DB::table('shoppinglist')->where('id', '=', $checked)->delete();
+        }
+        return redirect('/boodschappenlijst');
+
     }
 }

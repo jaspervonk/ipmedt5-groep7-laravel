@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             WekkersTableSeeder::class,
             SleepgunscoresTableSeeder::class,
             StoredProductsTableSeeder::class,
+            activeshoppinglistTableSeeder::class,
         ]);
     }
 }
