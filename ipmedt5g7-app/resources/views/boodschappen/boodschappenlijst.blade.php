@@ -3,7 +3,13 @@
     <main class="boodschappen-grid u-body-padding">
         <header class="grid__header">
             <h1 class="pageTitle">Boodschappen</h1>
+            @if($activeShoppinglist->activeshoppinglist == "Default")
+            <p class="blackFont">We hebben je standaard het lijstje Default gegeven. Je kunt er meerdere aanmaken.</p>
+            @else
             <p class="blackFont">Huidig lijstje: {{$activeShoppinglist->activeshoppinglist}}</p>
+            @endif
+
+            
             <form action="/boodschappenlijst/clear" method="POST" onsubmit='return setPopup("Alle producten zijn verwijderd.", "linear-gradient(180deg, #5ACD34 0%, #2B8D29 100%)");'>
                 @csrf
                 <button type="submit" class="button button--red button--remove">Maak lijstje leeg</button>
