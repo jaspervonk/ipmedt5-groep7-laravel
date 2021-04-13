@@ -71,7 +71,7 @@ while True:
         mydb.commit()
 
     elif (rcv == 'e'):
-        mycursor.execute("UPDATE deskworking SET working_status = 'niet aan het werken';")
+        mycursor.execute("UPDATE deskworking SET working_status = 'druk op START om te beginnen';")
         mydb.commit()
 
     elif (rcv == 'gp'):
