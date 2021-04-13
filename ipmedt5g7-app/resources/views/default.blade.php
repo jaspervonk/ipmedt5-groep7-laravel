@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    
     <!-- einde swiperJS -->
-    <link rel="icon" type="image/png" href="./img/logo.png">
+    <link rel="icon" type="image/png" href="/img/logo.png">
     <script src="/js/main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>Daily Routine</title>
@@ -24,7 +24,7 @@
             <input type="checkbox" id="check" class="checkbtn">
             <label for="check" class="nav__hamburger"><i class="fas fa-bars fa-2x"></i></label>
             <figure>
-                <img class="nav__logo" src="./img/logo.png" alt="Logo">
+                <img class="nav__logo" src="/img/logo.png" alt="Logo">
             </figure>
             <ul class="nav__list">
                 <li class="nav__list__li--close">
