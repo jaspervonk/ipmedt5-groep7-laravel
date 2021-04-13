@@ -54,6 +54,12 @@ select{
     font-size: 4.5rem;
 }
 
+@media(max-width: 400px){
+    .pageTitle{
+        font-size: 3rem;
+    }
+}
+
 .blackFont{
     color: #212121;
 }
@@ -180,11 +186,11 @@ button:hover{
         flex-direction: column;
         padding-right: 0%;
         gap: 1rem;
+        z-index: 2;
         overflow-y: scroll;
     }
 
     .nav__list__li{
-        /* position: absolute; */
         display: block;
         padding: 0;
         top:0;
@@ -196,6 +202,7 @@ button:hover{
         font-size: 1.8rem;
         letter-spacing: .2rem;
         text-decoration: none;
+        overflow-y: scroll;
     }
 
     a.active, a:hover{
@@ -250,7 +257,7 @@ button:hover{
         box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.35);
     }
 
-    #check:checked ~ ul{
+    #check:checked ~ .nav__list{
         left: 0%;
         display: flex;
         align-items: center;
@@ -259,13 +266,7 @@ button:hover{
 }
 
 @media only screen and (max-width: 700px){
-    /* .nav__list{
-        padding-right: 20vw;
-    } */
 
-    #check:checked ~ .nav__list{
-        left: 0%;
-    }
 }
 
 /* ========== Feedback Popup ========== */
@@ -754,7 +755,7 @@ input[type=checkbox]:checked + label.isChecked{
 
 @media(max-width: 900px){
     .grid__header{
-        grid-column: 2 / 12;
+        grid-column: 2 / 11;
         grid-row: 1;
     }
     
@@ -781,7 +782,7 @@ input[type=checkbox]:checked + label.isChecked{
 
 @media(max-width: 600px){
     .grid__header{
-        grid-column: span 12;
+        grid-column: span 11;
         grid-row: 1;
     }
     
