@@ -16,7 +16,7 @@ class DeskworkingTableSeeder extends Seeder
     public function run()
     {
         DB::table('deskworking')->insert([
-            'working_status' => "niet aan het werken",
+            'working_status' => "druk op START om te beginnen",
         ]);
     }
 }
