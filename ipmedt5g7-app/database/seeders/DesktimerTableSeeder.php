@@ -15,27 +15,27 @@ class DesktimerTableSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('desktimer')->insert([
-        //     'total_work_minutes' => 0,
-        //     'total_pause_minutes' => 0,
-        //     'datum' => '01-01-2021',
-        // ]);
+        DB::table('desktimer')->insert([
+            'total_work_minutes' => 0,
+            'total_pause_minutes' => 0,
+            'datum' => '01-01-2021',
+        ]);
 
-        // DB::table('desktimer')->insert([
-        //     'total_work_minutes' => 2,
-        //     'total_pause_minutes' => 2,
-        // ]);
+        DB::table('desktimer')->insert([
+            'total_work_minutes' => 2,
+            'total_pause_minutes' => 2,
+        ]);
 
-        // DB::table('desktimer')->insert([
-        //     'total_work_minutes' => 0,
-        //     'total_pause_minutes' => 0,
-        //     'datum' => '01-01-2021',
-        // ]);
+        DB::table('desktimer')->insert([
+            'total_work_minutes' => 0,
+            'total_pause_minutes' => 0,
+            'datum' => '01-01-2021',
+        ]);
 
-        // DB::table('desktimer')->insert([
-        //     'total_work_minutes' => 2,
-        //     'total_pause_minutes' => 2,
-        // ]);
+        DB::table('desktimer')->insert([
+            'total_work_minutes' => 2,
+            'total_pause_minutes' => 2,
+        ]);
 
         // DB::table('desktimer')->insert([
         //     'total_work_minutes' => 0,
