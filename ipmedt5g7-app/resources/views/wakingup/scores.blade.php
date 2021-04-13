@@ -5,21 +5,7 @@
 @endsection
 
 @section('content')
-    <header class="mainHeader u-opstaan-gradient u-box-shadow">
-        <nav class="mainHeader__nav">
-            <img src="/img/logo.png"></img>
-            <ul>
-                <li><a href="/gebruiker">Account</a></li>
-                <li><a href="/opstaan">Opstaan</a></li>
-                <li><a href="/desk">Bureau</a></li>
-                <li><a href="/boodschappenlijst">Boodschappen</a></li>
-                <li><a href="/recepten">Koken</a></li>
-            </ul> 
-        </nav>
-    </header>
-
     <section class="u-flexbox">
-
         <section class="u-flexbox-column">
             <h1 class='wakingup--header'>Sleepgun Resultaten</h1>
             <ul class='scoresList u-opstaan-gradient u-list-style-none u-box-shadow u-vertical-scroll'>

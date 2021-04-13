@@ -11,7 +11,8 @@ class GebruikerController extends Controller
         return view ('gebruiker.gebruiker', [
             'product' => \App\Models\Shoppinglist::all(),
             'user' => \App\Models\User::all(),
-            'ActiveUser' => \App\Models\activeUserTable::all(),
+            'ActiveUser' => \App\Models\activeUserTable::all()->first(),
+            'activeShoppinglist' => \App\Models\ActiveShoppinglist::all()->first(),
         ]);
     }
 }

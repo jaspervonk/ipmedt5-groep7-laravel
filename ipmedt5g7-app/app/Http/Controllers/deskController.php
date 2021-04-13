@@ -16,6 +16,7 @@ class deskController extends Controller
             // 'total_work_minutes' => \App\Models\Desk::first()->skip(0)->first()->total_work_minutes,
             'working_status' => \App\Models\DeskWork::all()->first()->working_status,
             'actieve_deskjob' => \App\Models\Deskjob::first()->deskjob,
+            'ActiveUser' => \App\Models\activeUserTable::all()->first(),
             
         ]);
 
@@ -31,6 +32,7 @@ class deskController extends Controller
             'alle_tijden' => \App\Models\Desk::all()->where('deskjob', \App\Models\Deskjob::first()->deskjob),
             'alle_deskjobs' => \App\Models\AllDeskJobs::all(),
             'actieve_deskjob' => \App\Models\Deskjob::first()->deskjob,
+            'ActiveUser' => \App\Models\activeUserTable::all()->first(),
         ]);
     }
 
