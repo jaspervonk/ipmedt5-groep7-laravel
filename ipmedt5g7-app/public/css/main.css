@@ -302,9 +302,8 @@ button:hover{
     grid-column: span 3;
     width: 100%;
     height: 35rem;
-    position: relative;
+    /* position: relative; */
     background: linear-gradient(143.7deg, #90C8F5 0%, #8494EC 100%);
-    /* border: #F8B500 solid 1px; */
 }
 
 .receptKaart__header{
