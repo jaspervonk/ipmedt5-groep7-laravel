@@ -1,6 +1,7 @@
 window.onload = () =>{
     updateNavigation();
     checkFeedbackPopup();
+    checkWerkTimer();
 }
 
 function checkFeedbackPopup(){
@@ -37,7 +38,7 @@ function updateNavigation(){
         localStorage.setItem("headerColor", "linear-gradient(180deg, #90C8F5 0%, #8494EC 100%)");
     }
     else if(directory == "/desk"){
-        localStorage.setItem("headerColor", "linear-gradient(180deg, #5D6595 0%, #1F1842 100%)");
+        localStorage.setItem("headerColor", "linear-gradient(180deg, #6CC04A 0%, #FF9D83 0.01%, #FA546C 100%)");
     }
     else if(directory == "/gebruiker"){
         localStorage.setItem("headerColor", "linear-gradient(180deg, #6AEAB2 0%, #20B798 100%)");
@@ -45,4 +46,11 @@ function updateNavigation(){
 
     mainHeader.style.background = localStorage.getItem("headerColor");
     navList.style.background = localStorage.getItem("headerColor");
+}
+
+function checkWerkTimer(){
+    const directory = window.location.pathname;
+    if(directory == "/desk"){
+        setTimeout(function(){ window.location.reload(1); }, 3000);
+    }
 }
