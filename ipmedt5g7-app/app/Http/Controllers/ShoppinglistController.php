@@ -68,7 +68,7 @@ class ShoppinglistController extends Controller
         $lijst = DB::table('usershoppinglist');
         $activeshoppinglist = DB::table('activeshoppinglist')->first();
         foreach ($lijst as $lijst) {
-            $lijst->where('shoppinglist', '=', $activeshoppinglist)->delete();
+            $lijst->where('shoppinglist', '=', $activeshoppinglist->activeshoppinglist)->delete();
         };
         //DB::table('shoppinglist')->where('shoppinglist->user', $activeshoppinglist->shoppinglist->first())->delete();
         // $query = $activeshoppinglist::all()->first();
