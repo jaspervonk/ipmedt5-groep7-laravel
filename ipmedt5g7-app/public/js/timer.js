@@ -33,6 +33,7 @@ function sleep(ms) {
 // 3 countdown timer functies voor de recepten die tot de 3 timers kunnen hebben
  function countdown(hr,mm,ss)
     {
+        document.getElementById("cdBtn_1").style.display = "none";
         const interval = setInterval( async function(){
             // Hier telt de timer af en zorgt ervoor dat de uren minuten en secondes een goede overgang maken bij de 00
             ss--;
@@ -65,6 +66,7 @@ function sleep(ms) {
 
     function countdown1(hr,mm,ss)
     {
+        document.getElementById("cdBtn_2").style.display = "none";
         var interval = setInterval(async function(){
 
             ss--;
@@ -94,6 +96,7 @@ function sleep(ms) {
 
     function countdown2(hr,mm,ss)
     {
+        document.getElementById("cdBtn_1").style.display = "none";
         var interval = setInterval(async function(){
 
             ss--;

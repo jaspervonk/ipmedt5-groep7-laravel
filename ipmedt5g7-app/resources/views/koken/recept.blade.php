@@ -13,7 +13,7 @@
             <section class='recept__informatie__kaart u-box-shadow-content'>
                 <p class='recept__informatie__tekst'> Recept voor: {{$recepten->hoeveelheid}} </p>
                 <p class='recept__informatie__tekst'> Tijd: {{$recepten->tijd}} minuten </p>
-                <p class='recept__informatie__tekst'> Maximum te behalen punten: {{$recepten->punten}}</p>   
+                <p class='recept__informatie__tekst'> Maximum te behalen punten: {{$recepten->punten - 10}}</p>   
             </section>
             <section class='recept__informatie__kaart2'>
                 <section class='recept__btnSection u-flex-v-center'>
@@ -38,21 +38,22 @@
                 <!-- Slides -->
                 <div class="swiper-slide">
                     <section class='swiper-slide__time'>
-                        <button class='swiper-slide__button' onclick="countdown(0,{{$recepten->timer_1}},1), 1"> Start tijd </button>
+                        <button class='swiper-slide__button' onclick="countdown(0,{{$recepten->timer_1}},1), 1" id='cdBtn_1'> Start tijd </button>
                         <h3 id="timer" class='swiper-slide__timer u-box-shadow-content'> {{$recepten->timer_1}} minuten </h3> <br> 
                     </section>
-                    <p class='recept__bereiden__tekst'> {{$recepten->bereiden_1}}</p>    
+                    <p class='recept__bereiden__tekst'> {{$recepten->bereiden_1}}</p>   <br>
+                    <a class='recept__informatie' href="{{ url('/receptInfo') }}"> Hoe stel ik de timer in?</a>  
                 </div>
                 <div class="swiper-slide">
                     <section class='swiper-slide__time'>
-                        <button class='swiper-slide__button' onclick="countdown1(0,{{$recepten->timer_2}},1), 2"> Start tijd</button>
+                        <button class='swiper-slide__button' onclick="countdown1(0,{{$recepten->timer_2}},1), 2" id='cdBtn_2'> Start tijd</button>
                         <h3 id="timer2" class='swiper-slide__timer u-box-shadow-content'> {{$recepten->timer_2}} minuten </h3> <br>
                     </section>
                     <p class='recept__bereiden__tekst'> {{$recepten->bereiden_2}}</p>  
                 </div>
                 <div class="swiper-slide">
                     <section class='swiper-slide__time'>
-                        <button class='swiper-slide__button' onclick="countdown2(0,{{$recepten->timer_3}},1), 3"> Start tijd </button>
+                        <button class='swiper-slide__button' onclick="countdown2(0,{{$recepten->timer_3}},1), 3" id='cdBtn_3'> Start tijd </button>
                         <h3 id="timer3" class='swiper-slide__timer u-box-shadow-content'> {{$recepten->timer_3}} minuten </h3> <br>
                     </section>
                     <p class='recept__bereiden__tekst'> {{$recepten->bereiden_3}}</p>     
@@ -63,8 +64,6 @@
             <!-- slider navigatieknoppen -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
         </article>
         <section class='recept__ingredienten'>
             <section class='recept__ingredienten__kaart'>

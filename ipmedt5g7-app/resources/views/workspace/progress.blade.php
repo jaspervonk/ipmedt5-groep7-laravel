@@ -6,13 +6,14 @@
 
 @section('content')
 <section class="desklabels">
-    <h1 class="desklabels__actief u-text-color-black u-grid-center"> actieve deskjob: {{$actieve_deskjob}}</h1>
+    <h1 class="desklabels__actief u-text-color-black"> actieve deskjob: {{$actieve_deskjob}}</h1>
 
     <form class="desklabels__form u-grid-center" action="/selectDeskjob" method="POST">
         @method('POST')
         {{ csrf_field() }}
-        <label class="u-text-color-black" for="deskjobs">Kies een bestaande deskjob:</label>
-        <input list="deskjobs" name="deskjob" id="deskjob">
+        <label class="desklabels__labels u-text-color-black" for="deskjobs">Kies een bestaande deskjob:</label>
+        <br />
+        <input class="desklabels__input" list="deskjobs" name="deskjob" id="deskjob">
 
         <datalist id="deskjobs">
             @foreach($alle_deskjobs as $alle_deskjobs)
@@ -20,16 +21,17 @@
             @endforeach
         </datalist>
 
-        <button class="u-desk-button" type="submit">selecteer</button>
+        <button class="desklabels__button u-desk-button" type="submit">selecteer</button>
     </form>
 
 
     <form class="desklabels__form u-grid-center" action="/addDeskjob" method="POST">
         @method('POST')
         {{ csrf_field() }}
-        <label class="u-text-color-black" for="deskjob_name">Maak een nieuwe Deskjob aan:</label>
-        <input type="text" name="deskjob_name">
-        <button class="u-desk-button" type="submit">Aanmaken</button>
+        <label class="desklabels__labels u-text-color-black" for="deskjob_name">Maak een nieuwe Deskjob aan:</label>
+        <br />
+        <input class="desklabels__input" type="text" name="deskjob_name">
+        <button class="desklabels__button u-desk-button" type="submit">Aanmaken</button>
     </form>
 
     <button class="deskprogress__button u-desk-button" type="button" onclick="window.location.assign('/desk')">ga terug</button>
