@@ -97,6 +97,8 @@ button:hover{
 .nav__logo{
     width: 6rem;
     padding-top: 1rem;
+    margin-left: 2rem;
+    background: none;
 }
 
 .nav__hamburger{
@@ -156,6 +158,18 @@ button:hover{
     box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.35);
 }
 
+
+@media only screen and (min-width: 1000px){
+    .checkbtn{
+        display: none;
+    }
+
+    .nav{
+        background: none !important;
+    }
+}
+
+
 @media only screen and (max-width: 1000px){
     .checkbtn{
         font-size: 3rem;
@@ -211,9 +225,6 @@ button:hover{
 
     a.active, a:hover{
         text-decoration: underline;
-        background-color: none;
-        transition: .5s;
-        line-height: 2rem;
     }
 
     .active{
@@ -228,7 +239,7 @@ button:hover{
 
     .nav__hamburger{
         right: 0;
-        margin-top: 1rem;
+        margin-top: 2rem;
         float: right;
         display: block;
     }
@@ -282,7 +293,7 @@ button:hover{
     display: block;
     height: 0rem;
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 8rem;
 
     overflow: hidden;
     transition: 1.5s;
