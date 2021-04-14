@@ -65,10 +65,10 @@ class ShoppinglistController extends Controller
     }
 
     public function removeShoppinglist(\App\Models\UserShoppinglist $userShoppinglist, \App\Models\activeUserTable $activeUserTable, \App\Models\ActiveShoppinglist $activeshoppinglist){
-        $lijst = DB::table('usershoppinglist');
+        $lijst = DB::table('shoppinglist');
         $activeshoppinglist = DB::table('activeshoppinglist')->first();
         foreach ($lijst as $lijst) {
-            $lijst->where('shoppinglist', '=', $activeshoppinglist->activeshoppinglist)->delete();
+            $lijst->where('shoppinglist', '=', $activeshoppinglist)->delete();
         };
         //DB::table('shoppinglist')->where('shoppinglist->user', $activeshoppinglist->shoppinglist->first())->delete();
         // $query = $activeshoppinglist::all()->first();
