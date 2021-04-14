@@ -17,7 +17,7 @@ class AddUserController extends Controller
         DB::table('usershoppinglist') 
             ->insert(array('user' => $user->name, 'shoppinglist' => "Default")
         );
-        if($ActiveShoppinglist->activeshoppinglist == null){
+        if($ActiveShoppinglist::find(1) == null){
             DB::table('activeshoppinglist')
                 ->insert(array('activeshoppinglist' => 'Default')
             );
