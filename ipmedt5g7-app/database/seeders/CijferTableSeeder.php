@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use DB;
 
-class cijferTableSeeder extends Seeder
+class CijferTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
