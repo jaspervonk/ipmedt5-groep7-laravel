@@ -23,8 +23,16 @@ class ReceptController extends Controller
     public function klaar($id){
         return view ('koken.receptKlaar', [
             'recepten' => \App\Models\Recepten::find($id),
-            'activeUser' => \App\Models\activeUserTable::all(),
+            'ActiveUser' => \App\Models\activeUserTable::all()->first(),
             'cijfer' => \App\Models\Cijfer::first()->waarde,
         ]);
     }
+
+    public function info(){
+        return view('koken.receptInfo', [
+            'ActiveUser' => \App\Models\activeUserTable::all()->first(),
+        ]);
+    }
+
+
 }

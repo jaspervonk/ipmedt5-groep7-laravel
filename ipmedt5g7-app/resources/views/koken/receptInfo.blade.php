@@ -1,18 +1,6 @@
 @extends('default')
 
 @section('content')
-<header class="mainHeader u-koken-gradient u-box-shadow">
-    <nav class="mainHeader__nav">
-        <img src="/img/logo.png"></img>
-        <ul>
-            <li><a href="/gebruiker">Account</a></li>
-            <li><a href="/wakingupresults">Opstaan</a></li>
-            <li><a href="/desk">Bureau</a></li>
-            <li><a href="/boodschappenlijst">Boodschappen</a></li>
-            <li><a href="/recepten">Koken</a></li>
-        </ul> 
-    </nav>
-</header>
 <article class='informatie'>
     <a class='recept__informatie' href="javascript:history.back()"> < Ga terug</a>
     <section class='informatie__timer'>
