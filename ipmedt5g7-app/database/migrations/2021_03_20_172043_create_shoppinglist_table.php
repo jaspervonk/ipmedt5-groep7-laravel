@@ -19,10 +19,7 @@ class CreateShoppinglistTable extends Migration
             $table->string("merk")->nullable();
             $table->integer("aantal")->default(1);
             $table->string("volume")->nullable();
-            $table->timestamp("updated_at")->nullable();
-            $table->timestamp("created_at")->nullable();
             $table->string("shoppinglist");
-            // $table->string("user")->default("Algemeen")->nullable();
         });
     }
 

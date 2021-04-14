@@ -20,8 +20,6 @@ class CreateStoredProductsTable extends Migration
             $table->string('merk')->nullable();
             $table->string('volume')->nullable();
             $table->float('prijs')->nullable();
-            $table->timestamp("updated_at")->nullable();
-            $table->timestamp("created_at")->nullable();
         });
     }
 
