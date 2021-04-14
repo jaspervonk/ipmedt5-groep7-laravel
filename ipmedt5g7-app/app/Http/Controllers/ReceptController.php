@@ -16,6 +16,7 @@ class ReceptController extends Controller
     public function show($id){
         return view ('koken.recept', [
             'recepten' => \App\Models\Recepten::find($id),
+            'ActiveUser' => \App\Models\activeUserTable::all()->first(),
         ]);
     }
 

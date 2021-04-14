@@ -4,7 +4,7 @@
         <h3 class="gebruiker__header__text u-box-shadow-content"> Hallo {{$ActiveUser->name}}!</h3>
         <section class='gebruiker__section1'>
             <h3 class='gebruiker__title'>Gebruiker aanmaken</h3>
-            <form action="/addUser" method="POST">
+            <form action="/addUser" method="POST" onsubmit='return setPopup("De gebruiker is toegevoegd", "linear-gradient(180deg, #5ACD34 0%, #2B8D29 100%)");'>
                 @method('POST')
                 {{ csrf_field() }}
                 <label for="name">Naam:</label><br>
