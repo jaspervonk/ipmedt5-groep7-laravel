@@ -1,7 +1,7 @@
 <section class="card u-box-shadow grid__toevoegen">
     <h2>Toevoegen aan database:</h2>
-    <hr>
-    <form action="/submit" method="POST" onsubmit='return setPopup("Product is toegevoegd aan de database.", "linear-gradient(180deg, #5ACD34 0%, #2B8D29 100%)");'>
+    <hr class="u-stripe">
+    <form action="/boodschappenlijst/store" method="POST" onsubmit='return setPopup("Product is toegevoegd aan de database.", "linear-gradient(180deg, #5ACD34 0%, #2B8D29 100%)");'>
         @method('POST')
         {{ csrf_field() }}
         <p class="u-label">* = Verplicht veld</p>
@@ -22,8 +22,8 @@
 </section>
 <section class="card u-box-shadow grid__barcodeScannen">
     <h2>Product toevoegen:</h2>
-    <hr>
-    <form action="/api" method="POST" onsubmit='return setPopup("Product is toegevoegd.", "linear-gradient(180deg, #5ACD34 0%, #2B8D29 100%)");'>
+    <hr class="u-stripe">
+    <form action="/boodschappenlijst/api" method="POST" onsubmit='return setPopup("Product is toegevoegd.", "linear-gradient(180deg, #5ACD34 0%, #2B8D29 100%)");'>
         @method('POST')
         {{ csrf_field() }}
         <label class="u-label" for="merk">Barcode:</label>

@@ -54,23 +54,15 @@ select{
     padding: 1rem 1.5rem;
 }
 
-.pageTitle{
+.grid__header__title{
     color: #212121;
     font-size: 4.5rem;
 }
 
 @media(max-width: 400px){
-    .pageTitle{
+    .grid__header__title{
         font-size: 3rem;
     }
-}
-
-.blackFont{
-    color: #212121;
-}
-
-.u-noLiStyle{
-    list-style: none;
 }
 
 button:hover{
@@ -1512,12 +1504,16 @@ input[type=checkbox]:checked + label.isChecked{
     z-index: 2;
 }
 
-hr{
+.u-stripe{
     border: .1rem solid #eee;
 }
 
-#u-white{
-    color: #eee;
+.u-blackFont{
+    color: #212121;
+}
+
+.u-noLiStyle{
+    list-style: none;
 }
 
 /* ========== animation classes ========== */

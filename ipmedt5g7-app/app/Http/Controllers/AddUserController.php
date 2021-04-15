@@ -8,6 +8,7 @@ use DB;
 
 class AddUserController extends Controller
 {
+    //Functie om een gebruiker aan het systeem toe te voegen.
     public function create(Request $request, \App\Models\User $user, \App\Models\ActiveShoppinglist $ActiveShoppinglist){
         $user->name = $request->input('name');
         $user->save();
@@ -15,11 +16,11 @@ class AddUserController extends Controller
             ->update(array('name' => $user->name)
         );
         DB::table('usershoppinglist') 
-            ->insert(array('user' => $user->name, 'shoppinglist' => "Default")
+            ->insert(array('user' => $user->name, 'shoppinglist' => "Default")//Hier wordt standaard het lijstje 'Default' aan de nieuwe gebruiker meegegeven.
         );
         if($ActiveShoppinglist::find(1) == null){
             DB::table('activeshoppinglist')
-                ->insert(array('activeshoppinglist' => 'Default')
+                ->insert(array('activeshoppinglist' => 'Default')//Hier wordt het lijstje 'Default' op actief gezet.
             );
         }else{
             DB::table('activeshoppinglist')->where('id', 1)

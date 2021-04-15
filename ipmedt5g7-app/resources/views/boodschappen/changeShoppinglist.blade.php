@@ -1,6 +1,6 @@
 <form action="/boodschappenlijst/change" method="POST">
     @csrf
-    <label class="blackFont" for="naam">Selecteer lijstje: </label>
+    <label class="u-blackFont" for="naam">Selecteer lijstje: </label>
     <select name="naam" onchange="this.form.submit()">
         <option value="" disabled selected hidden>Kies een lijstje</option>
         @foreach($userShoppinglists as $usershoppinglist)

@@ -4,13 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-// use \GuzzleHttp\Client;
-// use Illuminate\Http\Client\Response;
 use \App\Models\Shoppinglist;
-// use ArrayAccess;
-// use DOMDocument;
-// use \App\Goutte\Client;
-
 
 class ApiController extends Controller
 {
@@ -68,23 +62,4 @@ class ApiController extends Controller
             }
         }             
     }
-
-    // public function api(Request $request)
-    // {
-    //     $barcode = 723175258273;
-    //     $BASE_URL = 'https://www.coop.nl/product/';
-    //     $response = Http::get($BASE_URL . $barcode);
-    //     $data = $response->getBody()->getContents();
-    //     return collect(json_decode(utf8_decode($data)));
-    // }
-
-    // public function api(Request $request){
-    //     $barcode = 8710496976575;
-    //     $BASE_URL = 'https://www.coop.nl/product/';
-
-    //     $client = new Client();
-    //     $page = $client::request('GET', $BASE_URL . $barcode);
-
-    //     print($page);
-    // }
 }

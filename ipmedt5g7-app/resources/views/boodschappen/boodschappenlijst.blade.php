@@ -2,11 +2,11 @@
     @section('content')
     <main class="boodschappen-grid u-body-padding">
         <header class="grid__header">
-            <h1 class="pageTitle">Boodschappen</h1>
+            <h1 class="grid__header__title">Boodschappen</h1>
             @if($activeShoppinglist->activeshoppinglist == "Default")
-            <p class="blackFont">We hebben je standaard het lijstje Default gegeven. Je kunt er meerdere aanmaken.</p>
+            <p class="u-blackFont">We hebben je standaard het lijstje Default gegeven. Je kunt er meerdere aanmaken.</p>
             @else
-            <p class="blackFont">Huidig lijstje: {{$activeShoppinglist->activeshoppinglist}}</p>
+            <p class="u-blackFont">Huidig lijstje: {{$activeShoppinglist->activeshoppinglist}}</p>
             @endif
 
             
@@ -22,8 +22,8 @@
             @else
             <h2 class="card__title">Selecteer een boodschappenlijst</h2>
             @endif
-            <hr>
-            <form action="/remove" method="POST" onsubmit='return setPopup("Product(en) zijn verwijderd.", "linear-gradient(180deg, #5ACD34 0%, #2B8D29 100%)");'>
+            <hr class="u-stripe">
+            <form action="/boodschappenlijst/remove" method="POST" onsubmit='return setPopup("Product(en) zijn verwijderd.", "linear-gradient(180deg, #5ACD34 0%, #2B8D29 100%)");'>
                 @method('POST')
                 {{ csrf_field() }}
                 <ul>
